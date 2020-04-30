@@ -1,8 +1,15 @@
 <template>
     <div class="padmini">
-        <h1>
-            <ProfileCard />
-        </h1>
+        <div class="profileCard">
+            <ProfileCard 
+            v-for="(profiles, i) in data" 
+            :key="i" 
+            :name="profiles.name" 
+            :title="profiles.title"
+            :color="profiles.color" >
+            <!-- <div class="test"></div> -->
+            </ProfileCard>
+        </div>
     </div>
 </template>
 
@@ -10,7 +17,7 @@
 import ProfileCard from '../components/ProfileCard.vue'
 import { data } from "../locale/components/profileCard.js";
 export default {
-    name: "padmini",
+  name: "padmini",
   components: {
     ProfileCard,
   },
@@ -24,5 +31,7 @@ export default {
 </script>
 
 <style scoped>
+
+
 
 </style>

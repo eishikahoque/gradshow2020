@@ -1,11 +1,15 @@
 export const data = 
    [ 
         {
-            name: "Test"
+            name: "Padmini",
+            title: "Awesome Coder",
+            color: "red"
            
         },
         {
-            name: "Test1"
+            name: "Eishika",
+            title: "Super Awesome Designer",
+            color: "blue"
            
         },        
         

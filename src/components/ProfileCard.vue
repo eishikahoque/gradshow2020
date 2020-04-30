@@ -1,6 +1,7 @@
 <template> 
-<div class="profilecard">
-    {{ test }}
+<div class="profilecard" v-bind:style="{'background-color': color}">
+    {{ name }}<br>
+    {{ title }}
 </div>
 </template>
 
@@ -8,6 +9,7 @@
 
 export default {
   name: "profilecard",
+  props: ["name", "title", "color"],
   components: {
     
   },
@@ -22,5 +24,17 @@ export default {
 </script>
 
 <style scoped>
+
+.profilecard{
+    background-color: pink;
+    width: 200px;
+    height: 300px;
+}
+
+.test{
+     background-color: white;
+    width: 100px;
+    height: 100px;
+}
 
 </style>
