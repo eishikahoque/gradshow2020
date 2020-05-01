@@ -6,8 +6,6 @@
 </template>
 
 <script>
-import "@/assets/css/gradshow.scss";
-
 export default {
   name: "GradShow",
 

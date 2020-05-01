@@ -1,50 +1,63 @@
 <template>
-  <div class="intro-container">
-    <!-- INTRO MESSAGE -->
-    <div class="row">
-      <div class="column">
-        <section>
-          <img
-            :src="require(`../assets/images/${images.comingSoon}`)"
-            alt="Coming Soon"
-          />
-        </section>
-      </div>
-    </div>
-    <!-- NEWSLETTER -->
-    <div class="row newsletter">
-      <div class="column">
-        <!-- SIGNUP FORM -->
-        <div class="row row-no-padding">
-          <div class="column column-75">
-            <label for="email">Sign up here for more information</label>
-            <!-- INPUT TEXT -->
-            <input
-              name="email"
-              type="email"
-              placeholder="youremail@email.com"
-            />
-          </div>
-          <div class="column column-25">
-            <!-- SUBMIT BUTTON -->
-            <button class="primary subscribe-btn">Subscribe</button>
+  <div>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="column">
+            <img src="../assets/images/imm-logo.svg" alt="" srcset="" />
           </div>
         </div>
       </div>
-    </div>
-    <!-- FOOTER MESSAGE -->
-    <div class="row footer-message">
-      <div class="column">
-        <p>Connect with your IMM grads on May 14th</p>
+    </header>
+    <div class="intro-container">
+      <!-- INTRO MESSAGE -->
+      <div class="row">
+        <div class="column">
+          <section>
+            <img
+              :src="require(`../assets/images/${images.comingSoon}`)"
+              alt="Coming Soon"
+            />
+          </section>
+        </div>
       </div>
+      <!-- NEWSLETTER -->
+      <div class="row newsletter">
+        <div class="column">
+          <!-- SIGNUP FORM -->
+          <div class="row row-no-padding">
+            <div class="column column-75">
+              <label for="email">Sign up here for more information</label>
+              <!-- INPUT TEXT -->
+              <input
+                name="email"
+                type="email"
+                placeholder="youremail@email.com"
+              />
+            </div>
+            <div class="column column-25">
+              <!-- SUBMIT BUTTON -->
+              <button class="primary subscribe-btn">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- FOOTER MESSAGE -->
+      <div class="row footer-message">
+        <div class="column">
+          <p>Connect with your IMM grads on May 14th</p>
+        </div>
+      </div>
+      <!-- BLOB CONTAINER -->
+      <div class="blob-container"></div>
+      <!--  -->
     </div>
-    <!-- BLOB CONTAINER -->
-    <div class="blob-container"></div>
-    <!--  -->
   </div>
 </template>
 
 <script>
+import "@/assets/css/gradshow.scss";
+
 export default {
   data: function() {
     return {
@@ -57,6 +70,17 @@ export default {
 </script>
 
 <style lang="scss">
+header {
+  margin: 70px 0;
+}
+
+// MEDIA QUERY FOR SCREENS LESS THAN 960px
+@media only screen and (max-width: 960px) {
+  header {
+    text-align: center;
+    margin: 70px 0;
+  }
+}
 .intro-container {
   max-width: 800px;
   margin: 0 auto;
