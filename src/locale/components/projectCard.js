@@ -1,6 +1,7 @@
 export const data = 
     [
         {
+            id: "01",
             name: "name",
             description: "description",
             image: "/path/img.png",
@@ -9,6 +10,7 @@ export const data =
             mainColour: "#333"
         },
         {
+            id: "02",
             name: "name",
             description: "description",
             image: "/path/img.png",
