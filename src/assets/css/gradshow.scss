@@ -1,9 +1,23 @@
+/* IMPORT FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+
 /* GLOBAL SCSS */
 $primary-color: #472b7a;
 
+p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+}
+
 body {
- background: linear-gradient(90deg, #E7B8F0, #CFBDF3);
- color: $primary-color !important;
+    background: linear-gradient(90deg, #E7B8F0, #CFBDF3);
+    color: $primary-color !important;
 }
 
 .primary{
