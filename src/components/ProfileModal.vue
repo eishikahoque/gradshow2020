@@ -1,8 +1,10 @@
 <template>
-  <main class="modal" >
-    <div class="imageGradient" v-bind:style="{backgroundImage: `linear-gradient(180deg, rgba(210,203,224,0.4) 0%, rgba(70,42,128,0.9) 100%), url(${profile.picture})`}">
+  <main class="modal">
+    <div class="imageGradient" v-bind:style="{backgroundImage: `linear-gradient(180deg, rgba(151,135,184,0.4) 0%, rgba(71,43,122,0.95) 100%), url(${profile.picture})`}">
       <div class="jobTitle">
-        {{ profile.title }}
+        {{ profile.hash1 }}
+        {{ profile.hash2 }}
+        {{ profile.hash3 }}
       </div>
       <section class="studentDescription">
         <div class="className">
@@ -14,7 +16,10 @@
         <div class="studentBlurb">
           {{ profile.blurb }}
         </div>
-        <button class="button button-outline">
+        <button class="button button-outline" 
+          target="_blank"
+          @click="viewPortfolio"
+        >
           View Portfolio
         </button>
       </section>
@@ -30,34 +35,39 @@ export default {
   components: {},
   data() {
     return {
-      // picture: this.props.profile.image
+      // portfolio: this.props.profile.portfolio
     };
   },
-  methods: {}
+  methods: {
+    viewPortfolio: function() {
+      window.open(this.profile.portfolio, "_blank");
+    }
+  }
 }
 </script>
 
 <style scoped>
 .modal {
-  width: 40rem; 
-  height: 40rem;
+  width: 50rem; 
+  height: 50rem;
   background-color: white;
 }
 
 .imageGradient {
-  /* background-image: url(${this.props.profile.picture}), linear-gradient(180deg, rgba(210,203,224,0.75) 0%, rgba(70,42,128,0.75) 100%); */
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 3rem 4rem;
-  display: flex; 
+  padding: 3rem;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  display: flex;
   flex-direction: column;
-  width: 40rem; 
-  height: 40rem;
+  width: 50rem;
+  height: 50rem;
 }
 
 .jobTitle {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   display: flex; 
   justify-content: flex-end;
   flex: 1;
@@ -80,14 +90,16 @@ export default {
 .studentName {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 2.125rem;
-  color: white;
+  font-size: 3.5rem;
+  background: -webkit-linear-gradient(180deg, #c5fbda, #c6bdf5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .studentBlurb {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   color: white;
 }
 
@@ -95,7 +107,7 @@ export default {
   color: white;
   margin-top: 2rem;
   border-color: white;
-  max-width: 54%;
+  max-width: 40%;
 }
 
 .button.button-outline:hover {
