@@ -58,6 +58,9 @@
 <script>
 import "@/assets/css/gradshow.scss";
 
+// MAILCHIMP
+import MailchimpSubscribe from "vue-mailchimp-subscribe";
+
 export default {
   data: function() {
     return {
@@ -94,11 +97,12 @@ header {
   height: 80px;
   border-radius: 24px 0px 0px 24px;
   padding: 0 3rem;
-  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
 }
+
 .newsletter label {
   padding-left: 3rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
 .subscribe-btn {
