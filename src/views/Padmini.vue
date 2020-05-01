@@ -1,26 +1,24 @@
 <template>
   <div class="padmini">
     <div class="overlay" v-show="hideOverlay" @click="closeOverlay">
-      <div class="modalHolder"><div class="profileModalContainer" v-show="hideModal">
-      <ProfileModal
-        v-for="(profiles, i) in data"
-        :key="i" 
-        :name="profiles.name"
-        :title="profiles.title"
-        :bio="profiles.bio"
-        class="modalContainer"
-      >
-      </ProfileModal>
-    </div></div>
+      <div class="profileModalContainer" v-show="hideModal">
+        <ProfileModal
+          :profile="currentProfile"
+          class="modalContainer"
+        >
+        </ProfileModal>
+      </div>
     </div>
-    <div class="profileCardContainer" @click="showModal">
+    <div class="profileCardContainer">
       <ProfileCard class="cardContainer"
         v-for="(profiles, i) in data"
         :key="i"
+        @open-modal="showModal(i)"
         :id="profiles.id"
         :name="profiles.name"
         :title="profiles.title"
         :color="profiles.color"
+        :image="profiles.picture"
         >
         <!-- <div class="test"></div> -->
       </ProfileCard>
@@ -42,6 +40,7 @@ export default {
   data() {
     return {
       data,
+      currentProfile: null,
       showCard: true,
       hideModal: false,
       hideOverlay: false
@@ -49,19 +48,19 @@ export default {
   },
   methods: {
     hideCard: function(){
-      this.showCard=false;
+      this.showCard = false;
     },
-    showModal: function(){
-      this.hideModal=true;
-      this.hideOverlay=true;
-      this.$props.profiles.id=1;
+    showModal: function(profileId) {
+      this.hideModal = true;
+      this.hideOverlay = true;
+      this.currentProfile = this.data[profileId];
     },
     // showOverlay: function(){
     //   this.hideOverlay=true;
     //   console.log("whatthefuck");
     // },
     closeOverlay: function(){
-      this.hideOverlay=false;
+      this.hideOverlay = false;
     }
   }
 }

@@ -1,7 +1,7 @@
 <template> 
-  <main class="profilecard">
-    <div v-bind:style="{'background-color': color}">
-      <img src='../assets/padmini.png' class='cardImage' alt="student picture" />
+  <main class="profilecard" @click="$emit('open-modal')">
+    <div v-bind:style="{backgroundColor: color}">
+      <img v-bind:src="image" class="cardImage" alt="student picture" />
     </div>
     <div class="profilecardName">
       {{ name }}
@@ -17,11 +17,11 @@
 
 export default {
   name: "profilecard",
-  props: ["name", "title", "color", "id", "bio"],
+  props: ["name", "title", "color", "id", "bio", "image"],
   components: {},
   data() {
     return {
-      test: "hi"
+    //   data,
     };
   },
   methods: {}
@@ -39,14 +39,14 @@ export default {
 }
 
 .profilecardName {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1.3125rem;
   font-weight: 600;
   margin-top: 1rem;
 }
 
 .profilecardTitle {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   margin-bottom: 1rem;

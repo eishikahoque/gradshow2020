@@ -1,22 +1,24 @@
 <template>
-  <main class="modal">
-    <div class='title'>
-      {{ title }}
+  <main class="modal" >
+    <div class="imageGradient" v-bind:style="{backgroundImage: `linear-gradient(180deg, rgba(210,203,224,0.4) 0%, rgba(70,42,128,0.9) 100%), url(${profile.picture})`}">
+      <div class="jobTitle">
+        {{ profile.title }}
+      </div>
+      <section class="studentDescription">
+        <div class="className">
+          IMM 2020
+        </div>
+        <div class="studentName">
+          {{ profile.name }}
+        </div>
+        <div class="studentBlurb">
+          {{ profile.blurb }}
+        </div>
+        <button class="button button-outline">
+          View Portfolio
+        </button>
+      </section>
     </div>
-    <section class="studentDescription">
-      <div class="className">
-        IMM 2020
-      </div>
-      <div class="studentName">
-        {{ name }}
-      </div>
-      <div class="studentBio">
-        {{ bio }}
-      </div>
-      <button class="button button-outline">
-        View Portfolio
-      </button>
-    </section>
   </main>
 </template>
 
@@ -24,11 +26,11 @@
 
 export default {
   name: "profilemodal",
-  props: ["name", "title", "bio"],
+  props: ["profile"],
   components: {},
   data() {
     return {
-      test: "hi"
+      // picture: this.props.profile.image
     };
   },
   methods: {}
@@ -39,16 +41,22 @@ export default {
 .modal {
   width: 40rem; 
   height: 40rem;
-  background-image:  url('../assets/padmini.png'), linear-gradient(180deg, rgba(210,203,224,1) 0%, rgba(70,42,128,1) 100%);
+  background-color: white;
+}
+
+.imageGradient {
+  /* background-image: url(${this.props.profile.picture}), linear-gradient(180deg, rgba(210,203,224,0.75) 0%, rgba(70,42,128,0.75) 100%); */
   background-repeat: no-repeat;
   background-size: cover;
   padding: 3rem 4rem;
   display: flex; 
   flex-direction: column;
+  width: 40rem; 
+  height: 40rem;
 }
 
-.title {
-  font-family: 'Montserrat', sans-serif;
+.jobTitle {
+  font-family: "Montserrat", sans-serif;
   font-size: 1.125rem;
   display: flex; 
   justify-content: flex-end;
@@ -64,20 +72,20 @@ export default {
 
 .className {
   color: #FBB6CB;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.3125rem;
   font-weight: 600;
 }
 
 .studentName {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 2.125rem;
   color: white;
 }
 
-.studentBio {
-  font-family: 'Montserrat', sans-serif;
+.studentBlurb {
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1.125rem;
   color: white;
