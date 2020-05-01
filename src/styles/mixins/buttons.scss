@@ -1,0 +1,11 @@
+@import '../variables';
+
+@mixin primary-btn-color {
+    background-color: $color-purple;
+    border-color: $color-purple;
+
+    &:hover {
+        background-color: $color-dark-purple;
+        border-color: $color-dark-purple;
+    }
+}
