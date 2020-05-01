@@ -40,12 +40,15 @@
         </div>
       </div>
       <!-- BLOB CONTAINER -->
-      <div class="blob-container"></div>
+
     </div>
   </div>
 </template>
 
 <script>
+
+// MAILCHIMP
+import MailchimpSubscribe from "vue-mailchimp-subscribe";
 
 export default {
   data: function() {
@@ -76,6 +79,10 @@ header {
 .intro-container {
   max-width: 800px;
   margin: 0 auto;
+  background-image: url(../assets/images/blob.png);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 .newsletter {
@@ -113,17 +120,17 @@ header {
   margin-top: 40px;
 }
 
-.blob-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: -1;
-  background-image: url(../assets/images/blob.png);
-  background-position: center;
-  background-repeat: no-repeat;
-}
+// .blob-container {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100vh;
+//   z-index: -1;
+//   background-image: url(../assets/images/blob.png);
+//   background-position: center;
+//   background-repeat: no-repeat;
+// }
 
 @include media-breakpoint-down(sm) {
   .newsletter input[type="email"], .subscribe-btn {
