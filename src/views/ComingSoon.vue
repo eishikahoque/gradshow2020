@@ -21,27 +21,52 @@
           </section>
         </div>
       </div>
+      <div>
+        <!-- ==== -->
+      </div>
       <!-- NEWSLETTER -->
       <div class="row newsletter">
         <div class="column">
-          <!-- SIGNUP FORM -->
-          <div class="row row-no-padding">
-            <div class="column column-75">
-              <label for="email">Sign up here for more information</label>
-              <!-- INPUT TEXT -->
-              <input
-                name="email"
-                type="email"
-                placeholder="youremail@email.com"
-              />
-            </div>
-            <div class="column column-25">
-              <!-- SUBMIT BUTTON -->
-              <button class="primary subscribe-btn">Subscribe</button>
-            </div>
-          </div>
+          <!-- MAILCHIMP TEST -->
+          <mailchimp-subscribe
+            url="https://sheridancollege.us5.list-manage.com/subscribe/post-json"
+            user-id="0f989d38861f906f55f887ece"
+            list-id="ba049562ad"
+            @error="onError"
+            @success="onSuccess"
+          >
+            <template v-slot="{ subscribe, setEmail, error, success, loading }">
+              <!-- SIGNUP FORM -->
+              <form @submit.prevent="subscribe">
+                <div class="row row-no-padding">
+                  <div class="column column-75">
+                    <label for="email">Sign up here for more information</label>
+                    <input
+                      type="email"
+                      id="email"
+                      @input="setEmail($event.target.value)"
+                      placeholder="youremail@email.com"
+                    />
+                  </div>
+                  <div class="column column-25">
+                    <!-- SUBMIT BUTTON -->
+                    <button class="primary subscribe-btn" type="submit">
+                      Subscribe
+                    </button>
+                    <!-- <button class="primary subscribe-btn">Subscribe</button> -->
+                  </div>
+                </div>
+                <div class="alert" v-if="error || success || loading">
+                  <div v-if="error">{{ error }}</div>
+                  <div v-if="success">Yay!</div>
+                  <div v-if="loading">Loading…</div>
+                </div>
+              </form>
+            </template>
+          </mailchimp-subscribe>
         </div>
       </div>
+
       <!-- FOOTER MESSAGE -->
       <div class="row footer-message">
         <div class="column">
@@ -62,12 +87,29 @@ import "@/assets/css/gradshow.scss";
 import MailchimpSubscribe from "vue-mailchimp-subscribe";
 
 export default {
+  components: {
+    MailchimpSubscribe
+  },
   data: function() {
     return {
       images: {
         comingSoon: "coming-soon-text.svg"
-      }
+      },
+      error: null,
+      success: false,
+      loading: true
     };
+  },
+  methods: {
+    subscribe() {
+      console.log("SUBSCRIBE");
+    },
+    onSuccess() {
+      console.log("Successful");
+    },
+    onError() {
+      console.log("Error");
+    }
   }
 };
 </script>
@@ -121,6 +163,13 @@ header {
 .footer-message {
   text-align: center;
   font-size: 2.4rem;
+}
+.alert {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  /* color: #fff; */
+  font-weight: normal;
 }
 
 // .blob-container {
