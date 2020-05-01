@@ -1,18 +1,7 @@
 <template>
   <div class="padmini">
-    <div class="profileCardContainer">
-      <ProfileCard 
-        v-for="(profiles, i) in data"
-        :key="i"
-        :name="profiles.name"
-        :title="profiles.title"
-        :color="profiles.color"
-        class="cardContainer"
-      >
-        <!-- <div class="test"></div> -->
-      </ProfileCard>
-    </div>
-    <div class="profileModalContainer">
+    <div class="overlay" v-show="hideOverlay" @click="closeOverlay">
+      <div class="modalHolder"><div class="profileModalContainer" v-show="hideModal">
       <ProfileModal
         v-for="(profiles, i) in data"
         :key="i" 
@@ -22,7 +11,21 @@
         class="modalContainer"
       >
       </ProfileModal>
+    </div></div>
     </div>
+    <div class="profileCardContainer" @click="showModal">
+      <ProfileCard class="cardContainer"
+        v-for="(profiles, i) in data"
+        :key="i"
+        :id="profiles.id"
+        :name="profiles.name"
+        :title="profiles.title"
+        :color="profiles.color"
+        >
+        <!-- <div class="test"></div> -->
+      </ProfileCard>
+    </div>
+    
   </div>
 </template>
 
@@ -39,9 +42,28 @@ export default {
   data() {
     return {
       data,
+      showCard: true,
+      hideModal: false,
+      hideOverlay: false
     };
   },
-  methods: {}
+  methods: {
+    hideCard: function(){
+      this.showCard=false;
+    },
+    showModal: function(){
+      this.hideModal=true;
+      this.hideOverlay=true;
+      this.$props.profiles.id=1;
+    },
+    // showOverlay: function(){
+    //   this.hideOverlay=true;
+    //   console.log("whatthefuck");
+    // },
+    closeOverlay: function(){
+      this.hideOverlay=false;
+    }
+  }
 }
 </script>
 
@@ -64,5 +86,23 @@ export default {
   margin: 0 1rem;
 }
 
+.overlay {     
+  position: absolute;  
+  z-index: 1000;   
+  display: flex;     
+  justify-content: center;     
+  align-items: center;     
+  width: 100vw;     
+  height: 100vh;     
+  background: rgba(0, 0, 0, 0.5); 
+  left: 0;
+  top: 0;
+  }
+
+  .modalHolder{
+    width:500px;
+    height:500px;
+    background-color:red;
+  }
 
 </style>

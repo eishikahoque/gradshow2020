@@ -1,12 +1,14 @@
 export const data = 
    [
         {
+            id: 1,
             name: "Padmini Smith",
             title: "Product Designer",
             color: "#FDDDFF",
             bio: "Event planner turned designer focused on user experience & project management, and skilled in front-end & back-end development"
         },
-        {
+        {   
+            id: 2,
             name: "Eishika Hoque Mostafiz",
             title: "Front-End Developer",
             color: "#C6EFFF",

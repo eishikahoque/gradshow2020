@@ -17,7 +17,7 @@
 
 export default {
   name: "profilecard",
-  props: ["name", "title", "color"],
+  props: ["name", "title", "color", "id", "bio"],
   components: {},
   data() {
     return {
