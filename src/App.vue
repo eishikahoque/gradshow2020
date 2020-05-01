@@ -1,20 +1,20 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <!-- navigation -->
-    </div>
+    <!-- MAIN BODY -->
     <router-view />
   </div>
 </template>
 
 <script>
-import "@/assets/css/gradshow.css";
+import "@/assets/css/gradshow.scss";
+
 export default {
   name: "GradShow",
+
   data: function() {
     return {};
   }
 };
 </script>
 
-<style></style>
+<style lang="scss"></style>
