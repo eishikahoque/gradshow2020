@@ -74,6 +74,8 @@ export default {
 }
 .newsletter label {
   padding-left: 3rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
 }
 .subscribe-btn {
   margin-top: 3rem;
