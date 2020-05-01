@@ -39,7 +39,9 @@ export default {
 .modal {
   width: 40rem; 
   height: 40rem;
-  background: linear-gradient(180deg, rgba(210,203,224,1) 0%, rgba(70,42,128,1) 65%);
+  background-image:  url('../assets/padmini.png'), linear-gradient(180deg, rgba(210,203,224,1) 0%, rgba(70,42,128,1) 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 3rem 4rem;
   display: flex; 
   flex-direction: column;
