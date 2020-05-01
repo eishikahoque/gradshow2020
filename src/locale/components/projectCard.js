@@ -7,7 +7,7 @@ export const data =
             image: "/path/img.png",
             students: "student1, student2, student3",
             link: "https://www.website.com",
-            mainColour: "#333"
+            mainColor: "#333"
         },
         {
             id: "02",
