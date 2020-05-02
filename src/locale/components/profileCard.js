@@ -181,5 +181,16 @@ export const data = [
 	},
 
 	{
-	
+		id: 14,
+		name: "Padmini Smith",
+		title: "Product Designer",
+		picture: "/static/images/padmini.png",
+		color: "#FDDDFF",
+		hash: ["UXDesigner", "frontenddev", "projectmanager"],
+		keywords: ["UXUI", "FE", "PM"],
+		portfolio: "https://www.padminismith.com/",
+		social: "https://www.linkedin.com/in/padmini-smith",
+		blurb:
+			"Event planner turned designer focused on user experience & project management, and skilled in front-end & back-end development",
+	},
 ];
