@@ -3,11 +3,12 @@
     <div class="imageGradient" v-bind:style="{backgroundImage: `linear-gradient(180deg, rgba(151,135,184,0.4) 0%, rgba(71,43,122,0.95) 100%), url(${profile.picture})`}">
       <section class="jobTitleRow">
         <div class="jobTitle">
-          <span>{{ profile.hash1 }}</span>
-          <i class="fas fa-circle"></i>
-          <span>{{ profile.hash2 }}</span>
-          <i class="fas fa-circle"></i>
-          <span>{{ profile.hash3 }}</span>
+          <span
+            v-for="(hash, i) in profile.hash"
+            :key="i"
+          >
+          {{ hash }} <template v-if="i < profile.hash.length - 1">  |  </template>
+          </span>
         </div>
         <span>
           <i class="fas fa-times"></i>
@@ -169,13 +170,13 @@ export default {
 @include media-breakpoint-down(sm) {
   .modal {
     max-width: 95vw;
-    max-height: 65vh;
+    max-height: 85vh;
   }
 
   .imageGradient {
     padding: 2rem;
     width: 95vw;
-    height: 65vh;
+    height: 85vh;
     background-size: contain;
   }
 

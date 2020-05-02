@@ -1,36 +1,28 @@
-<template> 
+<template>
   <main class="profilecard" @click="$emit('open-modal')">
     <div v-bind:style="{backgroundColor: color}">
       <img v-bind:src="image" class="cardImage" alt="student picture" />
     </div>
-    <div class="profilecardName">
-      {{ name }} &reg;
-    </div>
+    <div class="profilecardName">{{ name }} &reg;</div>
     <div class="profilecardTitle">
       {{ title }}
     </div>
   </main>
-
 </template>
 
 <script>
-
 export default {
   name: "profilecard",
   props: ["name", "title", "color", "id", "bio", "image"],
   components: {},
   data() {
-    return {
-    //   data,
-    };
+    return {};
   },
   methods: {}
-
 };
 </script>
 
 <style scoped>
-
 .profilecard {
   background-color: white;
   margin: 1rem;
@@ -56,5 +48,4 @@ export default {
 .cardImage {
   display: flex;
 }
-
 </style>
