@@ -1,11 +1,18 @@
 <template>
   <main class="modal">
     <div class="imageGradient" v-bind:style="{backgroundImage: `linear-gradient(180deg, rgba(151,135,184,0.4) 0%, rgba(71,43,122,0.95) 100%), url(${profile.picture})`}">
-      <div class="jobTitle">
-        {{ profile.hash1 }}
-        {{ profile.hash2 }}
-        {{ profile.hash3 }}
-      </div>
+      <section class="jobTitleRow">
+        <div class="jobTitle">
+          <span>{{ profile.hash1 }}</span>
+          <i class="fas fa-circle"></i>
+          <span>{{ profile.hash2 }}</span>
+          <i class="fas fa-circle"></i>
+          <span>{{ profile.hash3 }}</span>
+        </div>
+        <span>
+          <i class="fas fa-times"></i>
+        </span>
+      </section>
       <section class="studentDescription">
         <div class="className">
           IMM 2020
@@ -16,12 +23,15 @@
         <div class="studentBlurb">
           {{ profile.blurb }}
         </div>
-        <button class="button button-outline" 
-          target="_blank"
-          @click="viewPortfolio"
-        >
-          View Portfolio
-        </button>
+        <div class="modalButtonRow">
+          <button class="button button-outline" 
+            target="_blank"
+            @click="viewPortfolio"
+          >
+            View Portfolio
+          </button>
+          <img src="/static/images/LinkedInlogo.svg" alt="linkedin icon" class="linkedinIcon" @click="redirectLinkedIn" />
+        </div>
       </section>
     </div>
   </main>
@@ -35,21 +45,26 @@ export default {
   components: {},
   data() {
     return {
-      // portfolio: this.props.profile.portfolio
+
     };
   },
   methods: {
     viewPortfolio: function() {
       window.open(this.profile.portfolio, "_blank");
+    },
+    redirectLinkedIn: function() {
+      window.open(this.profile.social, "_blank");
     }
   }
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+  @import "@/styles/mixins/breakpoints";
+
 .modal {
-  width: 50rem; 
-  height: 50rem;
+  max-width: 60rem; 
+  max-height: 60rem;
   background-color: white;
 }
 
@@ -61,16 +76,31 @@ export default {
   padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
-  width: 50rem;
-  height: 50rem;
+  width: 60rem;
+  height: 60rem;
+}
+
+.fas.fa-circle {
+  font-size: 8px;
+  margin: 8px;
+}
+
+.fas.fa-times {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.jobTitleRow {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
 }
 
 .jobTitle {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.6rem;
   display: flex; 
   justify-content: flex-end;
-  flex: 1;
   color: white;
 }
 
@@ -83,7 +113,7 @@ export default {
 .className {
   color: #FBB6CB;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.3125rem;
+  font-size: 2.1rem;
   font-weight: 600;
 }
 
@@ -99,8 +129,13 @@ export default {
 .studentBlurb {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 1.25rem;
+  font-size: 1.6rem;
   color: white;
+}
+
+.modalButtonRow {
+  display: flex; 
+  justify-content: space-between;
 }
 
 .button.button-outline {
@@ -115,4 +150,69 @@ export default {
   border-color: white;
 }
 
+.linkedinIcon {
+  margin-right: 3rem;
+}
+
+
+@include media-breakpoint-up(sm) {
+  .imageGradient {
+    padding: 3rem;  
+  }
+
+  .jobTitle {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .modal {
+    max-width: 95vw;
+    max-height: 65vh;
+  }
+
+  .imageGradient {
+    padding: 2rem;
+    width: 95vw;
+    height: 65vh;
+    background-size: contain;
+  }
+
+  .jobTitle {
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  .fas.fa-circle {
+    font-size: 3px;
+    margin: 4px;
+  }
+
+  .fas.fa-times {
+    font-size: 1.6rem;
+  }
+
+  .jobTitle {
+    font-size: 1.6rem;
+  }
+
+  .className {
+    font-size: 1.6rem;
+  }
+
+  .studentName {
+    font-size: 2.4rem;
+  }
+
+  .studentBlurb {
+    font-size: 1.6rem;
+  }
+
+  .button.button-outline {
+    margin-top: 1rem;
+    max-width: 100%;
+  }
+
+}
 </style>
