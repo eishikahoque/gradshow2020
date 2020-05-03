@@ -31,7 +31,7 @@ export default {
   background-color: white;
   margin: 1rem;
   padding: 1rem;
-  max-width: 25rem;
+  border-radius: 5px;
 }
 
 .profilecardName {

@@ -81,8 +81,8 @@ export default {
           value: "PM"
         },
         {
-          label: "Back-End Developer",
-          value: "BE"
+          label: "Other",
+          value: "OT"
         }
       ],
       selectedFilterIndex: 0,
@@ -97,11 +97,13 @@ export default {
       this.showCard = false;
     },
     showModal: function(profileId) {
+      document.body.style.overflow = "hidden";
       this.hideModal = true;
       this.hideOverlay = true;
       this.currentProfile = this.filteredData[profileId];
     },
     closeOverlay: function() {
+      document.body.style.overflow = "auto";
       this.hideOverlay = false;
     },
     filterStudents: function(selectedFilter) {
@@ -118,6 +120,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/styles/mixins/typography";
+@import "@/styles/mixins/breakpoints";
 
 .padmini {
   background-color: #f6fbfe;
@@ -158,12 +161,13 @@ export default {
   display: flex;
   &.blurContainer {
     filter: blur(5px);
+    overflow: hidden;
   }
 }
 
 .profileCardContainer {
-  display: flex;
-  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   &.blurContainer {
     filter: blur(5px);
   }
@@ -179,15 +183,27 @@ export default {
 }
 
 .overlay {
-  position: absolute;
-  z-index: 1000;
+  position: fixed;
+  z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background: rgba($color: #000000, $alpha: 0.8);
-  left: 0;
-  top: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@include media-breakpoint-up(sm) {
+  .profileCardContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@include media-breakpoint-up(md) {
+  .profileCardContainer {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 </style>
