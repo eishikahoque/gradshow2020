@@ -1,6 +1,7 @@
 <template>
   <main class="modal">
     <div
+      v-if="profile && profile.picture"
       class="imageGradient"
       v-bind:style="{
         backgroundImage: `linear-gradient(180deg, rgba(130, 107, 176,0.4) 0%, rgba(71,43,122,0.95) 100%), 
@@ -29,7 +30,7 @@
           {{ profile.blurb }}
         </div>
         <div class="modalButtonRow">
-          <button 
+          <button
             class="button button-outline"
             target="_blank"
             @click="viewPortfolio"
@@ -71,7 +72,7 @@ export default {
 @import "@/styles/mixins/breakpoints";
 
 .modal {
-  max-width: 60rem; 
+  max-width: 60rem;
   max-height: 60rem;
   background-color: white;
 }
@@ -107,7 +108,7 @@ export default {
 .jobTitle {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
-  display: flex; 
+  display: flex;
   justify-content: flex-end;
   color: white;
 }
@@ -119,7 +120,7 @@ export default {
 }
 
 .className {
-  color: #FBB6CB;
+  color: #fbb6cb;
   font-family: "Montserrat", sans-serif;
   font-size: 2.1rem;
   font-weight: 600;
@@ -161,7 +162,6 @@ export default {
 .linkedinIcon {
   margin-right: 3rem;
 }
-
 
 @include media-breakpoint-up(sm) {
   .imageGradient {

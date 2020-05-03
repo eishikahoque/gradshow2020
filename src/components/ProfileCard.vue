@@ -1,6 +1,6 @@
 <template>
   <main class="profilecard" @click="$emit('open-modal')">
-    <div 
+    <div
       v-bind:style="{
         backgroundColor: color
       }"
@@ -39,7 +39,7 @@ export default {
   font-size: 2.1rem;
   font-weight: 600;
   margin-top: 1rem;
-  color: #3E3E3E;
+  color: #3e3e3e;
 }
 
 .profilecardTitle {

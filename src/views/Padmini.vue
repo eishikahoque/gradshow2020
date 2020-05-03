@@ -2,14 +2,14 @@
   <div class="padmini">
     <section
       class="filteringSection"
-      v-bind:class="{ 'blurContainer': hideOverlay }"
+      v-bind:class="{ blurContainer: hideOverlay }"
     >
       <h1 class="headerTitle">Students</h1>
       <div class="buttonContainer">
         <button
           class="filterBtn"
           v-for="(filter, i) in filters"
-          v-bind:class="{ 'active': i === selectedFilterIndex }"
+          v-bind:class="{ active: i === selectedFilterIndex }"
           data-toggle="buttons"
           :key="i"
           @click="filterStudents(filter.value)"
@@ -20,7 +20,7 @@
     </section>
     <div
       class="profileCardContainer"
-      v-bind:class="{ 'blurContainer': hideOverlay }"
+      v-bind:class="{ blurContainer: hideOverlay }"
     >
       <ProfileCard
         class="cardContainer"
@@ -106,18 +106,21 @@ export default {
     },
     filterStudents: function(selectedFilter) {
       this.selectedFilterIndex = this.filters.indexOf(selectedFilter);
-      this.filteredData = selectedFilter ? this.originalData.filter(item => item.keywords.indexOf(selectedFilter) !== -1)
+      this.filteredData = selectedFilter
+        ? this.originalData.filter(
+            item => item.keywords.indexOf(selectedFilter) !== -1
+          )
         : this.originalData;
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
 @import "@/styles/mixins/typography";
 
 .padmini {
-  background-color: #F6FBFE;
+  background-color: #f6fbfe;
   margin: 2rem 1rem;
 }
 
