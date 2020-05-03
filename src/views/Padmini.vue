@@ -123,7 +123,6 @@ export default {
 @import "@/styles/mixins/breakpoints";
 
 .padmini {
-  background-color: #f6fbfe;
   margin: 2rem 1rem;
 }
 
@@ -201,7 +200,7 @@ export default {
 
 @include media-breakpoint-up(sm) {
   .profileCardContainer {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .filterBtn {

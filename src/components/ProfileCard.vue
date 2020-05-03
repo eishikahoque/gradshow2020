@@ -35,7 +35,7 @@ export default {
   margin: 1rem;
   padding: 1rem;
   border-radius: 5px;
-  box-shadow: 4px 4px 16px -5px rgba(140, 140, 140, 1);
+  box-shadow: 4px 4px 16px -5px #cecece;
 }
 
 .profilecardName {
@@ -82,7 +82,7 @@ export default {
 
 @include media-breakpoint-up(sm) {
   .profilecard {
-    box-shadow: none;
+    box-shadow: 6px 6px 16px -5px #f4f5f6;
   }
 }
 
