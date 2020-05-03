@@ -230,7 +230,7 @@ export default {
     text-align: left;
   }
   .buttonContainer {
-    margin-left: 4rem;
+    margin-left: 8rem;
   }
 }
 </style>

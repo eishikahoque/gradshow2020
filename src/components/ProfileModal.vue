@@ -38,7 +38,7 @@
             View Portfolio
           </button>
           <img
-            src="/static/images/socialIcons/LinkedInlogo.svg"
+            src="/static/images/socialIcons/linkedin.svg"
             alt="linkedin icon"
             class="linkedinIcon"
             @click="redirectLinkedIn"
