@@ -38,7 +38,7 @@
             View Portfolio
           </button>
           <img
-            src="/static/images/LinkedInlogo.svg"
+            src="/static/images/socialIcons/LinkedInlogo.svg"
             alt="linkedin icon"
             class="linkedinIcon"
             @click="redirectLinkedIn"
@@ -62,7 +62,7 @@ export default {
       window.open(this.profile.portfolio, "_blank");
     },
     redirectLinkedIn: function() {
-      window.open(this.profile.social, "_blank");
+      window.open(this.profile.linkedin, "_blank");
     }
   }
 };

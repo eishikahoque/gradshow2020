@@ -4,7 +4,7 @@
       class="filteringSection"
       v-bind:class="{ blurContainer: hideOverlay }"
     >
-      <h1 class="headerTitle">Students</h1>
+      <h1 class="headerTitle">Graduates</h1>
       <div class="buttonContainer">
         <button
           class="filterBtn"
@@ -131,10 +131,14 @@ export default {
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
   color: $color-purple;
+  text-align: center;
 }
 
 .filterBtn {
   margin: 1rem;
+  line-height: 2.8rem;
+  height: 2.8rem;
+  padding: 0 1rem;
   background-color: $color-grey;
   border-color: $color-grey;
   color: $color-black;
@@ -143,6 +147,7 @@ export default {
     background-color: $color-purple;
     border-color: $color-purple;
     color: $color-white;
+    box-shadow: 4px 4px 16px -5px rgba(140, 140, 140, 1);
   }
 }
 
@@ -151,14 +156,12 @@ export default {
   background-color: $color-purple;
   border-color: $color-purple;
   color: $color-white;
-}
-
-.buttonContainer {
-  margin-left: 4rem;
+  box-shadow: 4px 4px 16px -5px rgba(140, 140, 140, 1);
 }
 
 .filteringSection {
   display: flex;
+  flex-direction: column;
   &.blurContainer {
     filter: blur(5px);
     overflow: hidden;
@@ -167,7 +170,7 @@ export default {
 
 .profileCardContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   &.blurContainer {
     filter: blur(5px);
   }
@@ -200,10 +203,35 @@ export default {
   .profileCardContainer {
     grid-template-columns: 1fr 1fr 1fr;
   }
+
+  .filterBtn {
+    line-height: 3.8rem;
+    height: 3.8rem;
+    padding: 0 3rem;
+  }
+
+  .filteringSection {
+    text-align: center;
+  }
 }
 @include media-breakpoint-up(md) {
   .profileCardContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@include media-breakpoint-up(lg) {
+  .headerTitle {
+    text-align: left;
+  }
+  .profileCardContainer {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .filteringSection {
+    flex-direction: row;
+    text-align: left;
+  }
+  .buttonContainer {
+    margin-left: 4rem;
   }
 }
 </style>

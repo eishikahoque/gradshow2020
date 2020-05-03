@@ -4,10 +4,11 @@
       v-bind:style="{
         backgroundColor: color
       }"
+      class="gradient"
     >
       <img v-bind:src="image" class="cardImage" alt="student picture" />
     </div>
-    <div class="profilecardName">{{ name }} &reg;</div>
+    <div class="profilecardName">{{ name }}&reg;</div>
     <div class="profilecardTitle">
       {{ title }}
     </div>
@@ -26,12 +27,15 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "@/styles/mixins/breakpoints";
+
 .profilecard {
   background-color: white;
   margin: 1rem;
   padding: 1rem;
   border-radius: 5px;
+  box-shadow: 4px 4px 16px -5px rgba(140, 140, 140, 1);
 }
 
 .profilecardName {
@@ -52,4 +56,35 @@ export default {
 .cardImage {
   display: flex;
 }
+
+.gradient {
+  position: relative;
+  background-color: color;
+  z-index: 1;
+}
+
+.gradient::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(315deg, #c5fbda, #c1a2fc);
+  z-index: -1;
+  transition: opacity 0.5s linear;
+  opacity: 0;
+}
+
+.gradient:hover::before {
+  opacity: 1;
+}
+
+@include media-breakpoint-up(sm) {
+  .profilecard {
+    box-shadow: none;
+  }
+}
+
+
 </style>
