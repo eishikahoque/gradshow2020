@@ -1,11 +1,16 @@
 <template>
   <div class="padmini">
-    <section class="filteringSection">
+    <section
+      class="filteringSection"
+      v-bind:class="{ 'blurContainer': hideOverlay }"
+    >
       <h1 class="headerTitle">Students</h1>
       <div class="buttonContainer">
-        <button 
+        <button
           class="filterBtn"
           v-for="(filter, i) in filters"
+          v-bind:class="{ 'active': i === selectedFilterIndex }"
+          data-toggle="buttons"
           :key="i"
           @click="filterStudents(filter.value)"
         >
@@ -13,8 +18,12 @@
         </button>
       </div>
     </section>
-    <div class="profileCardContainer">
-      <ProfileCard class="cardContainer"
+    <div
+      class="profileCardContainer"
+      v-bind:class="{ 'blurContainer': hideOverlay }"
+    >
+      <ProfileCard
+        class="cardContainer"
         v-for="(profiles, i) in filteredData"
         :key="i"
         @open-modal="showModal(i)"
@@ -23,15 +32,12 @@
         :title="profiles.title"
         :color="profiles.color"
         :image="profiles.picture"
-        >
+      >
       </ProfileCard>
     </div>
     <div class="overlay" v-show="hideOverlay" @click="closeOverlay">
       <div class="profileModalContainer" v-show="hideModal">
-        <ProfileModal
-          :profile="currentProfile"
-          class="modalContainer"
-        >
+        <ProfileModal :profile="currentProfile" class="modalContainer">
         </ProfileModal>
       </div>
     </div>
@@ -39,10 +45,10 @@
 </template>
 
 <script>
-import ProfileCard from '../components/ProfileCard.vue';
+import ProfileCard from "../components/ProfileCard.vue";
 import { data } from "../locale/components/profileCard.js";
-import ProfileModal from '../components/ProfileModal.vue';
-import Filter from '../components/Filter.vue';
+import ProfileModal from "../components/ProfileModal.vue";
+
 export default {
   name: "padmini",
   components: {
@@ -77,8 +83,9 @@ export default {
         {
           label: "Back-End Developer",
           value: "BE"
-        },
+        }
       ],
+      selectedFilterIndex: 0,
       currentProfile: null,
       showCard: true,
       hideModal: false,
@@ -86,19 +93,21 @@ export default {
     };
   },
   methods: {
-    hideCard: function(){
+    hideCard: function() {
       this.showCard = false;
     },
     showModal: function(profileId) {
       this.hideModal = true;
       this.hideOverlay = true;
-      this.currentProfile = this.data[profileId];
+      this.currentProfile = this.filteredData[profileId];
     },
-    closeOverlay: function(){
+    closeOverlay: function() {
       this.hideOverlay = false;
     },
     filterStudents: function(selectedFilter) {
-      this.filteredData = this.originalData.filter(item => item.keywords.indexOf(selectedFilter) !== -1);
+      this.selectedFilterIndex = this.filters.indexOf(selectedFilter);
+      this.filteredData = selectedFilter ? this.originalData.filter(item => item.keywords.indexOf(selectedFilter) !== -1)
+        : this.originalData;
     }
   }
 }
@@ -118,20 +127,43 @@ export default {
   color: $color-purple;
 }
 
+.filterBtn {
+  margin: 1rem;
+  background-color: $color-grey;
+  border-color: $color-grey;
+  color: $color-black;
+
+  &.active {
+    background-color: $color-purple;
+    border-color: $color-purple;
+    color: $color-white;
+  }
+}
+
+.filterBtn:focus,
+.filterBtn.active {
+  background-color: $color-purple;
+  border-color: $color-purple;
+  color: $color-white;
+}
+
+.buttonContainer {
+  margin-left: 4rem;
+}
 
 .filteringSection {
   display: flex;
-  justify-content: space-between;
+  &.blurContainer {
+    filter: blur(5px);
+  }
 }
 
 .profileCardContainer {
   display: flex;
   border-radius: 5px;
-  /* -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px); */
+  &.blurContainer {
+    filter: blur(5px);
+  }
 }
 
 .profileModalContainer {
@@ -143,17 +175,16 @@ export default {
   margin: 0 1rem;
 }
 
-.overlay {     
-  position: absolute;  
-  z-index: 1000;   
-  display: flex;     
-  justify-content: center;     
-  align-items: center;     
-  width: 100vw;     
-  height: 100vh;     
-  background: rgba(73, 73, 73, 0.5); 
+.overlay {
+  position: absolute;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: rgba($color: #000000, $alpha: 0.8);
   left: 0;
   top: 0;
-  }
-
+}
 </style>

@@ -1,13 +1,17 @@
 <template>
   <main class="modal">
-    <div class="imageGradient" v-bind:style="{backgroundImage: `linear-gradient(180deg, rgba(151,135,184,0.4) 0%, rgba(71,43,122,0.95) 100%), url(${profile.picture})`}">
+    <div
+      class="imageGradient"
+      v-bind:style="{
+        backgroundImage: `linear-gradient(180deg, rgba(130, 107, 176,0.4) 0%, rgba(71,43,122,0.95) 100%), 
+        url(${profile.picture})`
+      }"
+    >
       <section class="jobTitleRow">
         <div class="jobTitle">
-          <span
-            v-for="(hash, i) in profile.hash"
-            :key="i"
-          >
-          {{ hash }} <template v-if="i < profile.hash.length - 1">  |  </template>
+          <span v-for="(hash, i) in profile.hash" :key="i">
+            {{ hash }}
+            <template v-if="i < profile.hash.length - 1">|</template>
           </span>
         </div>
         <span>
@@ -25,13 +29,19 @@
           {{ profile.blurb }}
         </div>
         <div class="modalButtonRow">
-          <button class="button button-outline" 
+          <button 
+            class="button button-outline"
             target="_blank"
             @click="viewPortfolio"
           >
             View Portfolio
           </button>
-          <img src="/static/images/LinkedInlogo.svg" alt="linkedin icon" class="linkedinIcon" @click="redirectLinkedIn" />
+          <img
+            src="/static/images/LinkedInlogo.svg"
+            alt="linkedin icon"
+            class="linkedinIcon"
+            @click="redirectLinkedIn"
+          />
         </div>
       </section>
     </div>
@@ -39,15 +49,12 @@
 </template>
 
 <script>
-
 export default {
   name: "profilemodal",
   props: ["profile"],
   components: {},
   data() {
-    return {
-
-    };
+    return {};
   },
   methods: {
     viewPortfolio: function() {
@@ -57,11 +64,11 @@ export default {
       window.open(this.profile.social, "_blank");
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
-  @import "@/styles/mixins/breakpoints";
+@import "@/styles/mixins/breakpoints";
 
 .modal {
   max-width: 60rem; 
@@ -122,9 +129,9 @@ export default {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 3.5rem;
-  background: -webkit-linear-gradient(180deg, #c5fbda, #c6bdf5);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: linear-gradient(270deg, #c5fbda, #c6bdf5);
+  background-clip: text;
+  color: transparent;
 }
 
 .studentBlurb {
@@ -135,7 +142,7 @@ export default {
 }
 
 .modalButtonRow {
-  display: flex; 
+  display: flex;
   justify-content: space-between;
 }
 
@@ -143,7 +150,7 @@ export default {
   color: white;
   margin-top: 2rem;
   border-color: white;
-  max-width: 40%;
+  max-width: 100%;
 }
 
 .button.button-outline:hover {
@@ -158,7 +165,7 @@ export default {
 
 @include media-breakpoint-up(sm) {
   .imageGradient {
-    padding: 3rem;  
+    padding: 3rem;
   }
 
   .jobTitle {
@@ -214,6 +221,5 @@ export default {
     margin-top: 1rem;
     max-width: 100%;
   }
-
 }
 </style>

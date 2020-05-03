@@ -1,6 +1,10 @@
 <template>
   <main class="profilecard" @click="$emit('open-modal')">
-    <div v-bind:style="{backgroundColor: color}">
+    <div 
+      v-bind:style="{
+        backgroundColor: color
+      }"
+    >
       <img v-bind:src="image" class="cardImage" alt="student picture" />
     </div>
     <div class="profilecardName">{{ name }} &reg;</div>
@@ -27,7 +31,7 @@ export default {
   background-color: white;
   margin: 1rem;
   padding: 1rem;
-  max-width: 22rem;
+  max-width: 25rem;
 }
 
 .profilecardName {
@@ -35,7 +39,7 @@ export default {
   font-size: 2.1rem;
   font-weight: 600;
   margin-top: 1rem;
-  color: black;
+  color: #3E3E3E;
 }
 
 .profilecardTitle {
