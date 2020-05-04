@@ -170,6 +170,8 @@ export default {
 .profileCardContainer {
   display: grid;
   grid-template-columns: 1fr;
+  grid-column-gap: 2rem;
+  margin: 0 6rem;
   &.blurContainer {
     filter: blur(5px);
   }

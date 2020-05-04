@@ -18,7 +18,7 @@
 <script>
 export default {
   name: "profilecard",
-  props: ["name", "title", "color", "id", "bio", "image"],
+  props: ["name", "title", "color", "gradient", "id", "bio", "image"],
   components: {},
   data() {
     return {};
@@ -70,7 +70,7 @@ export default {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(315deg, #c5fbda, #c1a2fc);
+  background-image: linear-gradient(315deg, #c5fbda, #c9f0ff, #fddfff, #c1a2fc);
   z-index: -1;
   transition: opacity 0.5s linear;
   opacity: 0;

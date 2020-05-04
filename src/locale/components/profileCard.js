@@ -8,6 +8,8 @@ export const data = [
     hash: ["#ProductDesign", "#UXDesign", "#FrontEndDev"],
     keywords: ["UXUI", "UXUI", "FE"],
     portfolio: "https://alena.kim/",
+    twitter: "https://twitter.com/alenakim_06",
+    github: "https://github.com/AlenaK06",
     linkedin: "https://www.linkedin.com/in/alena-soojeong-kim",
     blurb:
       "I bridge delightful digital experiences and business goals through design. It is my goal to ease and enrich human-computer interactions."
@@ -34,6 +36,8 @@ export const data = [
     hash: ["#ProductDesign", "#UXDesign", "#FrontendDev"],
     keywords: ["UXUI", "UXUI", "FE"],
     portfolio: "https://www.ankit.life/",
+    dribble: "https://dribbble.com/ankitrajgupta",
+    github: "https://github.com/ankitraj77",
     linkedin: "https://www.linkedin.com/in/ankit-raj-gupta",
     blurb:
       "I'm passionate about problem-solving. I use data and scientific methods to navigate my way and create accessible user experiences."
@@ -73,6 +77,8 @@ export const data = [
     hash: ["#UXDesigner", "#InteractiveDesigner", "#GraphicDesigner"],
     keywords: ["UXUI", "UXUI", "UXUI"],
     portfolio: "http://www.dmantilla.com",
+    behance: "https://www.behance.net/dmantilla99",
+    github: "https://github.com/ernestica",
     linkedin: "https://www.linkedin.com/in/mantilld",
     blurb:
       "One of my passions in life is helping people by communicating ideas through good design and working with the community to create real social change."
@@ -98,6 +104,8 @@ export const data = [
     hash: ["#UI/UXDesign", "#ProductDesign", "#FrontendDev"],
     keywords: ["UXUI", "UXUI", "FE"],
     portfolio: "http://www.eileensantiago.com",
+    behance: "https://www.behance.net/eileenmsantiago",
+    github: "https://github.com/eileenmsantiago",
     linkedin: "https://www.linkedin.com/in/eileensantiago",
     blurb: ""
   },
@@ -163,6 +171,8 @@ export const data = [
     hash: ["#FrontEndDev", "#UXDesigner", "#ProductDesigner"],
     keywords: ["FE", "UXUI", "UXUI"],
     portfolio: "http://www.getmelily.com",
+    instagram: "https://www.instagram.com/designldh/",
+    dribble: "https://dribbble.com/getmelily",
     linkedin: "https://www.linkedin.com/in/eishikahoque",
     blurb:
       "UX/UI designer with 3+ years of experience. I have a passion for creating interactive digital products that empower people to achieve their goals. 💪"
@@ -188,6 +198,8 @@ export const data = [
     hash: ["#DigitalDesigner", "#ProductDesigner", "#FrontEndDev"],
     keywords: ["UXUI", "UXUI", "FE"],
     portfolio: "http://www.oliviaoleary.com/",
+    dribble: "https://dribbble.com/oliviaoleary",
+    github: "https://github.com/olearyo",
     linkedin: "https://www.linkedin.com/in/oliviaoleary",
     blurb:
       "A digital designer illustrator turned front-end developer, I like to design and code applications that will help others, but also have fun doing it!"
@@ -210,10 +222,12 @@ export const data = [
     name: "Rbia Gilani",
     title: "Product Designer",
     picture: "/static/images/studentImages/rbia.png",
-    color: "#C6EFFF",
+    color: "#FDDDFF",
     hash: ["#UI/UXDesigner", "#FrontendDev", "#ProductDesign"],
     keywords: ["UXUI", "FE", "UXUI"],
     portfolio: "http://www.rbiagilani.com",
+    behance: "https://www.behance.net/rbiagilani",
+    github: "https://github.com/rbiag",
     linkedin: "https://www.linkedin.com/in/rbia-gilani",
     blurb:
       "Using my passion for UX design and creative problem solving, I aim to develop applications that provide positive and meaningful user experiences"
@@ -240,6 +254,8 @@ export const data = [
     hash: ["#FrontEndDe", "#UXDesigner", "#BackEndDev"],
     keywords: ["FE", "UXUI", "BE"],
     portfolio: "http://shanruan.io",
+    codepen: "https://codepen.io/shanruan33",
+    github: "https://github.com/shanruan33",
     linkedin: "https://www.linkedin.com/in/shanruan",
     blurb:
       "I'm a developer and designer who motivated to integrate the art of programming with the beauty of design into web applications."
@@ -265,6 +281,8 @@ export const data = [
     hash: ["#UXDesigner", "#DigitalCoordinator", "#Copywriter"],
     keywords: ["UXUI", "OT", "OT"],
     portfolio: "http://ux.szerenaszabo.com",
+    twitter: "https://twitter.com/szerenasz",
+    instagram: "https://www.instagram.com/szerenasz/",
     linkedin: "https://www.linkedin.com/in/szerenaszabo",
     blurb:
       "Event planner turned designer focused on user experience & project management, and skilled in front-end & back-end development"
@@ -279,7 +297,8 @@ export const data = [
     keywords: ["FE", "UXUI", "OT"],
     portfolio: "http://tim-lu-design.com/",
     linkedin: "https://www.linkedin.com/in/tim-tianjia-lu",
-    blurb: ""
+    blurb:
+      "I love graphic design and interactive creativities. I dedicated myself on this to fit people's need.Remarkable!!!"
   },
   {
     id: 23,
@@ -290,8 +309,11 @@ export const data = [
     hash: ["#BackEndDev", "#FrontEndDev"],
     keywords: ["BE", "FE"],
     portfolio: "http://www.yanzhang.site",
+    codepen: "https://codepen.io/yanzhang-sheridan",
+    github: "https://github.com/yanzhang-sheridan",
     linkedin: "https://www.linkedin.com/in/getmelily",
-    blurb: ""
+    blurb:
+      "An experienced programmer keeps coding, building and learning with passion and discovery"
   },
   {
     id: 24,

@@ -37,12 +37,18 @@
           >
             View Portfolio
           </button>
-          <img
-            src="/static/images/socialIcons/linkedin.svg"
-            alt="linkedin icon"
-            class="linkedinIcon"
-            @click="redirectLinkedIn"
-          />
+          <div class="socialIconRow">
+            <template v-for="(icon, i) in availableIcons">
+              <img
+                :key="i"
+                v-if="profile[icon.name]"
+                v-bind:src="`/static/images/socialIcons/${icon.image}`"
+                alt="social icon"
+                class="socialIcon"
+                @click="redirectSocial(profile[icon.name])"
+              />
+            </template>
+          </div>
         </div>
       </section>
     </div>
@@ -55,14 +61,53 @@ export default {
   props: ["profile"],
   components: {},
   data() {
-    return {};
+    return {
+      availableIcons: [
+        {
+          name: "codepen",
+          image: "codepen.svg"
+        },
+        {
+          name: "dribble",
+          image: "dribble.svg"
+        },
+        {
+          name: "facebook",
+          image: "facebook.svg"
+        },
+        {
+          name: "instagram",
+          image: "instagram.svg"
+        },
+        {
+          name: "pinterest",
+          image: "pinterest.svg"
+        },
+        {
+          name: "twitter",
+          image: "twitter.svg"
+        },
+        {
+          name: "github",
+          image: "github.svg"
+        },
+        {
+          name: "behance",
+          image: "behance.svg"
+        },
+        {
+          name: "linkedin",
+          image: "linkedin.svg"
+        }
+      ]
+    };
   },
   methods: {
     viewPortfolio: function() {
       window.open(this.profile.portfolio, "_blank");
     },
-    redirectLinkedIn: function() {
-      window.open(this.profile.linkedin, "_blank");
+    redirectSocial: function(path) {
+      window.open(path, "_blank");
     }
   }
 };
@@ -138,14 +183,15 @@ export default {
 
 .modalButtonRow {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  max-width: 100%;
 }
 
 .button.button-outline {
   color: white;
   margin-top: 1rem;
   border-color: white;
-  max-width: 100%;
+  max-width: 60%;
 }
 
 .button.button-outline:hover {
@@ -153,8 +199,18 @@ export default {
   border-color: white;
 }
 
-.linkedinIcon {
-  margin-right: 3rem;
+.socialIconRow {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.socialIcon {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin: 0 1rem;
 }
 
 @include media-breakpoint-up(sm) {
@@ -169,6 +225,20 @@ export default {
 
   .hashtag {
     margin-right: 0.75rem;
+  }
+
+  .modalButtonRow {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .socialIconRow {
+    justify-content: flex-end;
+    margin: 0;
+  }
+  .button.button-outline {
+    max-width: 100%;
   }
 }
 
