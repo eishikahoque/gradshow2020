@@ -1,5 +1,4 @@
 <template> 
-  <!-- <div class="project-card" v-bind:style="{backgroundColor: mainColor}"> -->
   <div class="project-card">
     <div>
       <img v-bind:src="project.image" class="project-card__image" alt="project image" />
@@ -14,11 +13,9 @@
       <div class="profile-card__details-description">
         <p> {{ project.description }} </p>
       </div>
-      <a v-bind:href="project.link"> 
-        <!-- <button class="btn">  -->
+      <a v-bind:href="project.link" target="_blank"> 
           View Project 
           <img class="link-img" src="/static/images/Icons/arrow-right.svg"/>
-        <!-- </button>  -->
       </a>
     </div>
   </div>
@@ -61,10 +58,6 @@ export default {
     @include text-h3();
   }
 }
-
-// .btn {
-//   @include secondary-btn();
-// }
 
 .link-img {
   margin-left: 0.5rem;

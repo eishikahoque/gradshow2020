@@ -1,21 +1,21 @@
 export const data = 
     [
         {
-            id: "01",
+            id: 1,
             name: "YODAE",
             description: "Say what you want and draw doodles with your voice.",
             image: "/static/images/projectImages/yodae.svg",
             students: "Yang, Oby, Drahsya, Ankit, & Eileen",
             link: "https://www.theyodae.com",
-            mainColor: "#333"
+            keywords: ["app"]
         },
         {
-            id: "02",
+            id: 2,
             name: "Motiful",
             description: "Motiful is an App to help brighten your day. Connect with other users to send & receive a positive motivational message & bring a little additional joy to your life at anytime on Mobile!",
             image: "/static/images/projectImages/motiful.svg",
             students: "Padmini, Diana, Rob, & Lily",
             link: "https://huang23.dev.fast.sheridanc.on.ca/motiful/",
-            mainColor: "#fff"
+            keywords: ["ar/vr"]
         }
     ]
