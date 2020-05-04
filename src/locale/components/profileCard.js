@@ -187,6 +187,8 @@ export const data = [
 		keywords: ["UXUI", "UXUI", "UXUI"],
 		portfolio: "http://www.iamoby.com",
 		linkedin: "https://www.linkedin.com/in/iamoby",
+		instagram: "https://www.instagram.com/iamobyy/",
+		behance: "https://www.behance.net/iamoby",
 		blurb:
 			" I want to create web and immersive experiences that are memorable and strengthen human relationships",
 	},
