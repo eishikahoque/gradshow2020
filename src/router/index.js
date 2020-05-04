@@ -3,13 +3,14 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Padmini from "../views/Padmini.vue";
 
+import ComingSoon from "../views/ComingSoon.vue";
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home
+    name: "ComingSoon",
+    component: ComingSoon
   },
   {
     path: "/padmini",
@@ -17,13 +18,9 @@ const routes = [
     component: Padmini
   },
   {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
+    path: "/home",
+    name: "Home",
+    component: Home
   }
 ];
 
