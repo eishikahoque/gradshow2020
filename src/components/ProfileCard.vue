@@ -28,7 +28,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/styles/mixins/breakpoints";
+@import "@/styles/mixins/breakpoints.scss";
 
 .profilecard {
   background-color: white;

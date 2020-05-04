@@ -68,6 +68,10 @@ export default {
           image: "codepen.svg"
         },
         {
+          name: "behance",
+          image: "behance.svg"
+        },
+        {
           name: "dribble",
           image: "dribble.svg"
         },
@@ -92,10 +96,6 @@ export default {
           image: "github.svg"
         },
         {
-          name: "behance",
-          image: "behance.svg"
-        },
-        {
           name: "linkedin",
           image: "linkedin.svg"
         }
@@ -114,7 +114,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/styles/mixins/breakpoints";
+@import "@/styles/mixins/breakpoints.scss";
 
 .modal {
   max-width: 95vw;
@@ -208,8 +208,8 @@ export default {
 }
 
 .socialIcon {
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 4rem;
+  height: 3rem;
   margin: 0 1rem;
 }
 

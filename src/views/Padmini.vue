@@ -4,7 +4,7 @@
       class="filteringSection"
       v-bind:class="{ blurContainer: hideOverlay }"
     >
-      <h1 class="headerTitle">Graduates</h1>
+      <h2 class="headerTitle">Graduates</h2>
       <div class="buttonContainer">
         <button
           class="filterBtn"
@@ -123,11 +123,12 @@ export default {
 @import "@/styles/mixins/breakpoints";
 
 .padmini {
-  margin: 2rem 1rem;
+  margin: 2rem;
 }
 
 .headerTitle {
   font-weight: 700;
+  font-size: 5rem;
   font-family: "Montserrat", sans-serif;
   color: $color-purple;
   text-align: center;
@@ -138,6 +139,8 @@ export default {
   line-height: 2.8rem;
   height: 2.8rem;
   padding: 0 1rem;
+  border-radius: 3px;
+  font-weight: 400;
   background-color: $color-grey;
   border-color: $color-grey;
   color: $color-black;
