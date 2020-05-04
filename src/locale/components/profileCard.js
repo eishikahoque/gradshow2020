@@ -282,7 +282,10 @@ export const data = [
 		keywords: ["UXUI", "UXUI", "FE"],
 		portfolio: "http://www.steveyichenli.com",
 		linkedin: "https://www.linkedin.com/in/yichensteveli",
-		blurb: "",
+		behance: "https://www.behance.net/steveli",
+
+		blurb:
+			"A UI/UX Designer skilled in executing creative problem-solving approaches, applying user-centered principles, and shaping meaningful products.",
 	},
 	{
 		id: 21,
