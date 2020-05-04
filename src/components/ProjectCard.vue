@@ -1,22 +1,36 @@
 <template> 
-  <main class="projectcard" v-bind:style="{backgroundColor: mainColor}">
+  <!-- <div class="project-card" v-bind:style="{backgroundColor: mainColor}"> -->
+  <div class="project-card">
     <div>
-      <img v-bind:src="image" alt="project image" />
+      <img v-bind:src="project.image" class="project-card__image" alt="project image" />
     </div>
-    <div class="profilecardName">
-      <h2> {{ name }} </h2>
-      <h4> By: {{ students }} </h4>
-      <p> {{ description }} </p>
-      <a v-bind:href="link"> <button> See a Live Demo </button> </a>
+    <div class="profile-card__details">
+      <h3 class="profile-card__details-title">
+        {{ project.name }} 
+      </h3>
+      <div class="profile-card__details-authors">
+        By: {{ project.students }} 
+      </div>
+      <div class="profile-card__details-description">
+        <p> {{ project.description }} </p>
+      </div>
+      <a v-bind:href="project.link"> 
+        <!-- <button class="btn">  -->
+          View Project 
+          <img class="link-img" src="/static/images/Icons/arrow-right.svg"/>
+        <!-- </button>  -->
+      </a>
     </div>
-  </main>
+  </div>
 </template>
 
 <script>
 
 export default {
-  name: "projectcard",
-  props: ["id", "name", "description", "image", "students", "link", "mainColor"],
+  name: "projectCard",
+  props: {
+    project: Object
+  },
   components: {},
   data() {
     return {};
@@ -26,11 +40,34 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss">
+@import "@/styles/variables";
+@import "@/styles/mixins/typography";
+@import "@/styles/mixins/buttons";
+@import "@/styles/mixins/breakpoints";
 
-.projectcard {
-  background-color: white;
-  border: 1px solid black;
+.project-card {
+  background-color: $color-white;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 4px 4px 16px -5px #cecece;
+
+  &__image {
+    width: 100%;
+  }
+
+  &__details-title {
+    @include text-h3();
+  }
+}
+
+// .btn {
+//   @include secondary-btn();
+// }
+
+.link-img {
+  margin-left: 0.5rem;
 }
 
 </style>

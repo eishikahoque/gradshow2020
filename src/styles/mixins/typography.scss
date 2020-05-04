@@ -5,8 +5,6 @@
 }
 
 @mixin secondary-base {
-    // color: $color-purple;
-    // font-weight: bold;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -22,10 +20,15 @@
 
 @mixin text-h3 {
     @include secondary-base();
+    font-size: 28px;
+}
+@mixin text-h4 {
+    @include secondary-base();
+    // font-weight: bold;
     font-size: 24px;
 }
 
-@mixin text-h4 {
+@mixin text-h5 {
     @include secondary-base();
     font-size: 18px;
 }
