@@ -133,7 +133,7 @@ export default {
 }
 
 .fas.fa-times {
-  font-size: 1.6rem;
+  font-size: 2.5rem;
   color: white;
 }
 
