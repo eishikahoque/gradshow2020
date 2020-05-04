@@ -4,7 +4,7 @@
       <router-link class="navbar-brand js-scroll-trigger" to="/"
         >IMM 2020</router-link
       >
-      <button
+      <!-- <button
         class="navbar-toggler navbar-toggler-right"
         type="button"
         data-toggle="collapse"
@@ -14,7 +14,7 @@
         aria-label="Toggle navigation"
       >
         Menu <img src="../assets/images/bars-solid.svg" alt="" srcset="" />
-      </button>
+      </button> -->
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
           <li class="nav-item" v-for="(linkObj, ind) in navList" :key="ind">
@@ -41,19 +41,36 @@
 export default {
   data: () => ({
     navList: [
+      // {
+      //   name: "About",
+      //   path: "#about"
+      // },
+      // {
+      //   name: "Grads",
+      //   path: "#grads"
+      // },
+      // {
+      //   name: "Projects",
+      //   path: "#projects"
+      // },
+      // { name: "Location", path: "#location" }
+
       {
-        name: "About",
-        path: "#about"
+        name: "Location",
+        path: "#location"
+      },
+      {
+        name: "Projects",
+        path: "#projects"
       },
       {
         name: "Grads",
-        path: "#grads"
+        path: "#grad"
       },
       {
-        name: "Projectss",
-        path: "#projects"
-      },
-      { name: "Location", path: "#location" }
+        name: "About",
+        path: "#about"
+      }
     ]
   })
 };
@@ -62,6 +79,16 @@ export default {
 <style language="sass" scoped>
 #mainNav.navbar {
   background: rgba(0, 0, 0, 0.1);
+}
+
+#mainNav .navbar-toggler {
+  font-size: 12px;
+  right: 0;
+  padding: 13px;
+  text-transform: uppercase;
+  /* color: #fff; */
+  border: 0;
+  /* background-color: #7250a8; */
 }
 
 /* @media (min-width: 992px) {
@@ -73,15 +100,48 @@ export default {
     border: none;
     background-color: transparent;
   }
+
+  .navbar-expand-lg,
+  .navbar-expand-lg .navbar-nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+  }
+
+  .navbar-expand-lg {
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -ms-flex-pack: start;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+  }
 } */
 
-#mainNav .navbar-toggler {
-  font-size: 12px;
-  right: 0;
-  padding: 13px;
-  text-transform: uppercase;
-  /* color: #fff; */
-  border: 0;
-  /* background-color: #7250a8; */
+.navbar {
+  margin-bottom: 10px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /* background-color: #606c76; */
+}
+
+.navbar li {
+  float: right;
+  margin-bottom: 0;
+}
+
+.navbar li a {
+  display: block;
+  /* color: white; */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  background-color: #ab5dda;
 }
 </style>
