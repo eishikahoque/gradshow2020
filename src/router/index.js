@@ -4,14 +4,18 @@ import Home from "../views/Home.vue";
 import ComingSoon from "../views/ComingSoon.vue";
 Vue.use(VueRouter);
 
+function load(componentName) {
+  return () => import(`@/components/${componentName}.vue`);
+}
+
 const routes = [
+  // {
+  //   path: "/",
+  //   name: "ComingSoon",
+  //   component: ComingSoon
+  // },
   {
     path: "/",
-    name: "ComingSoon",
-    component: ComingSoon
-  },
-  {
-    path: "/home",
     name: "Home",
     component: Home
   }
