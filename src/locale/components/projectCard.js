@@ -1,21 +1,23 @@
 export const data = 
     [
         {
-            id: "01",
+            id: 1,
             name: "name",
             description: "description",
             image: "/path/img.png",
-            students: "student1, student2, student3",
+            students: ["student1", "student2", "student3"],
             link: "https://www.website.com",
-            mainColor: "#333"
+            mainColor: "#333",
+            keywords: ["mobile app"]
         },
         {
-            id: "02",
+            id: 2,
             name: "name",
             description: "description",
             image: "/path/img.png",
-            students: "student1, student2, student3",
+            students: ["student1", "student2", "student3"],
             link: "https://www.website.com",
-            mainColor: "#fff"
+            mainColor: "#fff",
+            keywords: ["desktop app"]
         }
     ]

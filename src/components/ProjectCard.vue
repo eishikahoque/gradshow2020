@@ -16,7 +16,7 @@
 
 export default {
   name: "projectcard",
-  props: ["id", "name", "description", "image", "students", "link", "mainColor"],
+  props: ["id", "name", "description", "image", "students", "link", "mainColor", "keywords"],
   components: {},
   data() {
     return {};
