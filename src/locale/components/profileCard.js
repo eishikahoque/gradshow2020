@@ -149,6 +149,9 @@ export const data = [
 		keywords: ["UXUI", "UXUI", "FE"],
 		portfolio: "http://www.hirafareed.com",
 		linkedin: "https://www.linkedin.com/in/hira-fareed",
+		instagram: "https://www.instagram.com/hira.designs/",
+		behance: "https://www.behance.net/hirafareed",
+
 		blurb:
 			"A problem solver with a passion for creating experiences that are meaningful, user driven and delightful.",
 	},
