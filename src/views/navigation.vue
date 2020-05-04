@@ -133,9 +133,18 @@ export default {
   margin-bottom: 0;
 }
 
+.navbar-brand {
+  float: left;
+  margin-bottom: 0;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
 .navbar li a {
   display: block;
-  /* color: white; */
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
