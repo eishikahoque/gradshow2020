@@ -4,15 +4,8 @@ import VueRouter from "vue-router";
 // import ComingSoon from "../views/ComingSoon.vue";
 Vue.use(VueRouter);
 
-<<<<<<< Updated upstream
 function load(componentName) {
   return () => import(`@/components/${componentName}.vue`);
-=======
-// eslint-disable-next-line prettier/prettier
-
-function load(componentName) {
-  return () => import(`@/views/${componentName}.vue`);
->>>>>>> Stashed changes
 }
 
 const routes = [

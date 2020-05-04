@@ -2,13 +2,8 @@
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
       <router-link class="navbar-brand js-scroll-trigger" to="/"
-<<<<<<< Updated upstream
         >IMM 2020</router-link
       >
-=======
-        >IMM 2020
-      </router-link>
->>>>>>> Stashed changes
       <button
         class="navbar-toggler navbar-toggler-right"
         type="button"
@@ -18,11 +13,7 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-<<<<<<< Updated upstream
         Menu <img src="../assets/images/bars-solid.svg" alt="" srcset="" />
-=======
-        Menu
->>>>>>> Stashed changes
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
@@ -58,24 +49,10 @@ export default {
         name: "Grads",
         path: "#grads"
       },
-<<<<<<< Updated upstream
-      {
-        name: "Projects",
-        path: "#projects"
-      },
-      {
-        name: "Location",
-        path: "#location"
-      }
-    ]
-  })
-};
-=======
       { name: "Location", path: "#location" }
     ]
   })
-}
->>>>>>> Stashed changes
+};
 </script>
 
 <style language="sass" scoped>
