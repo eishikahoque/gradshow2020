@@ -108,7 +108,8 @@ export const data = [
 		behance: "https://www.behance.net/eileenmsantiago",
 		github: "https://github.com/eileenmsantiago",
 		linkedin: "https://www.linkedin.com/in/eileensantiago",
-		blurb: "",
+		blurb:
+			"A designer who loves developing intuitive digital web experiences. I strive to fuse my visual & technical creativity to solve digital product problems.",
 	},
 	{
 		id: 9,
