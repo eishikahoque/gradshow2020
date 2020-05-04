@@ -49,6 +49,10 @@ export default {
         name: "Grads",
         path: "#grads"
       },
+      {
+        name: "Projectss",
+        path: "#projects"
+      },
       { name: "Location", path: "#location" }
     ]
   })
