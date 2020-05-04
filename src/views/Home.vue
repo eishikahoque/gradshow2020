@@ -1,21 +1,10 @@
 <template>
   <div>
-<<<<<<< Updated upstream
-=======
-    Home Page...
-    <!-- <div class="row">
-      <div class="col-sm-6 col-md-3">Col 1</div>
-      <div class="col-sm-6 col-md-3">Col 2</div>
-      <div class="col-sm-6 col-md-3">Col 3</div>
-      <div class="col-sm-6 col-md-3">Col 4</div>
-    </div> -->
->>>>>>> Stashed changes
     <!-- About -->
     <About></About>
 
     <!-- Grads -->
     <Grads></Grads>
-<<<<<<< Updated upstream
 
     <!-- Projects-->
     <Projects></Projects>
@@ -24,13 +13,6 @@
     <!-- Location -->
     <Location></Location>
 
-    <!-- Contact -->
-    <Contact></Contact>
-
-=======
-    <!-- Location -->
-    <Location></Location>
->>>>>>> Stashed changes
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
@@ -64,7 +46,6 @@
 </template>
 
 <script>
-<<<<<<< Updated upstream
 import About from "./about";
 import Grads from "./grads";
 import Projects from "./projects";
@@ -78,15 +59,6 @@ export default {
     Projects,
     Location
   }
-=======
-// @ is an alias to /src
-import About from "./about";
-import Grads from "./grads";
-import Location from "./location";
-export default {
-  name: "Home",
-  components: { About, Grads, Location }
->>>>>>> Stashed changes
 };
 </script>
 
