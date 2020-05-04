@@ -1,0 +1,51 @@
+@import '../variables';
+
+@mixin primary-base {
+    font-family: 'Open Sans', sans-serif;
+}
+
+@mixin secondary-base {
+    // color: $color-purple;
+    // font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@mixin text-h1 {
+    @include secondary-base();
+    font-size: 120px;
+}
+
+@mixin text-h2 {
+    @include secondary-base();
+    font-size: 80px;
+}
+
+@mixin text-h3 {
+    @include secondary-base();
+    font-size: 24px;
+}
+
+@mixin text-h4 {
+    @include secondary-base();
+    font-size: 18px;
+}
+
+@mixin text-body-sm {
+    @include primary-base();
+    font-size: 16px;
+}
+
+@mixin text-body-md {
+    @include primary-base();
+    font-size: 24px;
+}
+
+@mixin text-body-lg {
+    @include primary-base();
+    font-size: 32px;
+}
+
+@mixin text-body-xl {
+    @include primary-base();
+    font-size: 38px;
+}
