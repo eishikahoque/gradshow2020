@@ -162,6 +162,9 @@ export const data = [
 		keywords: ["OT", "FE", "UXUI"],
 		portfolio: "http://www.kailinmarie.com",
 		linkedin: "https://www.linkedin.com/in/kai-marie-scott-64b2b0b2",
+		twiiter: "http://www.twitter.com/sleepykiks",
+		codepen: "https://codepen.io/SleepyKiks",
+
 		blurb: "An ocean of creativty and passion!",
 	},
 	{
@@ -219,6 +222,8 @@ export const data = [
 		keywords: ["UXUI", "FE", "PM"],
 		portfolio: "https://www.padminismith.com",
 		linkedin: "https://www.linkedin.com/in/padmini-smith",
+		behance: "https://www.behance.net/padminismith",
+		youtube: "https://www.youtube.com/channel/UCccebYAwrSDTbkCEv-tXvAA",
 		blurb:
 			"Event planner turned designer focused on user experience & project management, and skilled in front-end & back-end development",
 	},
@@ -304,6 +309,8 @@ export const data = [
 		keywords: ["FE", "UXUI", "OT"],
 		portfolio: "http://tim-lu-design.com/",
 		linkedin: "https://www.linkedin.com/in/tim-tianjia-lu",
+		twitter: "https://twitter.com/9JIE1",
+		instagram: "https://www.instagram.com/tianjia.lu.7/",
 		blurb:
 			"I love graphic design and interactive creativities. I dedicated myself on this to fit people's need.Remarkable!!!",
 	},
