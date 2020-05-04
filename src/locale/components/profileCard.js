@@ -93,6 +93,7 @@ export const data = [
 		keywords: ["UXUI", "UXUI", "UXUI"],
 		portfolio: "http://www.drashyagohil.com",
 		linkedin: "https://www.linkedin.com/in/drashya-gohil",
+
 		blurb: "I play with emoti(c)ons, web and pen tool.  😄👨‍💻 ✒️",
 	},
 	{
@@ -245,6 +246,8 @@ export const data = [
 		keywords: ["UXUI", "UXUI", "PM"],
 		portfolio: "http://www.robcottignies.com",
 		linkedin: "https://www.linkedin.com/in/rob-cottignies-guelph",
+		twitter: "https://twitter.com/Maplesnake6ix",
+		behance: "https://www.behance.net/robcottignies",
 		blurb:
 			"As a former Architectural Technician whose design is as robust as his user-focused principles, I want users to get what they need as fast as possible",
 	},
@@ -328,6 +331,8 @@ export const data = [
 		keywords: ["UXUI", "UXUI", "FE"],
 		portfolio: "http://yangdesign.ca",
 		linkedin: "https://www.linkedin.com/in/yangzm018",
+		behance: "https://www.behance.net/yangzm",
+		dribble: "https://dribbble.com/Yangzm018",
 		blurb:
 			"I enjoy transferring people's needs to crafted pixels, and I believe aesthetics and human-centered design stand equally to create a better user experience.",
 	},
