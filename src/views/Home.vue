@@ -32,8 +32,7 @@
     <div class="row">
       <div class="col-12">
         <!-- Put student profiles component here -->
-        <!-- REMOVE BELOW H1 WHEN YOU PLACE YOUR COMPONENTS -->
-        <h1 id="profileSec">I'm Profile</h1>
+        <Profiles id="profileSec" />
       </div>
     </div>
 
@@ -50,9 +49,14 @@
 </template>
 
 <script>
+import Profiles from "../components/Profiles.vue";
+
 // @ is an alias to /src
 export default {
-  name: "Home"
+  name: "Home",
+  components: {
+    Profiles
+  }
 };
 </script>
 
