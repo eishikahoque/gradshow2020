@@ -120,6 +120,15 @@ export default {
   margin-bottom: 10px;
 }
 
+.navbar-brand {
+  float: left;
+  margin-bottom: 0;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
 .navbar ul {
   list-style-type: none;
   margin: 0;
@@ -131,15 +140,6 @@ export default {
 .navbar li {
   float: right;
   margin-bottom: 0;
-}
-
-.navbar-brand {
-  float: left;
-  margin-bottom: 0;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
 }
 
 .navbar li a {
