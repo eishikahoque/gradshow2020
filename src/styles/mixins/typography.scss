@@ -20,11 +20,13 @@
 
 @mixin text-h3 {
     @include secondary-base();
-    font-size: 28px;
+    font-size: 38px;
+    margin-bottom: 1.75rem;
 }
 @mixin text-h4 {
     @include secondary-base();
-    // font-weight: bold;
+    color: $color-black();
+    font-weight: bold;
     font-size: 24px;
 }
 
@@ -40,12 +42,13 @@
 
 @mixin text-body-md {
     @include primary-base();
-    font-size: 24px;
+    font-size: 18px;
+    line-height: 24px;
 }
 
 @mixin text-body-lg {
     @include primary-base();
-    font-size: 32px;
+    font-size: 22px;
 }
 
 @mixin text-body-xl {

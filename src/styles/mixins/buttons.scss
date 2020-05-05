@@ -1,15 +1,28 @@
 @import '../variables';
 
-@mixin primary-btn-color {
-    background-color: $color-purple;
+@mixin primary-btn {
+    @include text-h4();
+    background-color: none;
     border-color: $color-purple;
-    height: 60px;
-    padding: 0 30px;
-    color: $color-white;
+    color: $color-purple;
+    margin: 1rem;
+    padding: 0.75rem 1.75rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.10rem;
 
     &:hover {
         background-color: $color-dark-purple;
         border-color: $color-dark-purple;
+        color: $color-white;
+    }
+
+    &.focus,
+    &.active {
+        background-color: $color-purple;
+        border-color: $color-purple;
+        color: $color-white;
+        box-shadow: 4px 4px 16px -5px rgba(140, 140, 140, 1);
     }
 }
 
@@ -24,3 +37,6 @@
         color: $color-dark-purple;
     }
 }
+
+
+

@@ -1,22 +1,36 @@
 <template> 
+    <!-- <div class="filteringSection">
+      <div class="buttonContainer">
+        <button
+          class="primary-btn"
+          v-for="(filter, i) in projFilters"
+          v-bind:class="{ active: i === selectedProjFilterIndex }"
+          data-toggle="buttons"
+          :key="i"
+          @click="filterProjects(filter.value)"
+        >
+          {{ filter.label }}
+        </button>
+      </div>
+    </div> -->
   <div class="project-card">
-    <div>
+    <div class="project-card__wrapper">
       <img v-bind:src="project.image" class="project-card__image" alt="project image" />
-    </div>
-    <div class="profile-card__details">
-      <h3 class="profile-card__details-title">
-        {{ project.name }} 
-      </h3>
-      <div class="profile-card__details-authors">
-        By: {{ project.students }} 
+      <div class="profile-card__details">
+        <h4 class="profile-card__details-title">
+          {{ project.name }} 
+        </h4>
+        <div class="profile-card__details-authors">
+          <p class="project-card__content">By: {{ project.students }} </p>
+        </div>
+        <div class="profile-card__details-description">
+          <p class="project-card__content"> {{ project.description }} </p>
+        </div>
+        <a v-bind:href="project.link" target="_blank"> 
+            View Project 
+            <img class="link-img" src="/static/images/Icons/arrow-right.svg"/>
+        </a>
       </div>
-      <div class="profile-card__details-description">
-        <p> {{ project.description }} </p>
-      </div>
-      <a v-bind:href="project.link" target="_blank"> 
-          View Project 
-          <img class="link-img" src="/static/images/Icons/arrow-right.svg"/>
-      </a>
     </div>
   </div>
 </template>
@@ -28,12 +42,13 @@ export default {
   props: {
     project: Object
   },
-  components: {},
+  components: {
+  },
+  
   data() {
     return {};
   },
   methods: {}
-
 };
 </script>
 
@@ -45,22 +60,42 @@ export default {
 
 .project-card {
   background-color: $color-white;
-  margin: 1rem;
-  padding: 1rem;
-  border-radius: 5px;
-  box-shadow: 4px 4px 16px -5px #cecece;
+  width: 100%;
+  // height: 650px;
+  // box-shadow: 4px 4px 16px -5px #cecece;
+  // counter-increment: project-card;
 
   &__image {
     width: 100%;
+    margin-bottom: 2rem;
   }
 
   &__details-title {
-    @include text-h3();
+    @include text-h4();
+    margin-bottom: 2rem;
+    color: $color-black;
+  }
+
+  &__wrapper {
+    padding: 1.5rem;
+  }
+
+  &__content {
+    @include text-body-md();
+    font-weight: 600;
+    color: $color-black;
+    margin-bottom: 1rem;
   }
 }
 
 .link-img {
   margin-left: 0.5rem;
 }
+
+// @include media-breakpoint-up(sm) {
+//   .project-card {
+//     width: 100%;
+//   }
+// }
 
 </style>

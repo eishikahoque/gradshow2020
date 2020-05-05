@@ -155,7 +155,7 @@ header {
   height: 80px;
   border-radius: 0px 24px 24px 0px;
   text-transform: unset;
-  @include primary-btn-color();
+  @include primary-btn();
 }
 
 .footer-message {
