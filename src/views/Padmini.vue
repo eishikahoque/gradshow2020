@@ -128,7 +128,7 @@ export default {
 
 .headerTitle {
   font-weight: 700;
-  font-size: 5rem;
+  font-size: 48px;
   font-family: "Montserrat", sans-serif;
   color: $color-purple;
   text-align: center;
@@ -173,8 +173,9 @@ export default {
 .profileCardContainer {
   display: grid;
   grid-template-columns: 1fr;
-  grid-column-gap: 2rem;
-  margin: 0 6rem;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  margin: 0 1rem;
   &.blurContainer {
     filter: blur(5px);
   }
@@ -182,7 +183,9 @@ export default {
 
 .profileModalContainer {
   display: flex;
-  margin: 1rem;
+  justify-content: center;
+  width: 85vw;
+  height: 95vh;
 }
 
 .modalContainer {
@@ -204,6 +207,9 @@ export default {
 }
 
 @include media-breakpoint-up(sm) {
+  .headerTitle {
+    font-size: 48px;
+  }
   .profileCardContainer {
     grid-template-columns: 1fr 1fr;
   }
@@ -219,6 +225,12 @@ export default {
   }
 }
 @include media-breakpoint-up(md) {
+  .profileModalContainer {
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+    height: 95vh;
+  }
   .profileCardContainer {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -229,6 +241,12 @@ export default {
   }
   .profileCardContainer {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .profileModalContainer {
+    display: flex;
+    justify-content: center;
+    width: 50vw;
+    height: 90vh;
   }
   .filteringSection {
     flex-direction: row;
