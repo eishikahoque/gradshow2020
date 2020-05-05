@@ -52,6 +52,8 @@ export const data = [
 		keywords: ["UXUI", "UXUI", "FE"],
 		portfolio: "http://www.chesmedia.com/",
 		linkedin: "https://www.linkedin.com/in/chesneygordonwilliams",
+		behance: "https://www.behance.net/chesneygw",
+		dribble: "https://dribbble.com/ChesneyGW/collections",
 		blurb:
 			"As a UX Designer I'm looking forward to using everything I've learned to create and build more intuitive user experiences",
 	},
@@ -65,6 +67,9 @@ export const data = [
 		keywords: ["FE", "UXUI", "OT"],
 		portfolio: "http://www.plungecreativemedia.com",
 		linkedin: "https://www.linkedin.com/in/darrenvaithilingam",
+		instagram: "https://www.instagram.com/plungecreativemedia/",
+		youtube:
+			"https://www.youtube.com/channel/UCXdVIgvaPkCyK2OtKGQJ12A/featured?view_as=subscriber",
 		blurb:
 			"My passion is to bring creations to life! With my skills in Audio, Video, Graphic, and now Web design, the ideas we can create is infinite!",
 	},
@@ -93,7 +98,8 @@ export const data = [
 		keywords: ["UXUI", "UXUI", "UXUI"],
 		portfolio: "http://www.drashyagohil.com",
 		linkedin: "https://www.linkedin.com/in/drashya-gohil",
-
+		instagram: "https://www.instagram.com/drashya_creates/",
+		dribble: "https://dribbble.com/drashya-creates",
 		blurb: "I play with emoti(c)ons, web and pen tool.  😄👨‍💻 ✒️",
 	},
 	{
