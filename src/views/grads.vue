@@ -1,6 +1,7 @@
 <template>
   <section class="page-section" id="grads">
     <div class="container">
+      <h1></h1>
       Grads Page...
       <div class="row">
         <div class="col-sm-6 col-md-3">Col 1</div>
@@ -18,3 +19,11 @@ export default {
   name: "Grads"
 };
 </script>
+
+<style scoped>
+/* REMOVE THIS ONCE YOU PLACE YOUR COMPONENTS */
+h1 {
+  min-height: 500px;
+}
+/* ========================================== */
+</style>

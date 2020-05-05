@@ -4,27 +4,32 @@
     <div class="row">
       <div class="col-12">
         <!-- Put navigation component here -->
-        <p>
+        <!-- <p>
           Navigation
-          <button v-scroll-to="'#introSec'">
-            Home
+          <button v-scroll-to="'#about'">
+            About
           </button>
-          <button v-scroll-to="'#profileSec'">
-            Profiles
+          <button v-scroll-to="'#grads'">
+            Grads
           </button>
-          <button v-scroll-to="'#projectSec'">
+          <button v-scroll-to="'#projects'">
             Projects
           </button>
-        </p>
+          <button v-scroll-to="'#location'">
+            Location
+          </button>
+        </p> -->
       </div>
     </div>
 
     <!-- ======== MAIN BODY -->
     <!-- INTRO -->
+
     <div class="row">
       <div class="col-12">
         <!-- Put intro component here -->
-        <h1 id="introSec">Hi. I'm Intro</h1>
+        <!-- <h1 id="about">I'm about section</h1>-->
+        <about></about>
       </div>
     </div>
 
@@ -33,7 +38,9 @@
       <div class="col-12">
         <!-- Put student profiles component here -->
         <!-- REMOVE BELOW H1 WHEN YOU PLACE YOUR COMPONENTS -->
-        <h1 id="profileSec">I'm Profile</h1>
+
+        <!-- <h1 id="grads">I'm grads section</h1> -->
+        <grads></grads>
       </div>
     </div>
 
@@ -42,10 +49,20 @@
       <div class="col-12">
         <!-- Put student projects component here -->
         <!-- REMOVE BELOW H1 WHEN YOU PLACE YOUR COMPONENTS -->
-        <h1 id="projectSec">I'm Projects</h1>
+        <!-- <h1 id="projects">I'm projects section</h1> -->
+        <projects></projects>
       </div>
     </div>
-    <!--  -->
+
+    <!-- Location -->
+    <div class="row">
+      <div class="col-12">
+        <!-- Put student projects component here -->
+        <!-- REMOVE BELOW H1 WHEN YOU PLACE YOUR COMPONENTS -->
+        <!-- <h1 id="location">I'm location section</h1> -->
+        <location></location>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -69,7 +86,7 @@ export default {
 <style scoped>
 /* REMOVE THIS ONCE YOU PLACE YOUR COMPONENTS */
 h1 {
-  min-height: 900px;
+  min-height: 600px;
 }
 /* ========================================== */
 </style>

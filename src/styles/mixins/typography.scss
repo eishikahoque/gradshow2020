@@ -35,6 +35,11 @@
     font-size: 16px;
 }
 
+@mixin text-nav-sm {
+    @include primary-base();
+    font-size: 12px;
+}
+
 @mixin text-body-md {
     @include primary-base();
     font-size: 24px;

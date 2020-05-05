@@ -7,8 +7,7 @@
 </template>
 
 <script>
-// eslint-disable-next-line prettier/prettier
-import Navigation from './views/navigation'
+import Navigation from "./components/Navigation";
 export default {
   name: "GradShow",
   components: {

@@ -1,6 +1,7 @@
 <template>
   <section class="page-section" id="about">
-    <div class="container">
+    <div class="container p-10">
+      <h1></h1>
       About Page...
       <div class="row">
         <div class="col-sm-6 col-md-3">Col 1</div>
@@ -18,3 +19,12 @@ export default {
   name: "About"
 };
 </script>
+
+<style scoped>
+/* REMOVE THIS ONCE YOU PLACE YOUR COMPONENTS */
+
+h1 {
+  min-height: 500px;
+}
+/* ========================================== */
+</style>
