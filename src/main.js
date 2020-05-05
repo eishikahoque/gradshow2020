@@ -4,6 +4,11 @@ import router from "./router";
 
 import "@/styles/main.scss";
 
+// FOR SMOOTH SCROLL
+// https://www.npmjs.com/package/vue-scrollto
+const VueScrollTo = require("vue-scrollto");
+Vue.use(VueScrollTo);
+
 Vue.config.productionTip = false;
 
 new Vue({
