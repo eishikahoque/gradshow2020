@@ -1,5 +1,5 @@
 <template>
-  <div class="padmini">
+  <div class="profiles">
     <section
       class="filteringSection"
       v-bind:class="{ blurContainer: hideOverlay }"
@@ -50,7 +50,7 @@ import { data } from "../locale/components/profileCard.js";
 import ProfileModal from "../components/ProfileModal.vue";
 
 export default {
-  name: "padmini",
+  name: "profiles",
   components: {
     ProfileCard,
     ProfileModal
@@ -122,7 +122,7 @@ export default {
 @import "@/styles/mixins/typography";
 @import "@/styles/mixins/breakpoints";
 
-.padmini {
+.profiles {
   margin: 2rem;
 }
 
