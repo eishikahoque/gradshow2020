@@ -142,6 +142,8 @@ export const data = [
 		keywords: ["UXUI", "UXUI", "FE"],
 		portfolio: "http://www.flora-zzz.com",
 		linkedin: "https://www.linkedin.com/in/flora-zuo-imm",
+		behance: "https://www.behance.net/wantingzuo9de1",
+		twitter: "https://twitter.com/Kiro_Meng",
 		blurb:
 			"From the moment I enter this world, I instinctively invent ways to have “fun”. I love creating new things that can “WOW” the world!!",
 	},
