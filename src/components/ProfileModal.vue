@@ -125,7 +125,7 @@ export default {
 .imageGradient {
   background-repeat: no-repeat;
   background-size: contain;
-  padding: 2rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   width: 95vw;
@@ -133,8 +133,10 @@ export default {
 }
 
 .fas.fa-times {
-  font-size: 2.5rem;
+  font-size: 18px;
   color: white;
+  cursor: pointer;
+
 }
 
 .jobTitleRow {
@@ -145,7 +147,7 @@ export default {
 
 .jobTitle {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.6rem;
+  font-size: 16px;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -161,14 +163,14 @@ export default {
 .className {
   color: #fbb6cb;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.6rem;
+  font-size: 21px;
   font-weight: 600;
 }
 
 .studentName {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 2.4rem;
+  font-size: 24px;
   background: linear-gradient(270deg, #c5fbda, #c6bdf5);
   background-clip: text;
   color: transparent;
@@ -177,7 +179,7 @@ export default {
 .studentBlurb {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 1.6rem;
+  font-size: 16px;
   color: white;
 }
 
@@ -190,8 +192,11 @@ export default {
 .button.button-outline {
   color: white;
   margin-top: 1rem;
+  background-color: transparent;
   border-color: white;
-  max-width: 60%;
+  max-width: 100%;
+  border-radius: 3px;
+  padding: 8px;
 }
 
 .button.button-outline:hover {
@@ -201,15 +206,15 @@ export default {
 
 .socialIconRow {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   width: 100%;
   margin: 1rem 0;
 }
 
 .socialIcon {
-  width: 4rem;
-  height: 3rem;
+  width: 24px;
+  height: 18px;
   margin: 0 1rem;
 }
 
@@ -235,26 +240,27 @@ export default {
 
   .socialIconRow {
     justify-content: flex-end;
-    margin: 0;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 0;
   }
   .button.button-outline {
-    max-width: 100%;
+    width: 100%;
   }
 }
 
 @include media-breakpoint-up(md) {
   .modal {
-    max-width: 60rem;
-    max-height: 60rem;
+    max-width: 70vw;
+    max-height: 90vh;
   }
 
   .imageGradient {
     padding: 3rem;
-    padding-top: 4rem;
     padding-bottom: 2rem;
-    width: 60rem;
-    height: 60rem;
-    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
   }
 
   .jobTitle {
@@ -263,28 +269,35 @@ export default {
   }
 
   .fas.fa-times {
-    font-size: 2.5rem;
+    font-size: 24px;
   }
 
   .jobTitle {
-    font-size: 1.8rem;
+    font-size: 18px;
   }
 
   .className {
-    font-size: 2.1rem;
+    font-size: 24px;
   }
 
   .studentName {
-    font-size: 3.4rem;
+    font-size: 38px;
   }
 
   .studentBlurb {
-    font-size: 1.8rem;
+    font-size: 18px;
   }
 
   .button.button-outline {
-    margin-top: 2rem;
-    max-width: 100%;
+    margin-top: 1rem;
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .socialIcon {
+    width: 32px;
+    height: 24px;
+    margin: 0 1rem;
   }
 }
 </style>

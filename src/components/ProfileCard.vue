@@ -8,7 +8,7 @@
     >
       <img v-bind:src="image" class="cardImage" alt="student picture" />
     </div>
-    <div class="profilecardName">{{ name }}&reg;</div>
+    <div class="profilecardName">{{ name }}</div>
     <div class="profilecardTitle">
       {{ title }}
     </div>
@@ -32,15 +32,16 @@ export default {
 
 .profilecard {
   background-color: white;
-  margin: 1rem;
   padding: 1rem;
   border-radius: 5px;
   box-shadow: 4px 4px 16px -5px #cecece;
+  max-width: 30rem;
+  cursor: pointer;
 }
 
 .profilecardName {
   font-family: "Open Sans", sans-serif;
-  font-size: 2.1rem;
+  font-size: 21px;
   font-weight: 600;
   margin-top: 1rem;
   color: #3e3e3e;
@@ -48,13 +49,15 @@ export default {
 
 .profilecardTitle {
   font-family: "Open Sans", sans-serif;
-  font-size: 1.6rem;
+  font-size: 16px;
   font-weight: 400;
   margin-bottom: 1rem;
 }
 
 .cardImage {
   display: flex;
+  width: 100%;
+  height: 100%;
 }
 
 .gradient {
