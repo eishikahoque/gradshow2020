@@ -1,17 +1,20 @@
 <template>
-  <div id="app">
-    <!-- MAIN BODY -->
-    <router-view />
-  </div>
+	<div id="app">
+		<Hero />
+		<AboutUs />
+		<!-- <router-view /> -->
+	</div>
 </template>
 
 <script>
+import Hero from "./components/Hero";
+import AboutUs from "./components/AboutUs";
 export default {
-  name: "GradShow",
-
-  data: function() {
-    return {};
-  }
+	name: "App",
+	components: {
+		Hero,
+		AboutUs,
+	},
 };
 </script>
 

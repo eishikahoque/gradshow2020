@@ -1,12 +1,15 @@
 <template>
 	<div class="hello">
-		<h1>IMM graduates of 2020!</h1>
+		<h2>Meet</h2>
+		<h2>Your Sheridan</h2>
+		<h2>IMM2020 GRADS</h2>
+		<p>See what they can do for you</p>
 	</div>
 </template>
 
 <script>
 export default {
-	name: "HelloWorld",
+	name: "Hero",
 	props: {
 		msg: String,
 	},
