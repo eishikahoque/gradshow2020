@@ -24,41 +24,13 @@
     
     <!-- ======== MAIN BODY -->
     <!-- HERO SECTION -->
-    <section class="container">
-      <div class="row justify-content-center">
-        <div class="col-10">
-          <h1 id="introSec"> Meet </h1>
-          <h1> Your Sheridan </h1>
-          <img
-            class="coming-soon-header"
-            :src="require(`../assets/images/${images.imm2020Grads}`)"
-            alt="IMM2020 Grads"
-          />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <h3> see what they can do for you </h3>
-        </div>
-      </div>
+    <section id="introSec" class="d-flex align-items-center">
+      <Hero />
     </section>
 
     <!-- ABOUT -->
-    <section class="container">
-      <div class="row">
-        <div class="col-12">
-          <h2 id="aboutSec"> About Us </h2>
-        </div>
-      </div>
-      <div class="row justify-content-md-end justify-content-sm-center">
-        <div class="col-11">
-          <p> The times might be uncertain, but our potential is iridescently bright. We are the 
-            upcoming designers, developers, and most importantly, problem solvers, who are excited 
-            to tackle the next challenge. If you are curious about what more the graduates can do 
-            for you, don’t be afraid to start a conversation. Take your time and flow through the 
-            web showcase of projects from design to development. </p>
-        </div>
-      </div>
+    <section id="aboutSec" class="d-flex align-items-center">
+      <AboutUs />
     </section>
 
     <!-- STUDENT PROFILES -->
@@ -84,13 +56,17 @@
 
 <script>
 // @ is an alias to /src
+import Hero from "../components/Hero";
+import AboutUs from "../components/AboutUs";
+
 export default {
   name: "Home",
+	components: {
+		Hero,
+		AboutUs,
+	},
   data: function(){
     return {
-      images: {
-        imm2020Grads: "imm2020-grads.svg"
-      },
       error: null,
       success: false,
       loading: true
@@ -109,8 +85,8 @@ export default {
 
 <style scoped>
 /* REMOVE THIS ONCE YOU PLACE YOUR COMPONENTS */
-/* h1 {
-  min-height: 900px;
-} */
+section {
+  min-height: 600px;
+}
 /* ========================================== */
 </style>
