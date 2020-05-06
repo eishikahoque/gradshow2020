@@ -24,21 +24,27 @@
     
     <!-- ======== MAIN BODY -->
     <!-- HERO SECTION -->
-    <div class="row">
-      <div class="col-12">
-        <!-- Put intro component here -->
-        <h1 id="introSec"> Meet </h1>
-        <h1> Your Sheridan </h1>
-        <img
-          class="coming-soon-header"
-          :src="require(`../assets/images/${images.imm2020Grads}`)"
-          alt="IMM2020 Grads"
-        />
+    <section class="container">
+      <div class="row justify-content-center">
+        <div class="col-10">
+          <h1 id="introSec"> Meet </h1>
+          <h1> Your Sheridan </h1>
+          <img
+            class="coming-soon-header"
+            :src="require(`../assets/images/${images.imm2020Grads}`)"
+            alt="IMM2020 Grads"
+          />
+        </div>
       </div>
-    </div>
+      <div class="row">
+        <div class="col-12">
+          <h3> see what they can do for you </h3>
+        </div>
+      </div>
+    </section>
 
     <!-- ABOUT -->
-    <div class="container">
+    <section class="container">
       <div class="row">
         <div class="col-12">
           <h2 id="aboutSec"> About Us </h2>
@@ -53,7 +59,7 @@
             web showcase of projects from design to development. </p>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- STUDENT PROFILES -->
     <div class="row">
