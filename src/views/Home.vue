@@ -43,8 +43,8 @@
         </swiper>
       </div>
       <div class="controls row project-carousel col-sm-12">
-        <div class="swiper-pagination col-lg" id="slide-counter" slot="pagination"></div>
-        <div class="swiper-buttons col-lg">
+        <div class="swiper-pagination" id="slide-counter" slot="pagination"></div>
+        <div class="swiper-buttons">
           <div class="swiper-button swiper-button-prev" id="btn-prev" slot="button-prev"></div>
           <div class="swiper-button swiper-button-next" id="btn-next" slot="button-next"></div>
         </div>
