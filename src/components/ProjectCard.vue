@@ -129,6 +129,9 @@ export default {
       margin: 1rem
   }
 
+  &:hover{
+    filter: invert(.5) sepia(2) saturate(5) hue-rotate(220deg);
+  }
 }
 
 .link-img {
