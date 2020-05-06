@@ -25,6 +25,7 @@
       <div class="col-12">
         <!-- Put intro component here -->
         <h1 id="introSec">Hi. I'm Intro</h1>
+        <BlobAnimation />
       </div>
     </div>
 
@@ -50,12 +51,14 @@
 
 <script>
 import Profiles from "../components/Profiles.vue";
+import BlobAnimation from "../components/BlobAnimation.vue";
 
 // @ is an alias to /src
 export default {
   name: "Home",
   components: {
-    Profiles
+    Profiles,
+    BlobAnimation
   }
 };
 </script>
