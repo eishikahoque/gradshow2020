@@ -40,11 +40,16 @@
               v-bind:project="project"
             />
           </swiper-slide>
-          <div class="swiper-pagination" id="slide-counter" slot="pagination"></div>
-          <div class="swiper-button swiper-button-prev" id="btn-prev" slot="button-prev"></div>
-          <div class="swiper-button swiper-button-next" id="btn-next" slot="button-next"></div>
         </swiper>
       </div>
+      <div class="controls row project-carousel col-sm-12">
+        <div class="swiper-pagination col-lg" id="slide-counter" slot="pagination"></div>
+        <div class="swiper-buttons col-lg">
+          <div class="swiper-button swiper-button-prev" id="btn-prev" slot="button-prev"></div>
+          <div class="swiper-button swiper-button-next" id="btn-next" slot="button-next"></div>
+        </div>
+      </div>
+
     </section>
   </div>
 </template>
@@ -155,10 +160,12 @@ export default {
 .swiper-pagination {
   @include text-h3();
   font-weight: 900;
+  text-align: left;
+
 
   &-fraction {
     margin-left: auto;
-    bottom: 1px;
+    bottom: 0px;
     left: 0; 
     width: 100%;
   }
@@ -169,14 +176,21 @@ export default {
   color: $color-white;
   width: 73px;
   height: 73px;
-  bottom: 2rem;
 }
+
 #btn-prev {
   background-color: $color-light-purple;
-  right: 5.1rem;
+  right: 5.2rem;
   left: auto;
 }
+
 #btn-next {
   background-color: $color-purple;
 }
+
+.controls{
+  margin-top:5rem;
+  margin-bottom:5rem;
+}
+
 </style>
