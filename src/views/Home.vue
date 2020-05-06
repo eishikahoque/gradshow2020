@@ -9,6 +9,9 @@
           <button v-scroll-to="'#introSec'">
             Home
           </button>
+          <button v-scroll-to="'#aboutSec'">
+            About
+          </button>
           <button v-scroll-to="'#profileSec'">
             Profiles
           </button>
@@ -18,13 +21,37 @@
         </p>
       </div>
     </div>
-
+    
     <!-- ======== MAIN BODY -->
-    <!-- INTRO -->
+    <!-- HERO SECTION -->
     <div class="row">
       <div class="col-12">
         <!-- Put intro component here -->
-        <h1 id="introSec">Hi. I'm Intro</h1>
+        <h1 id="introSec"> Meet </h1>
+        <h1> Your Sheridan </h1>
+        <img
+          class="coming-soon-header"
+          :src="require(`../assets/images/${images.imm2020Grads}`)"
+          alt="IMM2020 Grads"
+        />
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 id="aboutSec"> About Us </h2>
+        </div>
+      </div>
+      <div class="row justify-content-md-end justify-content-sm-center">
+        <div class="col-11">
+          <p> The times might be uncertain, but our potential is iridescently bright. We are the 
+            upcoming designers, developers, and most importantly, problem solvers, who are excited 
+            to tackle the next challenge. If you are curious about what more the graduates can do 
+            for you, don’t be afraid to start a conversation. Take your time and flow through the 
+            web showcase of projects from design to development. </p>
+        </div>
       </div>
     </div>
 
@@ -52,14 +79,32 @@
 <script>
 // @ is an alias to /src
 export default {
-  name: "Home"
+  name: "Home",
+  data: function(){
+    return {
+      images: {
+        imm2020Grads: "imm2020-grads.svg"
+      },
+      error: null,
+      success: false,
+      loading: true
+    };
+  },
+  methods: {
+    onSuccess(){
+      console.log("Successful");
+    },
+    onError(){
+      console.log("Error")
+    }
+  }
 };
 </script>
 
 <style scoped>
 /* REMOVE THIS ONCE YOU PLACE YOUR COMPONENTS */
-h1 {
+/* h1 {
   min-height: 900px;
-}
+} */
 /* ========================================== */
 </style>
