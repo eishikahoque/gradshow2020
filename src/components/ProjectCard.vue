@@ -25,11 +25,24 @@
         </div>
         <div class="profile-card__details-description">
           <p class="project-card__content"> {{ project.description }} </p>
+          <div class="project-card__links">
+            <template v-for="(icon, i) in projectIcons">
+              <img
+                :key="i"
+                v-if="project[icon.name]"
+                v-bind:src="`/static/images/socialIcons/${icon.image}`"
+                alt="project icon"
+                class="projectIcon"
+                @click="viewProject(project[icon.name])"
+              />
+            </template>
+          </div>
         </div>
+<!-- 
         <a v-bind:href="project.link" target="_blank"> 
             View Project 
             <img class="link-img" src="/static/images/Icons/arrow-right.svg"/>
-        </a>
+        </a> -->
       </div>
     </div>
   </div>
@@ -46,9 +59,28 @@ export default {
   },
   
   data() {
-    return {};
+    return {
+      projectIcons: [
+        {
+          name: "info",
+          image: "info.svg"
+        },
+        {
+          name: "link",
+          image: "link.svg"
+        },
+        {
+          name: "media",
+          image: "media.svg"
+        },
+      ],
+    };
   },
-  methods: {}
+  methods: {
+    viewProject: function(path) {
+      window.open(path, "_blank");
+    }
+  }
 };
 </script>
 
@@ -86,6 +118,17 @@ export default {
     color: $color-black;
     margin-bottom: 1rem;
   }
+}
+
+.projectIcon{
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+
+  &:not(:first-child) {
+      margin: 1rem
+  }
+
 }
 
 .link-img {
