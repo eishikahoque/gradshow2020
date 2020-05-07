@@ -109,11 +109,16 @@ export default {
     height: 100%;
     display: flex;
     flex-direction: column;
+
     &-title {
     @include text-h4();
     display: flex;
     margin-bottom: 2rem;
     color: $color-black;
+    }
+
+    &-authors {
+      font-weight: 900;
     }
 
     &-description {

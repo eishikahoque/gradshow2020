@@ -101,7 +101,7 @@ export default {
       ],
       swiperOptions: {
           slidesPerView: 1.5,
-          spaceBetween: 40,
+          spaceBetween: 20,
           pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -112,7 +112,12 @@ export default {
             prevEl: '.swiper-button-prev'
           },
           breakpoints: {
-            '768': {
+            '576': {
+              spaceBetween: 20,
+              slidesPerView: 2,
+            },
+            '992': {
+              spaceBetween: 30,
               slidesPerView: 2.5,
             }
           }
