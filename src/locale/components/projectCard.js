@@ -3,7 +3,7 @@ export const data =
         {
             id: 1,
             name: "YODAE",
-            description: "Say what you want and draw doodles with your voice.",
+            description: "It’s an experimental project that uses Google Speech API and Natural Language API to interpret voice commands and render doodles using Quick,Draw! database. Our goal for you, is to have a fun doodling web experience.",
             image: "/static/images/projectImages/yodae.svg",
             students: "Yang, Oby, Drahsya, Ankit, & Eileen",
             link: "https://www.theyodae.com",

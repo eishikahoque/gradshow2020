@@ -2,7 +2,7 @@
 
 @mixin primary-btn {
     @include text-h4();
-    background-color: none;
+    background-color: $color-white;
     border-color: $color-purple;
     color: $color-purple;
     margin: 1rem;

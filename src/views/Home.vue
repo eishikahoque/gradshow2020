@@ -27,29 +27,30 @@
           </button>
         </div>
       </div>
-      <div class="row project-carousel col-sm-12">
-        <swiper 
-          ref="mySwiper" 
-          class="swiper" 
-          :options="swiperOptions"
-        >
-          <swiper-slide
-            v-for="(project, i) in filteredProjData" :key="i"
+      <div class="project-carousel">
+        <div class="project-carousel__cards">
+          <swiper 
+            ref="mySwiper" 
+            class="swiper" 
+            :options="swiperOptions"
           >
-            <ProjectCard
-              v-bind:project="project"
-            />
-          </swiper-slide>
-        </swiper>
-      </div>
-      <div class="controls row project-carousel col-sm-12">
-        <div class="swiper-pagination" id="slide-counter" slot="pagination"></div>
-        <div class="swiper-buttons">
-          <div class="swiper-button swiper-button-prev" id="btn-prev" slot="button-prev"></div>
-          <div class="swiper-button swiper-button-next" id="btn-next" slot="button-next"></div>
+            <swiper-slide
+              v-for="(project, i) in filteredProjData" :key="i"
+            >
+              <ProjectCard
+                v-bind:project="project"
+              />
+            </swiper-slide>
+          </swiper>
+        </div>
+        <div class="controls">
+          <div class="swiper-pagination" id="slide-counter" slot="pagination"></div>
+          <div class="swiper-buttons">
+            <div class="swiper-button swiper-button-prev" id="btn-prev" slot="button-prev"></div>
+            <div class="swiper-button swiper-button-next" id="btn-next" slot="button-next"></div>
+          </div>
         </div>
       </div>
-
     </section>
   </div>
 </template>
@@ -100,7 +101,7 @@ export default {
       ],
       swiperOptions: {
           slidesPerView: 1.5,
-          spaceBetween: 50,
+          spaceBetween: 40,
           pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -110,6 +111,11 @@ export default {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev'
           },
+          breakpoints: {
+            '768': {
+              slidesPerView: 2.5,
+            }
+          }
       },
       selectedProjFilterIndex: 0
     };
@@ -148,7 +154,12 @@ export default {
 }
 
 .project-carousel {
-  padding-left: 20px
+  padding-left: 20px;
+
+  &__cards {
+    align-items: stretch;
+    margin-bottom: 4rem;
+  }
 }
 
 .filteringSection {
@@ -157,25 +168,33 @@ export default {
   width: 70%;
 }
 
+.swiper-wrapper {
+  display: flex;
+  align-items: stretch;
+}
+.swiper-slide {
+  display: flex;
+  height: unset;
+}
+
 .swiper-pagination {
   @include text-h3();
   font-weight: 900;
   text-align: left;
 
-
   &-fraction {
     margin-left: auto;
-    bottom: 0px;
-    left: 0; 
     width: 100%;
+    position: relative;
   }
 }
 
 .swiper-button {
-  // background-color: $color-purple;
+  position: relative;
   color: $color-white;
   width: 73px;
   height: 73px;
+  display: flex;
 }
 
 #btn-prev {
@@ -189,8 +208,15 @@ export default {
 }
 
 .controls{
-  margin-top:5rem;
+  // margin-top:5rem;
   margin-bottom:5rem;
+  display: flex;
+}
+
+@include media-breakpoint-down(sm) {
+  .filteringSection {
+    width: 100%;
+  }
 }
 
 </style>

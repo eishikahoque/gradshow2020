@@ -16,20 +16,20 @@
   <div class="project-card">
     <div class="project-card__wrapper">
       <img v-bind:src="project.image" class="project-card__image" alt="project image" />
-      <div class="profile-card__details">
-        <h4 class="profile-card__details-title">
+      <div class="project-card__details">
+        <h4 class="project-card__details-title">
           {{ project.name }} 
         </h4>
-        <div class="profile-card__details-authors">
+        <div class="project-card__details-authors">
           <p class="project-card__content">By: {{ project.students }} </p>
         </div>
-        <div class="profile-card__details-description">
+        <div class="project-card__details-description">
           <p class="project-card__content"> {{ project.description }} </p>
+          <a v-bind:href="project.link" target="_blank"> 
+              View Project 
+              <img class="link-img" src="/static/images/Icons/arrow-right.svg"/>
+          </a>
         </div>
-        <a v-bind:href="project.link" target="_blank"> 
-            View Project 
-            <img class="link-img" src="/static/images/Icons/arrow-right.svg"/>
-        </a>
       </div>
     </div>
   </div>
@@ -61,30 +61,46 @@ export default {
 .project-card {
   background-color: $color-white;
   width: 100%;
-  // height: 650px;
-  // box-shadow: 4px 4px 16px -5px #cecece;
-  // counter-increment: project-card;
+  display: flex;
 
   &__image {
     width: 100%;
     margin-bottom: 2rem;
   }
 
-  &__details-title {
-    @include text-h4();
-    margin-bottom: 2rem;
-    color: $color-black;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
   }
 
-  &__wrapper {
-    padding: 1.5rem;
+  &__details {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    &-title {
+    @include text-h4();
+    display: flex;
+    margin-bottom: 2rem;
+    color: $color-black;
+    }
+
+    &-description {
+      display: flex;
+      flex-direction: column;
+      margin-top: auto;
+    }
   }
 
   &__content {
     @include text-body-md();
-    font-weight: 600;
+    // font-weight: 600;
     color: $color-black;
     margin-bottom: 1rem;
+
+    @include media-breakpoint-down(md) {
+        font-size: 16px;
+    }
   }
 }
 
@@ -92,10 +108,10 @@ export default {
   margin-left: 0.5rem;
 }
 
-// @include media-breakpoint-up(sm) {
-//   .project-card {
-//     width: 100%;
-//   }
-// }
+@include media-breakpoint-up(sm) {
+  .project-card {
+    width: 100%;
+  }
+}
 
 </style>
