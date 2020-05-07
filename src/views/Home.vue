@@ -1,4 +1,6 @@
 <template>
+  <div class="blob-bg">
+
   <div class="container">
     <!-- ======= NAVIGATION -->
     <div class="row">
@@ -32,6 +34,8 @@
     <section id="aboutSec" class="d-flex align-items-center">
       <AboutUs />
     </section>
+
+    </div>
 
     <!-- STUDENT PROFILES -->
     <div class="row">
@@ -87,6 +91,13 @@ export default {
 /* REMOVE THIS ONCE YOU PLACE YOUR COMPONENTS */
 section {
   min-height: 600px;
+}
+
+.blob-bg {
+  background-image: url(../assets/images/head-bg.svg);
+  background-position: top;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 /* ========================================== */
 </style>

@@ -25,7 +25,7 @@ h4 {
 
 body {
     @include text-body-sm();
-    background: linear-gradient(180deg, #E7B8F0, #f6fbfe);
+    background: $color-grey-white;
     color: $color-purple;
 }
 
