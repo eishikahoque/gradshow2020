@@ -77,7 +77,7 @@ h1 {
   }
   .hero-subtext {
     @include text-body-lg();
-    padding-top: 50px; 
+    padding-top: 38px; 
   }
 }
 
