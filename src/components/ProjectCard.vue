@@ -31,7 +31,7 @@
               View Project 
               <img class="link-img" src="/static/images/Icons/arrow-right.svg"/>
           </a>
-          <template v-for="(icon, i) in projectIcons">
+          <!-- <template v-for="(icon, i) in projectIcons">
             <img
               :key="i"
               v-if="project[icon.name]"
@@ -40,7 +40,7 @@
               class="projectIcon"
               @click="viewProject(project[icon.name])"
             />
-          </template>
+          </template> -->
         </div>
       </div>
     </div>

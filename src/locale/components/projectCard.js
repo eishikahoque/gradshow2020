@@ -7,7 +7,6 @@ export const data =
             image: "/static/images/projectImages/yodae.svg",
             students: "Yang, Oby, Drahsya, Ankit, & Eileen",
             link: "https://www.theyodae.com",
-            media: "https://drive.google.com/open?id=1K38wPCNfuzWu-5YQE-DEULhMMMahFLd1",
             keywords: ["app"]
         },
         {
