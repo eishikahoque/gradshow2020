@@ -214,7 +214,12 @@ export default {
 
 .controls{
   // margin-top:5rem;
-  margin-bottom:5rem;
+  // margin-bottom: 5rem;
+  display: flex;
+  align-items: end;
+}
+
+.swiper-buttons {
   display: flex;
 }
 
