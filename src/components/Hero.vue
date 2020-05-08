@@ -9,13 +9,20 @@
             <div class="col">
               <h1> Your Sheridan </h1>
             </div>
+            <div class="ml-4">
+            <img
+              :src="require(`../assets/images/${images.imm2020}`)"
+              alt="IMM2020 Grads"
+              class="imm2020"
+            />
+            <img
+              :src="require(`../assets/images/${images.grads}`)"
+              alt="IMM2020 Grads"
+              class="grads"
+            />
+            </div>
           </div>
-          <img
-            class="imm-2020"
-            :src="require(`../assets/images/${images.imm2020Grads}`)"
-            alt="IMM2020 Grads"
-          />
-          <p class="hero-subtext"> see what they can do for you </p>
+          <p class="hero-subtext ml-3"> see what they can do for you </p>
         </div>
       </div>
     </div>
@@ -27,7 +34,8 @@ export default {
 	data: function(){
     return {
       images: {
-        imm2020Grads: "imm2020-grads.svg"
+        imm2020: "IMM2020.svg",
+        grads: "Grads.svg",
       }
     };
   }
@@ -39,48 +47,37 @@ export default {
 @import "@/styles/mixins/typography";
 @import "@/styles/mixins/breakpoints";
 
-@include media-breakpoint-up(lg) {
+h1 {
+  font-size: 48px;
+  margin-bottom: -5px;
+}
+
+.imm2020 {
+  width: 50%;
+  margin: 5px 8px 0 0;
+}
+
+.grads {
+  width: 30%;
+  padding-top: 5px;
+}
+
+.hero-subtext {
+  @include text-body-sm(); 
+  padding-top: 5px;
+}
+
+@include media-breakpoint-up(sm) {
   h1 {
-    margin-bottom: -30px;
     @include text-h1();
+    margin-bottom: -30px;
   }
-  .imm-2020 {
-    padding-top: 20px;
-    width: 90%;
+  .imm2020 {
+    margin: 0 20px 0 0;
   }
   .hero-subtext {
-    @include text-h3();
+    @include text-body-lg(); 
   }
 }
-
-@include media-breakpoint-up(md) {
-  h1 {
-    @include text-h1();
-    margin-bottom: -30px;
-  }
-  .imm-2020 {
-    padding-top: 10px;
-  }
-}
-
-// @include media-breakpoint-up(sm) {
-//   h1 {
-//     margin-bottom: -30px;
-//     font-size: 60px;
-//   }
-//   .imm-2020 {
-//     padding-top: 20px;
-//   }
-// }
-
-// @include media-breakpoint-up(xs) {
-//   h1 {
-//     margin-bottom: -30px;
-//     font-size: 60px;
-//   }
-//   .imm-2020 {
-//     padding-top: 20px;
-//   }
-// }
 
 </style>

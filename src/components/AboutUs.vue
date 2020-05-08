@@ -28,9 +28,13 @@ export default {
 @import "@/styles/mixins/typography";
 @import "@/styles/mixins/breakpoints";
 
+.headerTitle {
+  font-size: 48px;
+}
+
 @include media-breakpoint-up(sm) {
   .headerTitle {
-    font-size: 48px;
+    @include text-h2();
   }
 }
 
