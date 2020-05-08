@@ -34,31 +34,7 @@
     <section id="aboutSec" class="d-flex align-items-center">
       <AboutUs />
     </section>
-
     </div>
-
-    <!-- STUDENT PROFILES -->
-    <section>
-    <div class="row">
-      <div class="col-12">
-        <!-- Put student profiles component here -->
-        <!-- REMOVE BELOW H1 WHEN YOU PLACE YOUR COMPONENTS -->
-        <h1 id="profileSec">I'm Profile</h1>
-      </div>
-    </div>
-    </section>
-
-    <!-- FEATURED PROJECTS -->
-    <section>
-    <div class="row">
-      <div class="col-12">
-        <!-- Put student projects component here -->
-        <!-- REMOVE BELOW H1 WHEN YOU PLACE YOUR COMPONENTS -->
-        <h1 id="projectSec">I'm Projects</h1>
-      </div>
-    </div>
-    </section>
-    <!--  -->
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-	<div class="container">
+	<div class="container-fluid">
       <div class="row justify-content-center">
         <div class="col-12">
           <div class="row flex-column">
@@ -58,13 +58,13 @@ h1 {
 }
 
 .grads {
-  width: 30%;
+  width: 35%;
   padding-top: 5px;
 }
 
 .hero-subtext {
   @include text-body-sm(); 
-  padding-top: 5px;
+  padding-top: 10px;
 }
 
 @include media-breakpoint-up(sm) {
@@ -76,7 +76,8 @@ h1 {
     margin: 0 20px 0 0;
   }
   .hero-subtext {
-    @include text-body-lg(); 
+    @include text-body-lg();
+    padding-top: 50px; 
   }
 }
 
