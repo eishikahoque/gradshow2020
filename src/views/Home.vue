@@ -204,7 +204,7 @@ export default {
 
 #btn-prev {
   background-color: $color-light-purple;
-  right: 5.2rem;
+  right: 1rem;
   left: auto;
 }
 
@@ -221,6 +221,7 @@ export default {
 
 .swiper-buttons {
   display: flex;
+  align-content: center;
 }
 
 @include media-breakpoint-down(sm) {
