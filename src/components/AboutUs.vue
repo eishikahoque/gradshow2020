@@ -7,7 +7,7 @@
       </div>
       <div class="row justify-content-md-end justify-content-sm-center">
         <div class="col-11">
-          <p> The times might be uncertain, but our potential is iridescently bright. We are the 
+          <p class="about__text"> The times might be uncertain, but our potential is iridescently bright. We are the 
             upcoming designers, developers, and most importantly, problem solvers, who are excited 
             to tackle the next challenge. If you are curious about what more the graduates can do 
             for you, don’t be afraid to start a conversation. Take your time and flow through the 
@@ -29,7 +29,12 @@ export default {
 @import "@/styles/mixins/breakpoints";
 
 .headerTitle {
-  font-size: 48px;
+  @include text-h4();
+  margin-bottom: 3rem;
+}
+
+.about__text {
+  @include text-body-lg();
 }
 
 @include media-breakpoint-up(sm) {

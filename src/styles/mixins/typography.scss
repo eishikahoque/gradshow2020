@@ -43,9 +43,11 @@
 @mixin text-body-lg {
     @include primary-base();
     font-size: 32px;
+    line-height: 65px;
 }
 
 @mixin text-body-xl {
     @include primary-base();
     font-size: 38px;
+    line-height: 65px;
 }
