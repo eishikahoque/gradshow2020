@@ -1,7 +1,7 @@
 <template>
-	<div class="container-fluid">
-      <div class="row justify-content-center">
-        <div class="col-12">
+	<div class="container align-items-center">
+      <div class="row">
+        <div class="col">
           <h1> Meet </h1>
           <h1> Your Sheridan </h1>
           <h1 class="outline"> IMM2020 Grads </h1>
@@ -25,38 +25,74 @@ export default {
 @import "@/styles/mixins/typography";
 @import "@/styles/mixins/breakpoints";
 
+//IF MAIN STYLING IS IN SMALL BREAKPOINT & SMALL DEVICE STYLING IS IN MAIN CSS
 h1 {
-  font-size: 48px;
-  margin-bottom: -5px;
+  @include text-h1();
+  margin-bottom: -30px;
 }
-
 .outline {
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: $color-purple;
   color: rgba(0, 0, 0, 0);
   padding-bottom: 0;
 }
-
 .hero-subtext {
-  @include text-body-sm(); 
-  padding-top: 10px;
+  @include text-body-lg();
+  padding-top: 38px; 
 }
 
 @include media-breakpoint-up(sm) {
   h1 {
-    @include text-h1();
-    margin-bottom: -30px;
+    font-size: 48px;
+    margin-bottom: -5px;
   }
+
   .outline {
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: $color-purple;
     color: rgba(0, 0, 0, 0);
     padding-bottom: 0;
   }
+
   .hero-subtext {
-    @include text-body-lg();
-    padding-top: 38px; 
+    @include text-body-sm(); 
+    padding-top: 10px;
   }
 }
+
+//IF MAIN STYLING IS IN MAIN CSS & SMALL DEVICE STYLING IS IN SMALL BREAKPOINT
+// h1 {
+//   font-size: 48px;
+//   margin-bottom: -5px;
+// }
+
+// .outline {
+//   -webkit-text-stroke-width: 1px;
+//   -webkit-text-stroke-color: $color-purple;
+//   color: rgba(0, 0, 0, 0);
+//   padding-bottom: 0;
+// }
+
+// .hero-subtext {
+//   @include text-body-sm(); 
+//   padding-top: 10px;
+// }
+
+// @include media-breakpoint-up(sm) {
+//   h1 {
+//     @include text-h1();
+//     margin-bottom: -30px;
+//   }
+//   .outline {
+//     -webkit-text-stroke-width: 2px;
+//     -webkit-text-stroke-color: $color-purple;
+//     color: rgba(0, 0, 0, 0);
+//     padding-bottom: 0;
+//   }
+//   .hero-subtext {
+//     @include text-body-lg();
+//     padding-top: 38px; 
+//   }
+// }
 
 </style>
