@@ -2,27 +2,10 @@
 	<div class="container-fluid">
       <div class="row justify-content-center">
         <div class="col-12">
-          <div class="row flex-column">
-            <div class="col">
-              <h1> Meet </h1>
-            </div>
-            <div class="col">
-              <h1> Your Sheridan </h1>
-            </div>
-            <div class="ml-4">
-            <img
-              :src="require(`../assets/images/${images.imm2020}`)"
-              alt="IMM2020 Grads"
-              class="imm2020"
-            />
-            <img
-              :src="require(`../assets/images/${images.grads}`)"
-              alt="IMM2020 Grads"
-              class="grads"
-            />
-            </div>
-          </div>
-          <p class="hero-subtext ml-3"> see what they can do for you </p>
+          <h1> Meet </h1>
+          <h1> Your Sheridan </h1>
+          <h1 class="outline"> IMM2020 Grads </h1>
+          <p class="hero-subtext"> see what they can do for you </p>
         </div>
       </div>
     </div>
@@ -32,12 +15,7 @@
 export default {
 	name: "Hero",
 	data: function(){
-    return {
-      images: {
-        imm2020: "IMM2020.svg",
-        grads: "Grads.svg",
-      }
-    };
+    return {};
   }
 };
 </script>
@@ -52,14 +30,11 @@ h1 {
   margin-bottom: -5px;
 }
 
-.imm2020 {
-  width: 50%;
-  margin: 5px 8px 0 0;
-}
-
-.grads {
-  width: 35%;
-  padding-top: 5px;
+.outline {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: $color-purple;
+  color: rgba(0, 0, 0, 0);
+  padding-bottom: 0;
 }
 
 .hero-subtext {
@@ -72,8 +47,11 @@ h1 {
     @include text-h1();
     margin-bottom: -30px;
   }
-  .imm2020 {
-    margin: 0 20px 0 0;
+  .outline {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: $color-purple;
+    color: rgba(0, 0, 0, 0);
+    padding-bottom: 0;
   }
   .hero-subtext {
     @include text-body-lg();

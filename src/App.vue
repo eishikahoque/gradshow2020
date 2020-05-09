@@ -15,4 +15,11 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+  #app {
+  background-image: url(./assets/images/head-bg.svg);
+  background-position: top;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  } 
+</style>
