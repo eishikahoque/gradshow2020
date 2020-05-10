@@ -57,24 +57,24 @@ export default {
   components: {
   },
   
-  data() {
-    return {
-      projectIcons: [
-        {
-          name: "info",
-          image: "info.svg"
-        },
-        {
-          name: "link",
-          image: "link.svg"
-        },
-        {
-          name: "media",
-          image: "media.svg"
-        },
-      ],
-    };
-  },
+  // data() {
+  //   return {
+  //     projectIcons: [
+  //       {
+  //         name: "info",
+  //         image: "info.svg"
+  //       },
+  //       {
+  //         name: "link",
+  //         image: "link.svg"
+  //       },
+  //       {
+  //         name: "media",
+  //         image: "media.svg"
+  //       },
+  //     ],
+  //   };
+  // },
   methods: {
     viewProject: function(path) {
       window.open(path, "_blank");
@@ -96,6 +96,7 @@ export default {
 
   &__image {
     width: 100%;
+    height:350px;
     margin-bottom: 2rem;
   }
 
@@ -103,6 +104,7 @@ export default {
     display: flex;
     flex-direction: column;
     padding: 1.5rem;
+
   }
 
   &__details {
