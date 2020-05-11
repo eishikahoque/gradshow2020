@@ -45,27 +45,11 @@ export const data =
             link: "https://holi-vr.netlify.app/",
             keywords: ["ar/vr"]
         },
-        {
-            id: 6,
-            name: "Groovy Rain",
-            description: "a projected light installation that uses HeavyM projection mapping software to add a wide range of light effects to an otherwise static sculpture based on the song being played",
-            image: "/static/images/projectImages/edited/groovyrain.png",
-            students: "Padmini Smith, Rob Cottignies, Szerena Szabo, Alena Kim, & Andrew Block",
-            link: "https://www.behance.net/gallery/96706391/Groovy-Rain-A-HeavyM-Projection-Mapping-Project",
-            keywords: ["inter"]
-        },
+
+
 
         {
-            id: 7,
-            name: "Robot Space",
-            description: "Motiful is an App to help brighten your day. Connect with other users to send & receive a positive motivational message & bring a little additional joy to your life at anytime on Mobile!",
-            image: "/static/images/projectImages/edited/robot.png",
-            students: "Tim, Yan, Flora",
-            link: "http://tim-lu-design.com/robot%20space/robot%20space.html",
-            keywords: ["ar/vr"]
-        },
-        {
-            id: 8,
+            id: 6,
             name: "Project RAVE",
             description: "an interactive sound installation built with Arduino, sound & light sensors.",
             image: "/static/images/projectImages/edited/rave.png",
@@ -74,7 +58,7 @@ export const data =
             keywords: ["inter"]
         },
         {
-            id: 9,
+            id: 7,
             name: "Lookey",
             description: "A dynamic grocery product search App where you can search and place orders for products from multiple grocers in your area.",
             image: "/static/images/projectImages/edited/lookey.png",
@@ -83,7 +67,7 @@ export const data =
             keywords: ["ar/vr"]
         },
         {
-            id: 10,
+            id: 8,
             name: "Tale of two Strains - Website Redesign",
             description: "A fun little website user flow / interaction comparison - We asked the user to do a task on both sites, assessed what site was more difficult to navigate, and redesigned accordingly!",
             image: "/static/images/projectImages/edited/twostrains.png",
@@ -92,7 +76,7 @@ export const data =
             keywords: ["csa"]
         },
         {
-            id: 11,
+            id: 9,
             name: "PlantMe",
             description: "An e-commerce website that offers personalized plant subscription boxes and provides detailed plant-care instructions.",
             image: "/static/images/projectImages/edited/plantme.png",
@@ -101,7 +85,7 @@ export const data =
             keywords: ["app"]
         },
         {
-            id: 12,
+            id: 10,
             name: "Grocereasy",
             description: "A React mobile app designed to make online grocery shopping more convenient and accessible for users who are on the go.",
             image: "/static/images/projectImages/edited/grocereasy.png",
@@ -110,7 +94,7 @@ export const data =
             keywords: ["app"]
         },
         {
-            id: 13,
+            id: 11,
             name: "Gaming Friend Finder",
             description: "Love multiplayer games but don't have the squad?! Gaming Friend Finder can help... Built to connect like-minded gamers when looking for playing partners, this was an 8642 prototyping exercise with animated pitch materials..",
             image: "/static/images/projectImages/edited/gff.png",
@@ -118,5 +102,5 @@ export const data =
             link: "http://www.robcottignies.com/projects/Gaming-Friend-Finder-Project",
             keywords: ["app"]
         }
-        
+
     ]
