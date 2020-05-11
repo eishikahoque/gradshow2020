@@ -1,31 +1,59 @@
 @import '../variables';
+@import 'breakpoints.scss';
 
 @mixin primary-base {
     font-family: 'Open Sans', sans-serif;
 }
 
 @mixin secondary-base {
-    // color: $color-purple;
-    // font-weight: bold;
     font-family: 'Montserrat', sans-serif;
 }
 
 @mixin text-h1 {
     @include secondary-base();
-    font-size: 120px;
+    font-size: 100px;
+
+    @include media-breakpoint-down(md){
+        font-size: 60px;
+    }
+
+    @include media-breakpoint-down(sm){
+        font-size: 48px;
+    }
 }
 
 @mixin text-h2 {
     @include secondary-base();
-    font-size: 80px;
+    font-size: 60px;
+
+    @include media-breakpoint-down(md){
+        font-size: 24px;
+    }
 }
 
 @mixin text-h3 {
     @include secondary-base();
-    font-size: 24px;
+    font-size: 38px;
+    margin-bottom: 1.75rem;
+
+    @include media-breakpoint-down(md){
+        font-size: 28px
+    }
 }
 
 @mixin text-h4 {
+    @include secondary-base();
+    font-size: 18px;
+    color: $color-black();
+    font-weight: bold;
+    font-size: 24px;
+
+    @include media-breakpoint-down(md){
+        font-size: 18px;
+    }
+}
+
+@mixin text-h5 {
     @include secondary-base();
     font-size: 18px;
 }
@@ -33,21 +61,33 @@
 @mixin text-body-sm {
     @include primary-base();
     font-size: 16px;
+
+    @include media-breakpoint-down(sm){
+        font-size: 14px;
+    }
 }
 
 @mixin text-body-md {
     @include primary-base();
-    font-size: 24px;
+    font-size: 18px;
+    line-height: 24px;
+
+    @include media-breakpoint-down(md){
+        font-size: 16px;
+    }
 }
 
 @mixin text-body-lg {
     @include primary-base();
-    font-size: 32px;
-    line-height: 65px;
+    font-size: 22px;
+
+    @include media-breakpoint-down(sm){
+        font-size: 18px;
+    }
+    
 }
 
 @mixin text-body-xl {
     @include primary-base();
     font-size: 38px;
-    line-height: 65px;
 }

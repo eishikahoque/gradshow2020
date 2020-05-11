@@ -28,23 +28,8 @@ export default {
 @import "@/styles/mixins/typography";
 @import "@/styles/mixins/breakpoints";
 
-.headerTitle {
-  @include text-h3();
-  margin-bottom: 3rem;
-}
-
 .about__text {
-  @include text-body-sm();
-}
-
-@include media-breakpoint-up(sm) {
-  .headerTitle {
-    @include text-h2();
-  }
-
-  .about__text {
-    @include text-body-md();
-  }
+  @include text-body-md();
 }
 
 </style>
