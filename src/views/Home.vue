@@ -100,7 +100,7 @@ export default {
         }
       ],
       swiperOptions: {
-          slidesPerView: 1.5,
+          slidesPerView: 1.25,
           spaceBetween: 20,
           pagination: {
             el: '.swiper-pagination',
@@ -118,7 +118,7 @@ export default {
             },
             '992': {
               spaceBetween: 30,
-              slidesPerView: 2.5,
+              slidesPerView: 2.25,
             }
           }
       },
@@ -224,7 +224,7 @@ export default {
   align-content: center;
 }
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(md) {
   .filteringSection {
     width: 100%;
   }

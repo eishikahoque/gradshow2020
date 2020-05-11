@@ -96,7 +96,7 @@ export default {
 
   &__image {
     width: 100%;
-    height:350px;
+    height:360px;
     margin-bottom: 2rem;
   }
 
@@ -126,7 +126,7 @@ export default {
     &-description {
       display: flex;
       flex-direction: column;
-      margin-top: auto;
+      // margin-top: auto;
     }
   }
 
@@ -134,11 +134,15 @@ export default {
     @include text-body-md();
     // font-weight: 600;
     color: $color-black;
-    margin-bottom: 1rem;
+    margin-bottom: 1.75rem;
 
     @include media-breakpoint-down(md) {
         font-size: 16px;
     }
+  }
+
+  &__links {
+    margin-top: auto; 
   }
 }
 

@@ -5,7 +5,7 @@ export const data =
             name: "YODAE",
             description: "It’s an experimental project that uses Google Speech API and Natural Language API to interpret voice commands and render doodles using Quick,Draw! database. ",
             image: "/static/images/projectImages/edited/yodae.png",
-            students: "Yang, Oby, Drahsya, Ankit, & Eileen",
+            students: "Yang Yang, Evonne Oby Okoye, Drashya Gohil, Ankit Gupta, & Eileen Santiago",
             link: "https://www.theyodae.com",
             keywords: ["app"]
         },
@@ -14,7 +14,7 @@ export const data =
             name: "Motiful",
             description: "Motiful is an App to help brighten your day. Connect with other users to send & receive a positive motivational message & bring a little additional joy to your life at anytime on Mobile!",
             image: "/static/images/projectImages/edited/motiful.png",
-            students: "Padmini, Diana, Rob, & Lily",
+            students: "Padmini Smith, Diana Mantilla, Rob Cottignies, & Lily Da Huang",
             link: "https://huang23.dev.fast.sheridanc.on.ca/motiful/",
             keywords: ["app"]
         },
@@ -32,7 +32,7 @@ export const data =
             name: "Project ADAO",
             description: "Project Adao is a rapid prototyping tool aiming to help reduce the early grunt-work of design. The prototype was built with Tensorflow, Teachable Machine, Vue and Vuetify components.",
             image: "/static/images/projectImages/edited/adao.png",
-            students: "Padmini, Diana, Rob, & Lily",
+            students: "Andrew Block, Drashya Gohil, Ankit Gupta, Olivia OLeary",
             link: "https://www.projectadao.com/",
             keywords: ["app"]
         },
@@ -89,7 +89,7 @@ export const data =
             image: "/static/images/projectImages/edited/twostrains.png",
             students: "Padmini Smith, Olivia Oleary, Diana Mantilla, & Yang Yang",
             link: "https://www.behance.net/gallery/96570113/Tale-of-two-strains-Case-Study",
-            keywords: ["ar/vr"]
+            keywords: ["csa"]
         },
         {
             id: 11,

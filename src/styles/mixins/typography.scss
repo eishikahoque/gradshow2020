@@ -68,7 +68,7 @@
 @mixin text-body-md {
     @include primary-base();
     font-size: 18px;
-    line-height: 24px;
+    line-height: 28px;
 
     @include media-breakpoint-down(md) {
         font-size: 16px;
