@@ -2,34 +2,45 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
+          <div class="row">
+              <div class="col-6">
+                   <h3> IMM Grad Show </h3>
+          <h3 class="outline"> 2020 </h3>
+          
+              </div>
+              <div class="col-6">
+                  <a href="#nav"><h3>Top ^</h3></a>
+              </div>
+          </div>
+
         <div class="row align-items-center">
           <div class="col-md-6">
             <ul class="list-inline social-buttons">
               <li class="list-inline-item m-4">
-                <a href="#">fb!
-                  <!-- <img
-                    src="../assets/images/Icons-Facebook.svg"
+                <a href="#">
+                  <img
+                    src="/static/images/socialIcons/Icons-Facebook.svg"
                     alt=""
                     srcset=""
-                  /> -->
+                  />
                 </a>
               </li>
               <li class="list-inline-item m-4">
-                <a href="#">IN!
-                  <!-- <img
-                    src="../assets/images/Icons-Instagram.svg"
+                <a href="#">
+                  <img
+                    src="/static/images/socialIcons/Icons-Instagram.svg"
                     alt=""
                     srcset=""
-                  /> -->
+                  />
                 </a>
               </li>
               <li class="list-inline-item m-4">
-                <a href="#">TT
-                  <!-- <img
-                    src="../assets/images/Icons-Twitter.svg"
+                <a href="#">
+                  <img
+                    src="/static/images/socialIcons/Icons-Twitter.svg"
                     alt=""
                     srcset=""
-                  /> -->
+                  />
                 </a>
               </li>
             </ul>
@@ -51,6 +62,16 @@ export default {
 </script>
 
 <style scoped>
+/* @import "@/styles/mixins/typography"; */
+/* @import "@/styles/mixins/breakpoints"; */
+
+.outline {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #000;
+  color: rgba(0, 0, 0, 0);
+  padding-bottom: 0;
+}
+
 .footer {
   padding: 20px 0;
   text-align: left;
