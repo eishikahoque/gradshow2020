@@ -28,8 +28,9 @@ h4 {
     @include text-h4();
 }
 
-a {
-    @include text-h5();
+body {
+    @include text-body-sm();
+    background: $color-grey-white;
     color: $color-purple;
     font-weight: bold;
 }

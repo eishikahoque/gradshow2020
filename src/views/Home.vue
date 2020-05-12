@@ -1,43 +1,60 @@
 <template>
   <div class="container">
-    Home Page...
-    <section class="students">
-      <h2 class="section-title">Students</h2>
-      <!-- INSERT PROFILECARDS COMPONENT HERE -->
-      <!-- PLACEHOLDER FOR NOW -->
-      <div class="row">
-        <div class="col-sm-6 col-md-3">Col 1</div>
-        <div class="col-sm-6 col-md-3">Col 2</div>
-        <div class="col-sm-6 col-md-3">Col 3</div>
-        <div class="col-sm-6 col-md-3">Col 4</div>
+    <Navigation />
+    <BlobAnimation />
+    <div class="row">
+      <div id="home" class="col-12">
+          <Hero />
       </div>
-    </section>
-    <section class="projects">
-      <h2 class="section-title">Featured Projects</h2>
-      <div class="filteringSection">
-        <div class="buttonContainer">
-          <button
-            class="filterBtn"
-            v-for="(filter, i) in projFilters"
-            v-bind:class="{ active: i === selectedProjFilterIndex }"
-            data-toggle="buttons"
-            :key="i"
-            @click="filterProjects(filter.value)"
-          >
-            {{ filter.label }}
-          </button>
-        </div>
+    </div>
+
+    <div class="row">
+      <div id="about" class="col-12">
+        <About />
       </div>
-      <div v-for="(project, i) in filteredProjData" :key="i">
-        <ProjectCard
-          v-bind:project="project"
-        />
+    </div>
+
+    <!-- STUDENT PROFILES -->
+    <div class="row">
+      <div id="grads" class="col-12">
+        <!-- Put student profiles component here -->
+        <!-- REMOVE BELOW H1 WHEN YOU PLACE YOUR COMPONENTS -->
+
+        <!-- <h1 id="grads">I'm grads section</h1> -->
+        <Profiles />
       </div>
-    </section>
+    </div>
+
+    <!-- FEATURED PROJECTS -->
+    <div class="row">
+      <div class="col-12">
+        <!-- Put student projects component here -->
+        <!-- REMOVE BELOW H1 WHEN YOU PLACE YOUR COMPONENTS -->
+        <h1 id="projects">I'm projects section</h1>
+        <!-- <projects></projects> -->
+      </div>
+    </div>
+
+    <!-- Location -->
+    <div class="row">
+      <div class="col-12">
+        <!-- Put student projects component here -->
+        <!-- REMOVE BELOW H1 WHEN YOU PLACE YOUR COMPONENTS -->
+        <Footer />
+        <!-- <location></location> -->
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import Navigation from "../components/Navigation.vue";
+import Hero from "../components/Hero.vue";
+import About from "../components/AboutUs.vue";
+import Profiles from "../components/Profiles.vue";
+import BlobAnimation from "../components/BlobAnimation.vue";
+import Footer from "../components/Footer.vue";
+
 // @ is an alias to /src
 import ProjectCard from "../components/ProjectCard";
 import {data} from "@/locale/components/projectCard.js";
@@ -45,38 +62,21 @@ import {data} from "@/locale/components/projectCard.js";
 export default {
   name: "Home",
   components: {
-    ProjectCard
-  },
-  data() {
-    return{
-      projectData: data,
-      filteredProjData: data,
-      projFilters: [
-        {
-          label: "All",
-          value: ""
-        },
-        {
-          label:"Mobile/Web App",
-          value: "app"
-        },
-        {
-          label:"AR/VR Experience",
-          value: "ar/vr"
-        }
-      ],
-      selectedProjFilterIndex: 0
-    };
-  },
-  methods: {
-    filterProjects: function(selectedProjFilter){
-      this.selectedProjFilterIndex = this.projFilters.indexOf(selectedProjFilter);
-      this.filteredProjData = selectedProjFilter
-        ? this.projectData.filter(
-          item => item.keywords.indexOf(selectedProjFilter) !== -1
-        )
-        : this.projectData
-    }
+    Hero,
+    About,
+    Profiles,
+    BlobAnimation,
+    Navigation,
+    Footer
   }
 };
 </script>
+
+<style scoped>
+
+/* REMOVE THIS ONCE YOU PLACE YOUR COMPONENTS */
+h1 {
+  min-height: 900px;
+}
+/* ========================================== */
+</style>
