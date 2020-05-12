@@ -2,6 +2,7 @@
   <div id="app">
     <!-- MAIN BODY -->
     <router-view />
+    <div class="bg-gradient"></div>
   </div>
 </template>
 
@@ -15,4 +16,14 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.bg-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(180deg, #cfbdf3, #e7b8f0, #f6fbfe);
+  z-index: -6;
+}
+</style>

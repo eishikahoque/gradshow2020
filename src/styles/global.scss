@@ -1,6 +1,7 @@
 // Global.scss
 // This file is used to override global tags
 
+@import './variables.scss';
 @import './mixins/typography.scss';
 body {
     @include text-body-sm();
@@ -36,7 +37,13 @@ h4 {
 a {
     @include text-h5();
     color: $color-purple;
-    font-weight: bold;
+}
+
+body {
+    @include text-body-sm();
+    // background: linear-gradient(90deg, #E7B8F0, #CFBDF3);
+    background-color: #F6FBFE;
+    color: $color-purple;
 }
 
 input {
@@ -44,4 +51,8 @@ input {
     border-radius: .4rem;
     box-shadow: none;
     box-sizing: inherit;
+}
+
+section{
+    margin-bottom: 10rem;
 }

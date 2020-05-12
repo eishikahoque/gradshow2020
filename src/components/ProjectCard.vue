@@ -82,13 +82,11 @@ export default {
     &-description {
       display: flex;
       flex-direction: column;
-      // margin-top: auto;
     }
   }
 
   &__content {
     @include text-body-md();
-    // font-weight: 600;
     color: $color-black;
     margin-bottom: 1.75rem;
 
@@ -99,6 +97,7 @@ export default {
 
   &__links {
     margin-top: auto; 
+    @include text-h4();
   }
 }
 

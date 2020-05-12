@@ -1,8 +1,11 @@
 <template>
     <section id="projects">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="filteringSection">
-            <div class="buttonContainer">
+        <div 
+            class="filterContainer"
+            v-bind:class="{ blurContainer: hideOverlay}"
+        >
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="filterContainer-btn">
                 <button
                 class="primary-btn btn"
                 v-for="(filter, i) in projFilters"
@@ -119,8 +122,8 @@ export default {
             )
             : this.projectData
         }
-        }
-    };
+    }
+};
 </script>
 
 <style lang="scss">
@@ -141,12 +144,6 @@ export default {
         align-items: stretch;
         margin-bottom: 4rem;
     }
-}
-
-.filteringSection {
-    margin-bottom: 5rem;
-    margin-left: auto;
-    width: 70%;
 }
 
 .swiper-wrapper {
@@ -199,7 +196,7 @@ export default {
 }
 
 @include media-breakpoint-down(md) {
-    .filteringSection {
+    .filterContainer {
         width: 100%;
     }
 }

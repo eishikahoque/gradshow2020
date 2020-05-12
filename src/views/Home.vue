@@ -1,29 +1,62 @@
 <template>
   <div class="container">
-    <section class="students">
-      <h2 class="section-title">Students</h2>
-      <!-- INSERT PROFILECARDS COMPONENT HERE -->
-      <!-- PLACEHOLDER FOR NOW -->
-      <div class="row">
-        <div class="col-sm-6 col-md-4">Col 1</div>
-        <div class="col-sm-6 col-md-4">Col 2</div>
-        <div class="col-sm-6 col-md-4">Col 3</div>
-        <div class="col-sm-6 col-md-4">Col 4</div>
+    <Navigation />
+    <BlobAnimation />
+    <div class="row">
+      <div class="col-12">
+        <!-- Put intro component here -->
+        <h1 id="about">I'm about section</h1>
+        <!-- <about></about> -->
       </div>
-    </section>
-    <Projects/>
+    </div>
+
+    <!-- STUDENT PROFILES -->
+    <div class="row">
+      <div id="grads" class="col-12">
+        <!-- Put student profiles component here -->
+        <!-- REMOVE BELOW H1 WHEN YOU PLACE YOUR COMPONENTS -->
+
+        <!-- <h1 id="grads">I'm grads section</h1> -->
+        <Profiles />
+      </div>
+    </div>
+
+    <!-- FEATURED PROJECTS -->
+    <div class="row">
+      <div class="col-12">
+        <Projects />
+      </div>
+    </div>
+
+    <!-- Location -->
+    <div class="row">
+      <div class="col-12">
+        <!-- Put student projects component here -->
+        <!-- REMOVE BELOW H1 WHEN YOU PLACE YOUR COMPONENTS -->
+        <Footer />
+        <!-- <location></location> -->
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import Projects from "../components/Projects";
 import ProjectCard from "../components/ProjectCard";
+import Navigation from "../components/Navigation.vue";
+import Profiles from "../components/Profiles.vue";
+import BlobAnimation from "../components/BlobAnimation.vue";
+import Footer from "../components/Footer.vue";
 
 export default {
   name: "Home", 
   title: 'Auto slides per view / Carousel mode',
   components: {
-    Projects
+    Projects,
+    Profiles,
+    BlobAnimation,
+    Navigation,
+    Footer
   }
 };
 </script>
@@ -46,4 +79,18 @@ export default {
     margin-bottom: 6rem;
 }
 
+.filterContainer {
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    &.blurContainer {
+      filter: blur(5px);
+      overflow: hidden;
+    }
+
+    &-btn {
+      width: 68%;
+      margin-left: auto;
+    }
+}
 </style>

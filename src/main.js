@@ -1,16 +1,18 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
-// import VueCarousel from 'vue-carousel';
 
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 
 import 'swiper/css/swiper.css' 
 Vue.use(VueAwesomeSwiper);
 
-// Vue.use(VueCarousel);
-
 import "@/styles/main.scss";
+
+// FOR SMOOTH SCROLL
+// https://www.npmjs.com/package/vue-scrollto
+const VueScrollTo = require("vue-scrollto");
+Vue.use(VueScrollTo);
 
 Vue.config.productionTip = false;
 

@@ -1,19 +1,20 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
+
 import ComingSoon from "../views/ComingSoon.vue";
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "ComingSoon",
-    component: ComingSoon
-  },
-  {
-    path: "/home",
     name: "Home",
     component: Home
+  },
+  {
+    path: "/comingsoon",
+    name: "ComingSoon",
+    component: ComingSoon
   }
 ];
 
