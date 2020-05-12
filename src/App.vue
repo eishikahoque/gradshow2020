@@ -17,10 +17,5 @@ export default {
 </script>
 
 <style lang="scss">
-  #app {
-  background-image: url(/static/images/homeBackgrounds/head-bg.svg);
-  background-position: top;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  } 
+ 
 </style>
