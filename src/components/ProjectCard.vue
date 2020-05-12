@@ -53,7 +53,6 @@ export default {
 
   &__image {
     width: 100%;
-    height:360px;
     margin-bottom: 2rem;
   }
 
