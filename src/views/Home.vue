@@ -3,10 +3,14 @@
     <Navigation />
     <BlobAnimation />
     <div class="row">
-      <div class="col-12">
-        <!-- Put intro component here -->
-        <h1 id="about">I'm about section</h1>
-        <!-- <about></about> -->
+      <div id="home" class="col-12">
+          <Hero />
+      </div>
+    </div>
+
+    <div class="row">
+      <div id="about" class="col-12">
+        <About />
       </div>
     </div>
 
@@ -45,6 +49,8 @@
 
 <script>
 import Navigation from "../components/Navigation.vue";
+import Hero from "../components/Hero.vue";
+import About from "../components/AboutUs.vue";
 import Profiles from "../components/Profiles.vue";
 import BlobAnimation from "../components/BlobAnimation.vue";
 import Footer from "../components/Footer.vue";
@@ -53,6 +59,8 @@ import Footer from "../components/Footer.vue";
 export default {
   name: "Home",
   components: {
+    Hero,
+    About,
     Profiles,
     BlobAnimation,
     Navigation,
@@ -62,6 +70,7 @@ export default {
 </script>
 
 <style scoped>
+
 /* REMOVE THIS ONCE YOU PLACE YOUR COMPONENTS */
 h1 {
   min-height: 900px;
