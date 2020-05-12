@@ -17,13 +17,10 @@ export default {
 </script>
 
 <style lang="scss">
-.bg-gradient {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(180deg, #cfbdf3, #e7b8f0, #f6fbfe);
-  z-index: -6;
-}
+  #app {
+  background-image: url(/static/images/homeBackgrounds/head-bg.svg);
+  background-position: top;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  } 
 </style>

@@ -26,7 +26,7 @@
     @include secondary-base();
     font-size: 60px;
 
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(md){
         font-size: 24px;
     }
 }
@@ -47,6 +47,18 @@
     font-size: 24px;
 
     @include media-breakpoint-down(md) {
+        font-size: 18px;
+    }
+}
+
+@mixin text-h5 {
+    @include secondary-base();
+    font-size: 18px;
+    color: $color-black();
+    font-weight: bold;
+    font-size: 24px;
+
+    @include media-breakpoint-down(md){
         font-size: 18px;
     }
 }
