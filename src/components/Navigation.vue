@@ -110,7 +110,7 @@
 <script>
 export default {
   data: () => ({
-    imagePath: require("../assets/images/imm-logo.svg"),
+    // imagePath: require("../assets/images/imm-logo.svg"),
     linkColor: " #472b7a",
     background: "rgba(0, 0, 0, 0)",
     hoverBackground: "#ab5dda",
@@ -124,10 +124,10 @@ export default {
         path: "#grads"
       },
       {
-        name: "Projects",
+        name: "Works",
         path: "#projects"
       },
-      { name: "Location", path: "#location" }
+      // { name: "Location", path: "#location" }
       // {
       //   name: "Location",
       //   path: "#location"

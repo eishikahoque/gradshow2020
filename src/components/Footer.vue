@@ -3,52 +3,58 @@
     <footer class="footer">
       <div class="container">
           <div class="row">
-              <div class="col-6">
-                   <h3> IMM Grad Show </h3>
-          <h3 class="outline"> 2020 </h3>
+              <div class="col-9">
+                   <h2> IMM GradShow</h2>
+          <h2 class="outline"> 2020 </h2>
           
               </div>
-              <div class="col-6">
-                  <a href="#nav"><h3>Top ^</h3></a>
+              <div class="col-3">
+                  <a href="#nav"><h3><img
+                    src="/static/images/socialIcons/arrow-right.png"
+                    alt=""
+                    srcset=""
+                  />&nbsp; &nbsp; Top</h3></a>
               </div>
           </div>
 
-        <div class="row align-items-center">
-          <div class="col-md-6">
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item m-4">
-                <a href="#">
+    <div class="container">
+        <div class="row d-flex column">
+          <div class="col-6">    
+            <div class="col-4">
+               <a href="#">
                   <img
                     src="/static/images/socialIcons/Icons-Facebook.svg"
                     alt=""
                     srcset=""
                   />
                 </a>
-              </li>
-              <li class="list-inline-item m-4">
-                <a href="#">
+              
+            </div>
+          <div class="col-4">
+              <a href="#">
                   <img
                     src="/static/images/socialIcons/Icons-Instagram.svg"
                     alt=""
                     srcset=""
                   />
                 </a>
-              </li>
-              <li class="list-inline-item m-4">
-                <a href="#">
+          </div>
+          <div class="col-4">
+             <a href="#">
                   <img
                     src="/static/images/socialIcons/Icons-Twitter.svg"
                     alt=""
                     srcset=""
                   />
                 </a>
-              </li>
-            </ul>
           </div>
-          <div class="col-md-6">
-            <span class="copyright">Copyright &copy; IMM 2020</span>
           </div>
+          <div class="col-6">
+             <span class="copyright">Copyright &copy; IMM 2020</span>
+          </div>
+      </div>
         </div>
+
       </div>
     </footer>
 
@@ -75,6 +81,7 @@ export default {
 .footer {
   padding: 20px 0;
   text-align: left;
+  /* background-color: red; */
 }
 .footer span.copyright {
   font-size: 95%;
@@ -98,7 +105,7 @@ ul {
 ul.social-buttons li a {
   font-size: 20px;
   line-height: 50px;
-  display: block;
+  /* display: block; */
   width: 35px;
   height: 35px;
   -webkit-transition: all 0.3s;
@@ -109,17 +116,20 @@ ul.social-buttons li a {
   /* background-color: #212529; */
 }
 .list-inline-item {
-  display: inline-block;
+  /* display: inline-block; */
 }
 li {
-  display: inline-block;
+  /* display: inline-block; */
 }
 list-inline,
 .list-unstyled {
-  padding-left: 0;
-  list-style: none;
+  /* padding-left: 0; */
+  /* list-style: none; */
 }
 .list-inline-item:not(:last-child) {
-  margin-right: 0.5rem;
+  /* margin-right: 0.5rem; */
+}
+.row{
+  border: blue solid 2px;
 }
 </style>
