@@ -278,7 +278,7 @@ export default {
             },
             a = i.screen.init("blob-anim", null, !0),
             o = a.ctx;
-          a.resize(), (t = new e(a.width, a.height, 6, "#D7FDE0", "#D3F1F9"));
+          a.resize(), (t = new e(a.width, a.height, 6, "#cfbdf3", "#FCFDFD"));
         }
         return { run: n };
       })();

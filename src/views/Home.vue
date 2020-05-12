@@ -1,12 +1,12 @@
 <template>
   <div class="container">
     <Navigation />
+    <BlobAnimation />
     <div class="row">
       <div class="col-12">
         <!-- Put intro component here -->
         <h1 id="about">I'm about section</h1>
         <!-- <about></about> -->
-        <BlobAnimation />
       </div>
     </div>
 
