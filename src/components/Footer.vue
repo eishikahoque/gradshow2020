@@ -1,54 +1,51 @@
 <template>
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer mb-5">
       <div class="container">
           <div class="row">
-              <div class="col-6">
-                   <h3> IMM Grad Show </h3>
-          <h3 class="outline"> 2020 </h3>
+              <div class="col-10 mb-5">
+                <h3> IMM Grad Show</h3>
+                <h3 class="outline"> 2020 </h3>
           
               </div>
-              <div class="col-6">
-                  <a href="#nav"><h3>Top ^</h3></a>
+              <div class="col-2 textAlignRight mt-3">
+                  <a href="#nav">
+                    <h3>
+                    <i class="fas fa-arrow-up"></i> Top </h3>
+                  </a>
               </div>
           </div>
 
         <div class="row align-items-center">
-          <div class="col-md-6">
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item m-4">
+          <div class="col-lg-9 col-sm-12">
+            <div class="row">    
+            <div class="col-2">
+               <a href="#">
+                 <i class="fab fa-facebook-square fa-3x"></i>
+              </a>
+              
+            </div>
+            <div class="col-2">
                 <a href="#">
-                  <img
-                    src="/static/images/socialIcons/Icons-Facebook.svg"
-                    alt=""
-                    srcset=""
-                  />
+                  <i class="fab fa-instagram fa-3x"></i>  
                 </a>
-              </li>
-              <li class="list-inline-item m-4">
-                <a href="#">
-                  <img
-                    src="/static/images/socialIcons/Icons-Instagram.svg"
-                    alt=""
-                    srcset=""
-                  />
-                </a>
-              </li>
-              <li class="list-inline-item m-4">
-                <a href="#">
-                  <img
-                    src="/static/images/socialIcons/Icons-Twitter.svg"
-                    alt=""
-                    srcset=""
-                  />
-                </a>
-              </li>
-            </ul>
+            </div>
+            <div class="col-2">
+              <a href="#">
+                <i class="fab fa-twitter-square fa-3x"></i>
+              </a>
+            </div>
+            <div class="col-2">
+              <a href="#">
+                <i class="fab fa-linkedin fa-3x"></i>
+              </a>
           </div>
-          <div class="col-md-6">
-            <span class="copyright">Copyright &copy; IMM 2020</span>
           </div>
-        </div>
+          </div>
+          <div class="col-lg-3 col-sm-12">
+             <h4 class="copyright"> Copyright &copy; IMM 2020 </h4>
+          </div>
+      </div>
       </div>
     </footer>
 
@@ -75,13 +72,12 @@ export default {
 .footer {
   padding: 20px 0;
   text-align: left;
+  /* background-color: red; */
 }
-.footer span.copyright {
-  font-size: 95%;
-  line-height: 40px;
-  text-transform: none;
-  float: right;
+.copyright {
+  text-align: right;
 }
+
 a {
   text-decoration: none;
   background-color: transparent;
@@ -98,7 +94,7 @@ ul {
 ul.social-buttons li a {
   font-size: 20px;
   line-height: 50px;
-  display: block;
+  /* display: block; */
   width: 35px;
   height: 35px;
   -webkit-transition: all 0.3s;
@@ -109,17 +105,24 @@ ul.social-buttons li a {
   /* background-color: #212529; */
 }
 .list-inline-item {
-  display: inline-block;
+  /* display: inline-block; */
 }
 li {
-  display: inline-block;
+  /* display: inline-block; */
 }
 list-inline,
 .list-unstyled {
-  padding-left: 0;
-  list-style: none;
+  /* padding-left: 0; */
+  /* list-style: none; */
 }
 .list-inline-item:not(:last-child) {
-  margin-right: 0.5rem;
+  /* margin-right: 0.5rem; */
+}
+/* .row{
+  border: blue solid 2px;
+} */
+
+.textAlignRight {
+  text-align: right;
 }
 </style>
