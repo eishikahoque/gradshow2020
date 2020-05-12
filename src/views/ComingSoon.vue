@@ -133,7 +133,7 @@ header {
 }
 
 .newsletter input[type="email"] {
-  @include text-h3();
+  @include text-h5();
   width: 100%;
   background-color: $color-white;
   border-color: $color-white;

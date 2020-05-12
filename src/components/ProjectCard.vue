@@ -1,18 +1,4 @@
 <template> 
-    <!-- <div class="filteringSection">
-      <div class="buttonContainer">
-        <button
-          class="primary-btn"
-          v-for="(filter, i) in projFilters"
-          v-bind:class="{ active: i === selectedProjFilterIndex }"
-          data-toggle="buttons"
-          :key="i"
-          @click="filterProjects(filter.value)"
-        >
-          {{ filter.label }}
-        </button>
-      </div>
-    </div> -->
   <div class="project-card">
     <div class="project-card__wrapper">
       <img v-bind:src="project.image" class="project-card__image" alt="project image" />
@@ -31,16 +17,6 @@
               View Project 
               <img class="link-img" src="/static/images/Icons/arrow-right.svg"/>
           </a>
-          <!-- <template v-for="(icon, i) in projectIcons">
-            <img
-              :key="i"
-              v-if="project[icon.name]"
-              v-bind:src="`/static/images/socialIcons/${icon.image}`"
-              alt="project icon"
-              class="projectIcon"
-              @click="viewProject(project[icon.name])"
-            />
-          </template> -->
         </div>
       </div>
     </div>
@@ -56,25 +32,6 @@ export default {
   },
   components: {
   },
-  
-  // data() {
-  //   return {
-  //     projectIcons: [
-  //       {
-  //         name: "info",
-  //         image: "info.svg"
-  //       },
-  //       {
-  //         name: "link",
-  //         image: "link.svg"
-  //       },
-  //       {
-  //         name: "media",
-  //         image: "media.svg"
-  //       },
-  //     ],
-  //   };
-  // },
   methods: {
     viewProject: function(path) {
       window.open(path, "_blank");
