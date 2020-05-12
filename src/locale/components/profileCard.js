@@ -77,7 +77,7 @@ export const data = [
 		id: 6,
 		name: "Diana Mantilla",
 		title: "Digital Interactive Designer",
-		picture: "/static/images/studentImages/diana.png",
+		picture: "/static/images/studentImages/diana-2.png",
 		color: "#D1FFE3",
 		hash: ["#UXDesigner", "#InteractiveDesigner", "#GraphicDesigner"],
 		keywords: ["UXUI", "UXUI", "UXUI"],

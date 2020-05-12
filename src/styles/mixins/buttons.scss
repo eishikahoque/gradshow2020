@@ -3,9 +3,24 @@
 @mixin primary-btn-color {
     background-color: $color-purple;
     border-color: $color-purple;
+    height: 60px;
+    padding: 0 30px;
+    color: $color-white;
 
     &:hover {
         background-color: $color-dark-purple;
         border-color: $color-dark-purple;
+    }
+}
+
+@mixin secondary-btn {
+    @include text-h5();
+    font-weight: bold;
+    color: $color-purple;
+    border-style: none;
+    border-color: none;
+
+    &:hover {
+        color: $color-dark-purple;
     }
 }

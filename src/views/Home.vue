@@ -56,6 +56,9 @@ import BlobAnimation from "../components/BlobAnimation.vue";
 import Footer from "../components/Footer.vue";
 
 // @ is an alias to /src
+import ProjectCard from "../components/ProjectCard";
+import {data} from "@/locale/components/projectCard.js";
+
 export default {
   name: "Home",
   components: {
