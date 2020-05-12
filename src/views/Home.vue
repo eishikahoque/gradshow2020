@@ -1,14 +1,16 @@
 <template>
   <div class="container">
+    <Navigation />
+    <BlobAnimation />
     <div class="row">
       <div id="home" class="col-12">
           <Hero />
       </div>
     </div>
 
-  <div class="row">
+    <div class="row">
       <div id="about" class="col-12">
-          <About />
+        <About />
       </div>
     </div>
 
@@ -16,7 +18,10 @@
     <div class="row">
       <div id="grads" class="col-12">
         <!-- Put student profiles component here -->
-          <h1 id="grads"> Grads </h1>
+        <!-- REMOVE BELOW H1 WHEN YOU PLACE YOUR COMPONENTS -->
+
+        <!-- <h1 id="grads">I'm grads section</h1> -->
+        <Profiles />
       </div>
     </div>
 
@@ -24,21 +29,31 @@
     <div class="row">
       <div class="col-12">
         <!-- Put student projects component here -->
-        <h1 id="projects"> Projects </h1>
+        <!-- REMOVE BELOW H1 WHEN YOU PLACE YOUR COMPONENTS -->
+        <h1 id="projects">I'm projects section</h1>
+        <!-- <projects></projects> -->
       </div>
     </div>
 
+    <!-- Location -->
     <div class="row">
       <div class="col-12">
-        <h1> Footer </h1>
+        <!-- Put student projects component here -->
+        <!-- REMOVE BELOW H1 WHEN YOU PLACE YOUR COMPONENTS -->
+        <Footer />
+        <!-- <location></location> -->
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Navigation from "../components/Navigation.vue";
 import Hero from "../components/Hero.vue";
 import About from "../components/AboutUs.vue";
+import Profiles from "../components/Profiles.vue";
+import BlobAnimation from "../components/BlobAnimation.vue";
+import Footer from "../components/Footer.vue";
 
 // @ is an alias to /src
 export default {
@@ -46,6 +61,10 @@ export default {
   components: {
     Hero,
     About
+    Profiles,
+    BlobAnimation,
+    Navigation,
+    Footer
   }
 };
 </script>

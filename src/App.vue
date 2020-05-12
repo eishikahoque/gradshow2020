@@ -2,6 +2,7 @@
   <div id="app">
     <!-- MAIN BODY -->
     <router-view />
+    <div class="bg-gradient"></div>
   </div>
 </template>
 
