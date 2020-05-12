@@ -2,6 +2,11 @@
 // This file is used to override global tags
 
 @import './mixins/typography.scss';
+body {
+    @include text-body-sm();
+    // background: linear-gradient(90deg, #E7B8F0, #CFBDF3);
+    color: $color-purple;
+}
 
 h1 {
     font-weight: bold;

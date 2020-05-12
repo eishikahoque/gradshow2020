@@ -4,7 +4,7 @@
       class="filteringSection"
       v-bind:class="{ blurContainer: hideOverlay }"
     >
-      <h2 class="headerTitle">Graduates</h2>
+      <h2>Graduates</h2>
       <div class="buttonContainer">
         <button
           class="filterBtn"
@@ -123,7 +123,7 @@ export default {
 @import "@/styles/mixins/breakpoints";
 
 .profiles {
-  margin: 2rem;
+  margin: 0.5rem;
 }
 
 .headerTitle {
