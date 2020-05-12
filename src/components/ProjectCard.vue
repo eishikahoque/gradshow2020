@@ -14,8 +14,7 @@
         </div>
         <div class="project-card__links">
           <a v-bind:href="project.link" target="_blank"> 
-              View Project 
-              <img class="link-img" src="/static/images/Icons/arrow-right.svg"/>
+              View Project <i class="fas fa-arrow-right"></i>
           </a>
         </div>
       </div>
@@ -52,6 +51,7 @@ export default {
   display: flex;
 
   &__image {
+    object-fit: cover;
     width: 100%;
     margin-bottom: 2rem;
   }
