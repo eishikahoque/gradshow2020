@@ -1,39 +1,23 @@
 <template>
   <div class="container">
-    <!-- ======= NAVIGATION -->
-    <div class="row">
-      <div class="col-12">
-        <!-- Put navigation component here -->
-        <p>
-          Navigation
-          <button v-scroll-to="'#introSec'">
-            Home
-          </button>
-          <button v-scroll-to="'#profileSec'">
-            Profiles
-          </button>
-          <button v-scroll-to="'#projectSec'">
-            Projects
-          </button>
-        </p>
-      </div>
-    </div>
-
-    <!-- ======== MAIN BODY -->
-    <!-- INTRO -->
+    <Navigation />
     <div class="row">
       <div class="col-12">
         <!-- Put intro component here -->
-        <h1 id="introSec">Hi. I'm Intro</h1>
+        <h1 id="about">I'm about section</h1>
+        <!-- <about></about> -->
         <BlobAnimation />
       </div>
     </div>
 
     <!-- STUDENT PROFILES -->
     <div class="row">
-      <div class="col-12">
+      <div id="grads" class="col-12">
         <!-- Put student profiles component here -->
-        <Profiles id="profileSec" />
+        <!-- REMOVE BELOW H1 WHEN YOU PLACE YOUR COMPONENTS -->
+
+        <!-- <h1 id="grads">I'm grads section</h1> -->
+        <Profiles />
       </div>
     </div>
 
@@ -42,23 +26,37 @@
       <div class="col-12">
         <!-- Put student projects component here -->
         <!-- REMOVE BELOW H1 WHEN YOU PLACE YOUR COMPONENTS -->
-        <h1 id="projectSec">I'm Projects</h1>
+        <h1 id="projects">I'm projects section</h1>
+        <!-- <projects></projects> -->
       </div>
     </div>
-    <!--  -->
+
+    <!-- Location -->
+    <div class="row">
+      <div class="col-12">
+        <!-- Put student projects component here -->
+        <!-- REMOVE BELOW H1 WHEN YOU PLACE YOUR COMPONENTS -->
+        <Footer />
+        <!-- <location></location> -->
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import Navigation from "../components/Navigation.vue";
 import Profiles from "../components/Profiles.vue";
 import BlobAnimation from "../components/BlobAnimation.vue";
+import Footer from "../components/Footer.vue";
 
 // @ is an alias to /src
 export default {
   name: "Home",
   components: {
     Profiles,
-    BlobAnimation
+    BlobAnimation,
+    Navigation,
+    Footer
   }
 };
 </script>
