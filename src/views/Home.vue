@@ -2,20 +2,20 @@
   <div class="container">
     <Navigation />
     <BlobAnimation />
-    <div class="row">
+    <div class="row align-items-center mainSection">
       <div id="home" class="col-12">
           <Hero />
       </div>
     </div>
 
-    <div class="row">
+    <div class="row align-items-center">
       <div id="about" class="col-12">
         <About />
       </div>
     </div>
 
     <!-- STUDENT PROFILES -->
-    <div class="row">
+    <div class="row align-items-center">
       <div id="grads" class="col-12">
         <!-- Put student profiles component here -->
         <!-- REMOVE BELOW H1 WHEN YOU PLACE YOUR COMPONENTS -->
@@ -26,8 +26,8 @@
     </div>
 
     <!-- FEATURED PROJECTS -->
-    <div class="row">
-      <div class="col-12">
+    <div class="row align-items-center">
+      <div id="projects" class="col-12">
         <!-- Put student projects component here -->
         <!-- REMOVE BELOW H1 WHEN YOU PLACE YOUR COMPONENTS -->
         <h1 id="projects">I'm projects section</h1>
@@ -74,7 +74,14 @@ export default {
 </script>
 
 <style scoped>
+.mainSection{
+  height: 100vh;
+}
 
+#about, #grads, #projects{
+  margin-top: 10em;
+  margin-bottom: 10em;
+}
 /* REMOVE THIS ONCE YOU PLACE YOUR COMPONENTS */
 h1 {
   min-height: 900px;
