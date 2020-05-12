@@ -1,7 +1,8 @@
 <template>
   <div class="container">
-<Navigation />
-<div class="row">
+    <Navigation />
+    <BlobAnimation />
+    <div class="row">
       <div class="col-12">
         <!-- Put intro component here -->
         <h1 id="about">I'm about section</h1>
@@ -40,27 +41,27 @@
       </div>
     </div>
   </div>
-
 </template>
 
 <script>
 import Navigation from "../components/Navigation.vue";
 import Profiles from "../components/Profiles.vue";
+import BlobAnimation from "../components/BlobAnimation.vue";
 import Footer from "../components/Footer.vue";
 
 // @ is an alias to /src
 export default {
   name: "Home",
   components: {
-    Navigation,
     Profiles,
+    BlobAnimation,
+    Navigation,
     Footer
   }
 };
 </script>
 
 <style scoped>
-
 /* REMOVE THIS ONCE YOU PLACE YOUR COMPONENTS */
 h1 {
   min-height: 900px;
