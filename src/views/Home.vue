@@ -1,83 +1,60 @@
 <template>
   <div class="container">
-    <!-- ======= NAVIGATION -->
     <div class="row">
-      <div class="col-12">
-        <!-- Put navigation component here -->
-        <p>
-          Navigation
-          <button v-scroll-to="'#introSec'">
-            Home
-          </button>
-          <button v-scroll-to="'#aboutSec'">
-            About
-          </button>
-          <button v-scroll-to="'#profileSec'">
-            Profiles
-          </button>
-          <button v-scroll-to="'#projectSec'">
-            Projects
-          </button>
-        </p>
+      <div id="home" class="col-12">
+          <Hero />
       </div>
     </div>
-    
-    <!-- ======== MAIN BODY -->
-    <!-- HERO SECTION -->
-    <section id="introSec" class="d-flex align-items-center">
-      <Hero />
-    </section>
 
-    <!-- ABOUT -->
-    <section id="aboutSec" class="d-flex align-items-center">
-      <AboutUs />
-    </section>
+  <div class="row">
+      <div id="about" class="col-12">
+          <About />
+      </div>
+    </div>
 
-    <!-- PROFILES -->
-    <section id="profileSec" class="d-flex align-items-center">
-      <p> Profiles </p>
-    </section>
+    <!-- STUDENT PROFILES -->
+    <div class="row">
+      <div id="grads" class="col-12">
+        <!-- Put student profiles component here -->
+          <h1 id="grads"> Grads </h1>
+      </div>
+    </div>
 
-    <!-- PROJECTS -->
-    <section id="projectSec" class="d-flex align-items-center">
-      <p> Projects </p>
-    </section>
+    <!-- FEATURED PROJECTS -->
+    <div class="row">
+      <div class="col-12">
+        <!-- Put student projects component here -->
+        <h1 id="projects"> Projects </h1>
+      </div>
+    </div>
 
+    <div class="row">
+      <div class="col-12">
+        <h1> Footer </h1>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import Hero from "../components/Hero";
-import AboutUs from "../components/AboutUs";
+import Hero from "../components/Hero.vue";
+import About from "../components/AboutUs.vue";
 
+// @ is an alias to /src
 export default {
   name: "Home",
-	components: {
-		Hero,
-		AboutUs,
-	},
-  data: function(){
-    return {
-      error: null,
-      success: false,
-      loading: true
-    };
-  },
-  methods: {
-    onSuccess(){
-      console.log("Successful");
-    },
-    onError(){
-      console.log("Error")
-    }
+  components: {
+    Hero,
+    About
   }
 };
 </script>
 
 <style scoped>
+
 /* REMOVE THIS ONCE YOU PLACE YOUR COMPONENTS */
-section {
-  min-height: 600px;
+h1 {
+  min-height: 900px;
 }
+/* ========================================== */
 </style>
