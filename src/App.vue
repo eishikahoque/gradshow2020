@@ -2,7 +2,8 @@
   <div id="app">
     <!-- MAIN BODY -->
     <router-view />
-    <div class="bg-gradient"></div>
+        <div class="bg-gradient"></div>
+
   </div>
 </template>
 
@@ -17,10 +18,12 @@ export default {
 </script>
 
 <style lang="scss">
-  // #app {
-  // background-image: url(/static/images/homeBackgrounds/head-bg.svg);
-  // background-position: top;
-  // background-size: 100%;
-  // background-repeat: no-repeat;
-  // } 
+  #app {
+  background-image: url(/static/images/homeBackgrounds/bg-no-shadow.png);
+  background-position: top;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  } 
 </style>

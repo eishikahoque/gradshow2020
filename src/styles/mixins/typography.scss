@@ -43,7 +43,6 @@
 
 @mixin text-h4 {
     @include secondary-base();
-    font-size: 18px;
     color: $color-black();
     font-weight: bold;
     font-size: 24px;
