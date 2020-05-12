@@ -3,9 +3,9 @@
     <footer class="footer mb-5">
       <div class="container">
           <div class="row">
-              <div class="col-10">
-                <h2> IMM Grad Show</h2>
-                <h2 class="outline"> 2020 </h2>
+              <div class="col-10 mb-5">
+                <h3> IMM Grad Show</h3>
+                <h3 class="outline"> 2020 </h3>
           
               </div>
               <div class="col-2 textAlignRight mt-3">

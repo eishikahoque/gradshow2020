@@ -168,7 +168,7 @@ figure {
 }
 nav {
 //   position: fixed;
-  z-index: 3;
+  z-index: 1000;
   height: 60px;
   width: 100%;
 //   @include text-nav-sm();
