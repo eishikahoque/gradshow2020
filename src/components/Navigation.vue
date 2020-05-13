@@ -1,33 +1,16 @@
 <template>
  
  <div class="container">
-   <!-- <div class="row"> -->
-
   <nav class="navbar" :style="{ background: background || '#333' }" id="nav">
        <a href="javascript:void(0);" class="icon" @click="myFunction">
     <i class="fa fa-bars"></i>
   </a>
-    <!-- <a href="#home" class="active">IMM2020</a> -->
   <a href="#about">About</a>
   <a href="#grads">Grads</a>
   <a href="#projects">Works</a>
   
   </nav>
-  <!-- </div> -->
   </div>
-<!-- <div class="container">
-  <div class="row">
-  <nav class="navbar" id="nav">
-  <a href="#home" class="active">IMM2020</a>
-  <a href="#about">About</a>
-  <a href="#grads">Grads</a>
-  <a href="#projects">Works</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</nav>
-</div>
-</div> -->
 
 </template>
 
@@ -54,10 +37,6 @@ export default {
     ]
   }),
   methods: {
-    // toggleNav() {
-    //   const nav = this.$refs.nav.classList;
-    //   nav.contains("active") ? nav.remove("active") : nav.add("active");
-    // },
     myFunction: function(){
        var x = document.getElementById("nav");
           if (x.className === "navbar") {
@@ -71,11 +50,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/styles/variables.scss';
 @import "@/styles/mixins/typography";
 @import "@/styles/mixins/buttons";
 @import "@/styles/mixins/breakpoints";
 nav{
-  padding: 1em;
+  padding: 3em 1em;
 }
 .navbar .icon {
   display: none;
@@ -101,8 +81,7 @@ nav{
 
 /* Change the color of links on hover */
 .navbar a:hover {
-  background-color: #472B7A;
-  color: #FFF;
+  color: $color-light-purple;
 }
 
 /* Add an active class to highlight the current page */
