@@ -72,7 +72,6 @@ export default {
 .footer {
   padding: 20px 0;
   text-align: left;
-  /* background-color: red; */
 }
 .copyright {
   text-align: right;
@@ -118,9 +117,6 @@ list-inline,
 .list-inline-item:not(:last-child) {
   /* margin-right: 0.5rem; */
 }
-/* .row{
-  border: blue solid 2px;
-} */
 
 .textAlignRight {
   text-align: right;
