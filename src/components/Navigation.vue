@@ -168,7 +168,7 @@ figure {
 }
 nav {
 //   position: fixed;
-  z-index: 1000;
+  z-index: 3;
   height: 60px;
   width: 100%;
   font-weight: bold;
