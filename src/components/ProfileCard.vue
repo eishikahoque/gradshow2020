@@ -37,7 +37,7 @@ export default {
 
 .profilecard {
   background-color: white;
-  padding: 1rem;
+  padding: 0.9rem;
   box-shadow: 4px 4px 16px -5px #cecece;
   max-width: 30rem;
   cursor: pointer;
@@ -51,6 +51,7 @@ export default {
 .profilecardName {
   @include text-body-lg();
   font-weight: 900;
+  line-height: 22px;
   text-transform: uppercase;
   margin-bottom: 0.45rem;
   color: #3e3e3e;
@@ -63,7 +64,6 @@ export default {
   color: $color-black;
   margin-top: auto;
 }
-
 
 .cardImage {
   display: flex;
@@ -85,7 +85,8 @@ export default {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(315deg, #c5fbda, #c9f0ff, #fddfff, #c1a2fc);
+  // background-image: linear-gradient(315deg, #c5fbda, #c9f0ff, #fddfff, #c1a2fc);
+  background-image: linear-gradient(315deg, #c5fbda, #c9f0ff, #fddfff);
   z-index: -1;
   transition: opacity 0.5s linear;
   opacity: 0;

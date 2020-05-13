@@ -1,14 +1,15 @@
 <template>
- 
- <div class="container">
+
+<div class="container">
   <nav class="navbar" :style="{ background: background || '#333' }" id="nav">
-       <a href="javascript:void(0);" class="icon" @click="myFunction">
-    <i class="fa fa-bars"></i>
-  </a>
-  <a href="#about">About</a>
-  <a href="#grads">Grads</a>
-  <a href="#projects">Works</a>
-  
+    <a href="javascript:void(0);" class="icon" @click="myFunction">
+      <i class="fa fa-bars"></i>
+    </a>
+    <div class="navbar__wrapper">
+      <a href="#about">About</a>
+      <a href="#grads">Grads</a>
+      <a href="#projects">Works</a>
+    </div>
   </nav>
   </div>
 
@@ -38,11 +39,11 @@ export default {
   }),
   methods: {
     myFunction: function(){
-       var x = document.getElementById("nav");
+      var x = document.getElementById("nav");
           if (x.className === "navbar") {
               x.className += " responsive";
               } else {
-               x.className = "navbar";
+              x.className = "navbar";
           }
         }
   }
@@ -63,8 +64,12 @@ nav{
 
 /* Add a black background color to the top navigation */
 .navbar {
-  // background-color: #333;
   overflow: hidden;
+  display: flex;
+
+  &__wrapper {
+    margin-left: auto;
+  }
 }
 
 /* Style the links inside the navigation bar */
@@ -74,9 +79,8 @@ nav{
   display: block;
   color: #472B7A;
   text-align: center;
-  padding: 14px 16px;
+  padding-right: 3rem;
   text-decoration: none;
-  // font-size: 17px;
 }
 
 /* Change the color of links on hover */
