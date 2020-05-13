@@ -116,12 +116,12 @@ export default {
   height: 100vh;
 }
 
-#about, #grads, #projects{
-  margin-top: 10em;
-  margin-bottom: 10em;
-}
-/* REMOVE THIS ONCE YOU PLACE YOUR COMPONENTS */
-h1 {
-  min-height: 900px;
-}
+// #about, #grads, #projects{
+//   margin-top: 10em;
+//   margin-bottom: 10em;
+// }
+// /* REMOVE THIS ONCE YOU PLACE YOUR COMPONENTS */
+// h1 {
+//   min-height: 900px;
+// }
 </style>
