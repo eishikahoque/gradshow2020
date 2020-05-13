@@ -40,6 +40,7 @@
         font-size: 28px;
     }
 }
+
 @mixin text-h4 {
     @include secondary-base();
     color: $color-black();
