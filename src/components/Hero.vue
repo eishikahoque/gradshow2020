@@ -31,7 +31,7 @@ h1 {
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: $color-purple;
   color: rgba(0, 0, 0, 0);
-  padding-bottom: 0;
+  margin-bottom: 3rem;
 }
 
 .hero__text {
@@ -40,20 +40,19 @@ h1 {
 
 @include media-breakpoint-up(xs) {
   .outline {
-    -webkit-text-stroke-width: 1px;
-    font-size: 58px;
+    -webkit-text-stroke-width: 1.5px;
   }
 }
 
-@include media-breakpoint-up(lg) {
-    h1 {
-      margin-bottom: -20px;
-    }
-  .outline {
-    -webkit-text-stroke-width: 2px;
-  }
-  .hero__text {
-    margin-top: 10px;
-  }
-}
+// @include media-breakpoint-up(lg) {
+//     h1 {
+//       margin-bottom: -20px;
+//     }
+//   .outline {
+//     -webkit-text-stroke-width: 1.2px;
+//   }
+//   .hero__text {
+//     margin-top: 10px;
+//   }
+// }
 </style>

@@ -24,12 +24,14 @@ export default {
 
 <style lang="scss">
 #app {
-  background-image: url(/static/images/homeBackgrounds/newbg2.png);
+  background-image: url(/static/images/homeBackgrounds/bgnew3.png);
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
   background-size: 100%;
-}
+  z-index: -20;
+} 
+
 // #footer-bg {
 //   background-image: url(/static/images/homeBackgrounds/footer.svg);
 //   background-position: bottom;

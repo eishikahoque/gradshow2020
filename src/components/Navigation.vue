@@ -1,33 +1,17 @@
 <template>
- 
- <div class="container">
-   <!-- <div class="row"> -->
 
+<div class="container">
   <nav class="navbar" :style="{ background: background || '#333' }" id="nav">
-       <a href="javascript:void(0);" class="icon" @click="myFunction">
-    <i class="fa fa-bars"></i>
-  </a>
-    <!-- <a href="#home" class="active">IMM2020</a> -->
-  <a href="#about">About</a>
-  <a href="#grads">Grads</a>
-  <a href="#projects">Works</a>
-  
+    <a href="javascript:void(0);" class="icon" @click="myFunction">
+      <i class="fa fa-bars"></i>
+    </a>
+    <div class="navbar__wrapper">
+      <a href="#about">About</a>
+      <a href="#grads">Grads</a>
+      <a href="#projects">Works</a>
+    </div>
   </nav>
-  <!-- </div> -->
   </div>
-<!-- <div class="container">
-  <div class="row">
-  <nav class="navbar" id="nav">
-  <a href="#home" class="active">IMM2020</a>
-  <a href="#about">About</a>
-  <a href="#grads">Grads</a>
-  <a href="#projects">Works</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</nav>
-</div>
-</div> -->
 
 </template>
 
@@ -54,16 +38,12 @@ export default {
     ]
   }),
   methods: {
-    // toggleNav() {
-    //   const nav = this.$refs.nav.classList;
-    //   nav.contains("active") ? nav.remove("active") : nav.add("active");
-    // },
     myFunction: function(){
-       var x = document.getElementById("nav");
+      var x = document.getElementById("nav");
           if (x.className === "navbar") {
               x.className += " responsive";
               } else {
-               x.className = "navbar";
+              x.className = "navbar";
           }
         }
   }
@@ -71,11 +51,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/styles/variables.scss';
 @import "@/styles/mixins/typography";
 @import "@/styles/mixins/buttons";
 @import "@/styles/mixins/breakpoints";
 nav{
-  padding: 1em;
+  padding: 3em 1em;
 }
 .navbar .icon {
   display: none;
@@ -83,8 +64,12 @@ nav{
 
 /* Add a black background color to the top navigation */
 .navbar {
-  // background-color: #333;
   overflow: hidden;
+  display: flex;
+
+  &__wrapper {
+    margin-left: auto;
+  }
 }
 
 /* Style the links inside the navigation bar */
@@ -92,17 +77,15 @@ nav{
   font-weight: 600;
   float: left;
   display: block;
-  color: #472B7A;
+  // color: #472B7A;
   text-align: center;
-  padding: 14px 16px;
+  padding-right: 3rem;
   text-decoration: none;
-  // font-size: 17px;
 }
 
 /* Change the color of links on hover */
 .navbar a:hover {
-  background-color: #472B7A;
-  color: #FFF;
+  color: $color-light-purple;
 }
 
 /* Add an active class to highlight the current page */
@@ -238,19 +221,26 @@ nav{
 //}
 
 @media screen and (max-width: 600px) {
-  .navbar a:not(:first-child) {display: none;}
-  .navbar a.icon {
-    float: right;
-    display: block;
+  // .navbar a:not(:first-child) {display: none;}
+  .navbar a {
+    display: none;
   }
-}
-
-@media screen and (max-width: 600px) {
-  .navbar.responsive {position: relative;}
-  .navbar.responsive a.icon {
-    position: absolute;
+  .navbar a.icon {
     right: 0;
     top: 0;
+    // float: right;
+    display: block;
+  }
+
+  .navbar__wrapper {
+    margin-left: 0;
+  }
+
+  .navbar.responsive {position: relative;}
+  .navbar.responsive a.icon {
+    // position: absolute;
+    // right: 0;
+    // top: 0;
   }
   .navbar.responsive a {
     float: none;
