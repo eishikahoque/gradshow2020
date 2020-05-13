@@ -126,7 +126,7 @@ export default {
       {
         name: "Works",
         path: "#projects"
-      },
+      }
       // { name: "Location", path: "#location" }
       // {
       //   name: "Location",
@@ -167,7 +167,7 @@ figure {
   // margin-right: 10px;
 }
 nav {
-//   position: fixed;
+  //   position: fixed;
   z-index: 1000;
   height: 60px;
   width: 100%;
@@ -226,6 +226,8 @@ nav {
   right: 0;
   padding: 13px;
   border: 0;
+  position: relative;
+  z-index: 1;
 }
 @include media-breakpoint-down(sm) {
   nav {
