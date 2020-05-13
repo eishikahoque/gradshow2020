@@ -1,7 +1,7 @@
 export const data = [
 	{
 		id: 1,
-		name: "Alena</br>Kim",
+		name: "Alena Kim",
 		title: "Product Designer",
 		picture: "/static/images/studentImages/alena.png",
 		color: "#FDDFFF",
@@ -16,7 +16,7 @@ export const data = [
 	},
 	{
 		id: 2,
-		name: "Andrew</br>Block",
+		name: "Andrew Block",
 		title: "Front-end Developer",
 		picture: "/static/images/studentImages/Andrew.png",
 		color: "#C9F0FF",
@@ -29,7 +29,7 @@ export const data = [
 	},
 	{
 		id: 3,
-		name: "Ankit</br>Gupta",
+		name: "Ankit Gupta",
 		title: "Product Designer",
 		picture: "/static/images/studentImages/ankit.png",
 		color: "#FDDFFF",
@@ -44,7 +44,7 @@ export const data = [
 	},
 	{
 		id: 4,
-		name: "Chesney</br>Gordon-Williams",
+		name: "Chesney Gordon-Williams",
 		title: "Front-end Developer",
 		picture: "/static/images/studentImages/Chesney.png",
 		color: "#C9F0FF",
@@ -59,7 +59,7 @@ export const data = [
 	},
 	{
 		id: 5,
-		name: "Darren</br>Vaithilingam",
+		name: "Darren Vaithilingam",
 		title: "Graphic Designer",
 		picture: "/static/images/studentImages/Darren.png",
 		color: "#D1FFE3",
@@ -75,7 +75,7 @@ export const data = [
 	},
 	{
 		id: 6,
-		name: "Diana</br>Mantilla",
+		name: "Diana Mantilla",
 		title: "Digital Interactive Designer",
 		picture: "/static/images/studentImages/diana-2.png",
 		color: "#D1FFE3",
