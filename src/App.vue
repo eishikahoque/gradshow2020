@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <!-- MAIN BODY -->
+    <Navigation class="nav"/>
     <router-view />
     <div class="bg-gradient"></div>
     <!-- <div id="footer-bg"/> -->
@@ -8,9 +9,13 @@
 </template>
 
 <script>
+import Navigation from "./components/Navigation.vue";
+
 export default {
   name: "GradShow",
-
+  components: {
+    Navigation
+  },
   data: function() {
     return {};
   }
@@ -25,7 +30,6 @@ export default {
   background-repeat: no-repeat;
   background-size: 100%;
 }
-
 // #footer-bg {
 //   background-image: url(/static/images/homeBackgrounds/footer.svg);
 //   background-position: bottom;

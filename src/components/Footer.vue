@@ -10,40 +10,40 @@
               </div>
               <div class="col-2 textAlignRight mt-3">
                   <a href="#nav">
-                    <h3>
-                    <i class="fas fa-arrow-up"></i> Top </h3>
+                    <h4>
+                    <i class="fas fa-arrow-up"></i> Top </h4>
                   </a>
               </div>
           </div>
 
         <div class="row align-items-center">
-          <div class="col-lg-9 col-sm-12">
+          <div class="col-lg-6 col-sm-12">
             <div class="row">    
-            <div class="col-2">
-               <a href="#">
-                 <i class="fab fa-facebook-square fa-3x"></i>
+            <div class="col-1">
+               <a href="https://www.facebook.com/sheridanIMM">
+                 <i class="fab fa-facebook-square fa-lg"></i>
               </a>
               
             </div>
-            <div class="col-2">
-                <a href="#">
-                  <i class="fab fa-instagram fa-3x"></i>  
+            <div class="col-1">
+                <a href="https://www.instagram.com/sheridanimm/">
+                  <i class="fab fa-instagram fa-lg"></i>  
                 </a>
             </div>
-            <div class="col-2">
-              <a href="#">
-                <i class="fab fa-twitter-square fa-3x"></i>
+            <div class="col-1">
+              <a href="https://twitter.com/SheridanIMM">
+                <i class="fab fa-twitter-square fa-lg"></i>
               </a>
             </div>
-            <div class="col-2">
-              <a href="#">
-                <i class="fab fa-linkedin fa-3x"></i>
+            <div class="col-1">
+              <a href="https://www.linkedin.com/company/interactive-multimedia-at-sheridan-college/">
+                <i class="fab fa-linkedin fa-lg"></i>
               </a>
           </div>
           </div>
           </div>
-          <div class="col-lg-3 col-sm-12">
-             <h4 class="copyright"> Copyright &copy; IMM 2020 </h4>
+          <div class="col-lg-6 col-sm-12">
+             <h5 class="copyright"> Copyright &copy; IMM 2020 </h5>
           </div>
       </div>
       </div>
