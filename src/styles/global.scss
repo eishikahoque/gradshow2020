@@ -46,3 +46,15 @@ input {
 section{
     margin-bottom: 15rem;
 }
+
+a:link,
+a:visited {
+    color: $color-purple;
+}
+
+a:hover,
+a:active {
+    text-decoration: none;
+    color: $color-light-purple;
+    transition: 0.3s;
+}
