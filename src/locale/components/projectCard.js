@@ -64,7 +64,7 @@ export const data =
             image: "/static/images/projectImages/edited/lookey.png",
             students: "Tim,Yan,Flora",
             link: "https://www.youtube.com/watch?time_continue=11&v=H37BwTgwDhw&feature=emb_logo",
-            keywords: ["ar/vr"]
+            keywords: ["app"]
         },
         {
             id: 8,
