@@ -50,7 +50,7 @@ export default {
       {
         name: "Works",
         path: "#projects"
-      },
+      }
     ]
   }),
   methods: {
@@ -235,7 +235,6 @@ nav{
 //     }
 //   }
 //}
-
 
 @media screen and (max-width: 600px) {
   .navbar a:not(:first-child) {display: none;}
