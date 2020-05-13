@@ -77,7 +77,7 @@ nav{
   font-weight: 600;
   float: left;
   display: block;
-  color: #472B7A;
+  // color: #472B7A;
   text-align: center;
   padding-right: 3rem;
   text-decoration: none;
@@ -221,19 +221,26 @@ nav{
 //}
 
 @media screen and (max-width: 600px) {
-  .navbar a:not(:first-child) {display: none;}
-  .navbar a.icon {
-    float: right;
-    display: block;
+  // .navbar a:not(:first-child) {display: none;}
+  .navbar a {
+    display: none;
   }
-}
-
-@media screen and (max-width: 600px) {
-  .navbar.responsive {position: relative;}
-  .navbar.responsive a.icon {
-    position: absolute;
+  .navbar a.icon {
     right: 0;
     top: 0;
+    // float: right;
+    display: block;
+  }
+
+  .navbar__wrapper {
+    margin-left: 0;
+  }
+
+  .navbar.responsive {position: relative;}
+  .navbar.responsive a.icon {
+    // position: absolute;
+    // right: 0;
+    // top: 0;
   }
   .navbar.responsive a {
     float: none;
