@@ -89,13 +89,14 @@ nav{
 
 /* Style the links inside the navigation bar */
 .navbar a {
+  font-weight: 600;
   float: left;
   display: block;
   color: #472B7A;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  // font-size: 17px;
 }
 
 /* Change the color of links on hover */
