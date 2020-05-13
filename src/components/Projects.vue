@@ -172,11 +172,11 @@ export default {
 }
 
 .swiper-button {
-  position: relative;
-  color: $color-white;
-  width: 73px;
-  height: 73px;
-  display: flex;
+    position: relative;
+    color: $color-white;
+    width: 73px;
+    height: 65px;
+    display: flex;
 }
 
 #btn-prev {

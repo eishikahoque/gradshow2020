@@ -5,7 +5,7 @@
         <h1> Meet </h1>
         <h1> Your Sheridan </h1>
         <h1 class="outline"> IMM2020 Grads </h1>
-        <p class="hero__text"> see what they can do for you </p>
+        <p class="hero__text">& see what they can do for you </p>
       </div>
     </div>
   </section>

@@ -85,7 +85,7 @@ export default {
 }
 
 .section-title {
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
 
     @include media-breakpoint-down(sm) {
       text-align: center;
@@ -102,7 +102,7 @@ export default {
     }
 
     &-btn {
-      width: 68%;
+      width: 63%;
       margin-left: auto;
     }
     
