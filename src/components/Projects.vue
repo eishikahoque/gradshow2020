@@ -171,7 +171,7 @@ export default {
     position: relative;
     color: $color-white;
     width: 73px;
-    height: 73px;
+    height: 65px;
     display: flex;
 }
 

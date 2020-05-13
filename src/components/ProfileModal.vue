@@ -8,7 +8,7 @@
         url(${profile.picture})`
       }"
     >
-      <section class="jobTitleRow">
+      <div class="jobTitleRow">
         <div class="jobTitle">
           <span class="hashtag" v-for="(hash, i) in profile.hash" :key="i">
             {{ hash }}
@@ -18,8 +18,8 @@
         <span>
           <i class="fas fa-times"></i>
         </span>
-      </section>
-      <section class="studentDescription">
+      </div>
+      <div class="studentDescription">
         <div class="className">
           IMM 2020
         </div>
@@ -50,7 +50,7 @@
             </template>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   </main>
 </template>
@@ -115,34 +115,40 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/styles/mixins/breakpoints.scss";
+@import "@/styles/mixins/typography.scss";
+@import "@/styles/variables.scss";
 
 .modal {
   max-width: 95vw;
-  max-height: 90vh;
+  // max-height: 90vh;
+  height: 800px;
   background-color: white;
 }
 
 .imageGradient {
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   width: 95vw;
-  height: 90vh;
+  // height: 90vh;
+  // width: 100%;
+  height: 100%;
 }
 
 .fas.fa-times {
   font-size: 18px;
   color: white;
   cursor: pointer;
-
 }
 
 .jobTitleRow {
   display: flex;
   justify-content: space-between;
   flex: 1;
+  margin-bottom: 10rem;
 }
 
 .jobTitle {
@@ -158,6 +164,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  margin-top: 15rem;
 }
 
 .className {
@@ -190,18 +197,21 @@ export default {
 }
 
 .button.button-outline {
+  @include text-h5();
   color: white;
   margin-top: 1rem;
   background-color: transparent;
-  border-color: white;
+  // border-color: white;
+  border: 2px solid $color-white;
   max-width: 100%;
-  border-radius: 3px;
-  padding: 8px;
+  padding: 0.75rem 0.95rem;
 }
 
 .button.button-outline:hover {
-  color: white;
-  border-color: white;
+  background: linear-gradient(270deg, #c5fbda, #c6bdf5);
+  color: $color-dark-purple;
+  border-color: linear-gradient(270deg, #c5fbda, #c6bdf5);
+  font-weight: 900;
 }
 
 .socialIconRow {
@@ -214,8 +224,9 @@ export default {
 
 .socialIcon {
   width: 24px;
-  height: 18px;
+  height: 19px;
   margin: 0 1rem;
+  cursor: pointer;
 }
 
 @include media-breakpoint-up(sm) {
@@ -229,6 +240,8 @@ export default {
   }
 
   .hashtag {
+    @include text-h5();
+    font-weight: 600;
     margin-right: 0.75rem;
   }
 
@@ -260,7 +273,8 @@ export default {
     padding-bottom: 2rem;
     width: 100%;
     height: 100%;
-    background-size: contain;
+    // background-size: contain;
+    background-size: cover;
   }
 
   .jobTitle {
@@ -291,7 +305,7 @@ export default {
   .button.button-outline {
     margin-top: 1rem;
     width: 100%;
-    padding: 0.5rem;
+    // padding: 0.5rem;
   }
 
   .socialIcon {
