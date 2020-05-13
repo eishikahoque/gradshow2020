@@ -1,7 +1,7 @@
 export const data = [
 	{
 		id: 1,
-		name: "Alena Kim",
+		name: "Alena</br>Kim",
 		title: "Product Designer",
 		picture: "/static/images/studentImages/alena.png",
 		color: "#FDDFFF",
@@ -16,7 +16,7 @@ export const data = [
 	},
 	{
 		id: 2,
-		name: "Andrew \n Block",
+		name: "Andrew</br>Block",
 		title: "Front-end Developer",
 		picture: "/static/images/studentImages/Andrew.png",
 		color: "#C9F0FF",
@@ -29,7 +29,7 @@ export const data = [
 	},
 	{
 		id: 3,
-		name: "Ankit Gupta",
+		name: "Ankit</br>Gupta",
 		title: "Product Designer",
 		picture: "/static/images/studentImages/ankit.png",
 		color: "#FDDFFF",
@@ -44,7 +44,7 @@ export const data = [
 	},
 	{
 		id: 4,
-		name: "Chesney Gordon-Williams",
+		name: "Chesney</br>Gordon-Williams",
 		title: "Front-end Developer",
 		picture: "/static/images/studentImages/Chesney.png",
 		color: "#C9F0FF",
@@ -59,7 +59,7 @@ export const data = [
 	},
 	{
 		id: 5,
-		name: "Darren Vaithilingam",
+		name: "Darren</br>Vaithilingam",
 		title: "Graphic Designer",
 		picture: "/static/images/studentImages/Darren.png",
 		color: "#D1FFE3",
@@ -75,9 +75,9 @@ export const data = [
 	},
 	{
 		id: 6,
-		name: "Diana Mantilla",
+		name: "Diana</br>Mantilla",
 		title: "Digital Interactive Designer",
-		picture: "/static/images/studentImages/diana.png",
+		picture: "/static/images/studentImages/diana-2.png",
 		color: "#D1FFE3",
 		hash: ["#UXDesigner", "#InteractiveDesigner", "#GraphicDesigner"],
 		keywords: ["UXUI", "UXUI", "UXUI"],

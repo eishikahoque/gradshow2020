@@ -9,7 +9,7 @@
       <img v-bind:src="image" class="cardImage" alt="student picture" />
     </div>
     <div class="profile-card__content">
-      <div class="profilecardName">{{ name }}</div>
+      <div class="profilecardName" v-html="name"></div>
       <div class="profilecardTitle">
         {{ title }}
       </div>

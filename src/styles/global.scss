@@ -4,7 +4,8 @@
 @import './variables.scss';
 @import './mixins/typography.scss';
 body {
-    @include text-body-sm();
+    @include primary-base();
+    font-size: 16px;
     // background: linear-gradient(90deg, #E7B8F0, #CFBDF3);
     background: $color-grey-white;
     color: $color-purple;
@@ -36,12 +37,6 @@ h4 {
 
 a {
     @include text-h5();
-    color: $color-purple;
-}
-
-body {
-    @include text-body-sm();
-    background: $color-grey-white;
     color: $color-purple;
 }
 

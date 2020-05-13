@@ -128,6 +128,50 @@ export default {
   margin-right: 1rem;
 }
 
+.headerTitle {
+  font-weight: 700;
+  font-size: 48px;
+  font-family: "Montserrat", sans-serif;
+  color: $color-purple;
+  text-align: center;
+}
+
+.filterBtn {
+  margin: 1rem;
+  line-height: 2.8rem;
+  height: 2.8rem;
+  padding: 0 1rem;
+  border-radius: 3px;
+  font-weight: 400;
+  background-color: $color-grey;
+  border-color: $color-grey;
+  color: $color-black;
+
+  &.active {
+    background-color: $color-purple;
+    border-color: $color-purple;
+    color: $color-white;
+    box-shadow: 4px 4px 16px -5px rgba(140, 140, 140, 1);
+  }
+}
+
+.filterBtn:focus,
+.filterBtn.active {
+  background-color: $color-purple;
+  border-color: $color-purple;
+  color: $color-white;
+  box-shadow: 4px 4px 16px -5px rgba(140, 140, 140, 1);
+}
+
+.filteringSection {
+  display: flex;
+  flex-direction: column;
+  &.blurContainer {
+    filter: blur(5px);
+    overflow: hidden;
+  }
+}
+
 .profileCardContainer {
   display: grid;
   grid-template-columns: 1fr;
@@ -165,9 +209,9 @@ export default {
 }
 
 @include media-breakpoint-up(sm) {
-  .headerTitle {
-    font-size: 48px;
-  }
+  // .headerTitle {
+  //   font-size: 48px;
+  // }
   .profileCardContainer {
     grid-template-columns: 1fr 1fr;
   }
@@ -178,9 +222,9 @@ export default {
     padding: 0 3rem;
   }
 
-  .filterContainer {
-    text-align: center;
-  }
+  // .filterContainer {
+  //   text-align: center;
+  // }
 }
 @include media-breakpoint-up(md) {
   .profileModalContainer {

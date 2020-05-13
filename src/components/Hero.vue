@@ -1,5 +1,6 @@
 <template>
-	<div class="container align-items-center">
+  <section class="hero">
+	  <div class="container align-items-center">
       <div class="row">
         <div class="col">
           <h1> Meet </h1>
@@ -9,6 +10,7 @@
         </div>
       </div>
     </div>
+  </section>
 </template>
 
 <script>
@@ -41,6 +43,7 @@ h1 {
 @include media-breakpoint-up(xs) {
   .outline {
     -webkit-text-stroke-width: 1px;
+    font-size: 58px;
   }
 }
 

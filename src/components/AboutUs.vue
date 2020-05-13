@@ -1,8 +1,9 @@
 <template>
+  <section class="about">
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h2 class="headerTitle"> About Us </h2>
+          <h2 class="section-title"> About Us </h2>
         </div>
       </div>
       <div class="row justify-content-md-end justify-content-sm-center">
@@ -15,6 +16,7 @@
         </div>
       </div>
     </div>
+  </section>
 </template>
 
 <script>

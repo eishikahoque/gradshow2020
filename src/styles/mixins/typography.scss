@@ -27,7 +27,7 @@
     font-size: 60px;
 
     @include media-breakpoint-down(md){
-        font-size: 24px;
+        font-size: 38px;
     }
 }
 
@@ -51,9 +51,8 @@
     }
 }
 
-@mixin text-h5 {
+@mixin text-h4 {
     @include secondary-base();
-    font-size: 18px;
     color: $color-black();
     font-weight: bold;
     font-size: 24px;
