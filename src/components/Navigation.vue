@@ -1,18 +1,16 @@
 <template>
-
-<div class="container">
-  <nav class="navbar" :style="{ background: background || '#333' }" id="nav">
-    <a href="javascript:void(0);" class="icon" @click="myFunction">
-      <i class="fa fa-bars"></i>
-    </a>
-    <div class="navbar__wrapper">
-      <a href="#about">About</a>
-      <a href="#grads">Grads</a>
-      <a href="#projects">Works</a>
-    </div>
-  </nav>
+  <div class="container">
+    <nav class="navbar" :style="{ background: background || '#333' }" id="nav">
+      <a href="javascript:void(0);" class="icon" @click="myFunction">
+        <i class="fa fa-bars"></i>
+      </a>
+      <div class="navbar__wrapper">
+        <a href="#about">About</a>
+        <a href="#grads">Grads</a>
+        <a href="#projects">Works</a>
+      </div>
+    </nav>
   </div>
-
 </template>
 
 <script>
@@ -38,24 +36,24 @@ export default {
     ]
   }),
   methods: {
-    myFunction: function(){
+    myFunction: function() {
       var x = document.getElementById("nav");
-          if (x.className === "navbar") {
-              x.className += " responsive";
-              } else {
-              x.className = "navbar";
-          }
-        }
+      if (x.className === "navbar") {
+        x.className += " responsive";
+      } else {
+        x.className = "navbar";
+      }
+    }
   }
 };
 </script>
 
 <style lang="scss" scoped>
-@import '@/styles/variables.scss';
+@import "@/styles/variables.scss";
 @import "@/styles/mixins/typography";
 @import "@/styles/mixins/buttons";
 @import "@/styles/mixins/breakpoints";
-nav{
+nav {
   padding: 3em 1em;
 }
 .navbar .icon {
@@ -66,6 +64,8 @@ nav{
 .navbar {
   overflow: hidden;
   display: flex;
+  position: relative;
+  z-index: 1;
 
   &__wrapper {
     margin-left: auto;
@@ -90,7 +90,7 @@ nav{
 
 /* Add an active class to highlight the current page */
 .navbar a.active {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
 }
 
@@ -236,7 +236,9 @@ nav{
     margin-left: 0;
   }
 
-  .navbar.responsive {position: relative;}
+  .navbar.responsive {
+    position: relative;
+  }
   .navbar.responsive a.icon {
     // position: absolute;
     // right: 0;
