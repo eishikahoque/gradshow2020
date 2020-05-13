@@ -1,13 +1,11 @@
 <template>
-  <section class="hero">
-	  <div class="container align-items-center">
-      <div class="row">
-        <div class="col">
-          <h1> Meet </h1>
-          <h1> Your Sheridan </h1>
-          <h1 class="outline"> IMM2020 Grads </h1>
-          <p class="hero__text"> see what they can do for you </p>
-        </div>
+  <section class="container align-items-center hero">
+    <div class="row">
+      <div class="col">
+        <h1> Meet </h1>
+        <h1> Your Sheridan </h1>
+        <h1 class="outline"> IMM2020 Grads </h1>
+        <p class="hero__text"> see what they can do for you </p>
       </div>
     </div>
   </section>
