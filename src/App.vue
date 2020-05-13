@@ -28,7 +28,9 @@ export default {
 }
   #app {
     // background-image: url(/static/images/homeBackgrounds/bg-no-shadow.png);
-        background-image: url(/static/images/homeBackgrounds/newbg1.png);
+        // background-image: url(/static/images/homeBackgrounds/newbg1.png);
+        background-image: url(/static/images/homeBackgrounds/newbg2.png);
+
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;  
