@@ -108,5 +108,14 @@ export const data =
             students: "Tim Lu, Yan Zhang, & Flora Zuo",
             link: "http://tim-lu-design.com/robot%20space/robot%20space.html",
             keywords: ["ar/vr"]
+        },
+        {
+            id: 13,
+            name: "Sir Mousington",
+            description: "Sir Mousington is a twitterbot to create interactivity and conversation for the upcoming game Tales of the Dead Sea. The project was thought up because I wanted to do a project where I spent no money or resources outside of my own time.",
+            image: "/static/images/projectImages/edited/mousington-2.png",
+            students: "Kai Scott",
+            link: "http://www.twitter.com/smousington",
+            keywords: ["app"]
         }
     ]
