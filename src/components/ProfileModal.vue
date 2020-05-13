@@ -121,7 +121,6 @@ export default {
 .modal {
   max-width: 95vw;
   // max-height: 90vh;
-  height: 800px;
   background-color: white;
 }
 
@@ -164,7 +163,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  margin-top: 15rem;
+  margin-top: 5rem;
 }
 
 .className {

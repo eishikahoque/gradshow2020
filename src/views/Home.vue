@@ -17,10 +17,6 @@
     <!-- STUDENT PROFILES -->
     <div class="row align-items-center">
       <div id="grads" class="col-12">
-        <!-- Put student profiles component here -->
-        <!-- REMOVE BELOW H1 WHEN YOU PLACE YOUR COMPONENTS -->
-
-        <!-- <h1 id="grads">I'm grads section</h1> -->
         <Profiles />
       </div>
     </div>
@@ -38,7 +34,6 @@
         <!-- Put student projects component here -->
         <!-- REMOVE BELOW H1 WHEN YOU PLACE YOUR COMPONENTS -->
         <Footer />
-        <!-- <location></location> -->
       </div>
     </div>
   </div>

@@ -72,6 +72,10 @@ export default {
     @include text-h4();
     display: flex;
     color: $color-black;
+
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 1rem;
+      }
     }
 
     &-authors {
@@ -87,11 +91,6 @@ export default {
   &__content {
     @include text-body-md();
     color: $color-black;
-    margin-bottom: 1.75rem;
-
-    @include media-breakpoint-down(md) {
-        font-size: 16px;
-    }
   }
 
   &__links {
