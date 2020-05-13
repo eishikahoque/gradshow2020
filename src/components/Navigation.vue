@@ -1,110 +1,18 @@
 <template>
+
+<div class="container">
   <nav class="navbar" :style="{ background: background || '#333' }" id="nav">
-    <div class="container">
-      <router-link class="navbar-brand" to="/"
-        ><figure class="image-logo" @click="toggleNav">
-          <img :src="imagePath" height="80%" width="80%" /></figure
-      ></router-link>
-      <!-- <button
-        class="navbar-toggler navbar-toggler-right"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarResponsive"
-        aria-controls="navbarResponsive"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        Menu <img src="../assets/images/bars-solid.svg" alt="" srcset="" />
-      </button> -->
-      <ul ref="nav">
-        <!-- <router-link class="navbar-brand" to="/"
-          ><figure class="image-logo" @click="toggleNav">
-            <img :src="imagePath" height="80%" width="80%" /></figure
-        ></router-link> -->
-        <!-- <figure class="image-logo" @click="toggleNav">
-            <img :src="imagePath" height="60px" width="60px" />
-          </figure> -->
-        <li
-          class="nav-item"
-          v-for="(linkObj, ind) in navList"
-          :key="ind"
-          @mouseenter="
-            $event.currentTarget.style.background = hoverBackground || '#999'
-          "
-          @mouseleave="
-            $event.currentTarget.style.background = background || '#333'
-          "
-        >
-          <a :href="linkObj.path" v-if="linkObj.path.indexOf('#') === 0">{{
-            linkObj.name
-          }}</a>
-          <router-link v-else :to="linkObj.path"
-            >{{ linkObj.name }}
-          </router-link>
-        </li>
-      </ul>
-
-      <!--      
-      <div id="navbarResponsive">
-        <ul class="navbar-nav" ref="nav">
-          <li class="nav-item" v-for="(linkObj, ind) in navList" :key="ind">
-            <a :href="linkObj.path" v-if="linkObj.path.indexOf('#') === 0">{{
-              linkObj.name
-            }}</a>
-            <router-link v-else :to="linkObj.path"
-              >{{ linkObj.name }}
-            </router-link>
-          </li>
-        </ul> -->
-
-      <!-- <ul :style="{ background: background || '#333' }" ref="nav">
-          <figure class="image-logo" @click="toggleNav">
-            <img :src="imagePath" height="60px" width="60px" />
-          </figure>
-          <li
-            v-for="(link, index) in navList"
-            :key="index"
-            @mouseenter="
-              $event.currentTarget.style.background = hoverBackground || '#999'
-            "
-            @mouseleave="
-              $event.currentTarget.style.background = background || '#333'
-            "
-          >
-            <router-link
-              :to="link.path"
-              :style="{ color: linkColor || '#DDD' }"
-            >
-              {{ link.name }}
-            </router-link>
-          </li>
-        </ul> -->
-
-      <!-- <ul :style="{ background: background || '#333' }" ref="nav">
-          <figure class="image-logo" @click="toggleNav">
-            <img :src="imagePath" height="100%" width="100%" />
-          </figure>
-          <li
-            v-for="(link, index) in navList"
-            :key="index"
-            @mouseenter="
-              $event.currentTarget.style.background = hoverBackground || '#999'
-            "
-            @mouseleave="
-              $event.currentTarget.style.background = background || '#333'
-            "
-          >
-            <a
-              href="#"
-              v-if="link.path.indexOf('#') === 0"
-              :v-scroll-to="link.path"
-              :style="{ color: linkColor || '#DDD' }"
-            ></a>
-            <router-link v-else :to="link.path">{{ link.name }} </router-link>
-          </li>
-        </ul> -->
+    <a href="javascript:void(0);" class="icon" @click="myFunction">
+      <i class="fa fa-bars"></i>
+    </a>
+    <div class="navbar__wrapper">
+      <a href="#about">About</a>
+      <a href="#grads">Grads</a>
+      <a href="#projects">Works</a>
     </div>
   </nav>
+  </div>
+
 </template>
 
 <script>
@@ -126,139 +34,159 @@ export default {
       {
         name: "Works",
         path: "#projects"
-      },
-      // { name: "Location", path: "#location" }
-      // {
-      //   name: "Location",
-      //   path: "#location"
-      // },
-      // {
-      //   name: "Projects",
-      //   path: "#projects"
-      // },
-      // {
-      //   name: "Grads",
-      //   path: "#grads"
-      // },
-      // {
-      //   name: "About",
-      //   path: "#about"
-      // }
+      }
     ]
   }),
   methods: {
-    toggleNav() {
-      const nav = this.$refs.nav.classList;
-      nav.contains("active") ? nav.remove("active") : nav.add("active");
-    }
+    myFunction: function(){
+      var x = document.getElementById("nav");
+          if (x.className === "navbar") {
+              x.className += " responsive";
+              } else {
+              x.className = "navbar";
+          }
+        }
   }
 };
 </script>
 
 <style lang="scss" scoped>
+@import '@/styles/variables.scss';
 @import "@/styles/mixins/typography";
 @import "@/styles/mixins/buttons";
 @import "@/styles/mixins/breakpoints";
-figure {
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 10px;
-  margin-inline-end: 0;
-  // margin-right: 10px;
+nav{
+  padding: 3em 1em;
 }
-nav {
-//   position: fixed;
-  z-index: 1000;
-  height: 60px;
-  width: 100%;
-  font-weight: bold;
-  right: 0;
-  padding: 13px;
-  border: 0;
-  margin-bottom: 10px;
-  // background: rgba(126, 91, 91, 0.1);
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    /* background-color: #606c76; */
-    display: flex;
-    float: right;
-    height: 100%;
-    align-items: center;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    padding-inline-start: 0;
-  }
-  li {
-    // float: right;
-    margin-bottom: 0;
-    list-style-type: none;
-    padding: 0px 10px;
-    a {
-      display: flex;
-      color: $color-purple;
-      text-align: center;
-      padding: 12px 12px;
-      text-decoration: none;
-      flex-direction: row-reverse;
-      align-items: center;
-    }
-    a:hover {
-      // background-color: #ab5dda;
-    }
-  }
-  //   .navbar li {
-  //     background-color: #ab5dda;
-  //   }
+.navbar .icon {
+  display: none;
 }
-.navbar-brand {
+
+/* Add a black background color to the top navigation */
+.navbar {
+  overflow: hidden;
+  display: flex;
+
+  &__wrapper {
+    margin-left: auto;
+  }
+}
+
+/* Style the links inside the navigation bar */
+.navbar a {
+  font-weight: 600;
   float: left;
-  margin-bottom: 0;
-  color: white;
+  display: block;
+  // color: #472B7A;
   text-align: center;
-  padding: 14px 16px;
+  padding-right: 3rem;
   text-decoration: none;
 }
-.navbar {
-  @include text-body-sm();
-  right: 0;
-  padding: 13px;
-  border: 0;
+
+/* Change the color of links on hover */
+.navbar a:hover {
+  color: $color-light-purple;
 }
-@include media-breakpoint-down(sm) {
-  nav {
-    ul {
-      position: absolute;
-      width: 120px;
-      flex-direction: column;
-      height: fit-content;
-      transition: 300ms ease all;
-      top: 60px;
-      &.active {
-        left: 0px;
-      }
-      figure {
-        position: fixed;
-        z-index: 3;
-        top: 10px;
-        left: 2px;
-      }
-      li {
-        width: 100%;
-        padding-left: 0;
-        padding-right: 0;
-      }
-      a {
-        flex-direction: row;
-        margin-left: 20px;
-        justify-content: space-between;
-        margin-right: 13px;
-      }
-    }
-  }
+
+/* Add an active class to highlight the current page */
+.navbar a.active {
+  background-color: #4CAF50;
+  color: white;
 }
+
+// nav {
+// //   position: fixed;
+//   z-index: 3;
+//   height: 60px;
+//   width: 100%;
+//   font-weight: bold;
+//   right: 0;
+//   padding: 13px;
+//   border: 0;
+//   margin-bottom: 10px;
+//   // background: rgba(126, 91, 91, 0.1);
+//   ul {
+//     list-style-type: none;
+//     margin: 0;
+//     padding: 0;
+//     overflow: hidden;
+//     /* background-color: #606c76; */
+//     display: flex;
+//     float: right;
+//     height: 100%;
+//     align-items: center;
+//     margin-block-start: 0;
+//     margin-block-end: 0;
+//     padding-inline-start: 0;
+//   }
+//   li {
+//     // float: right;
+//     margin-bottom: 0;
+//     list-style-type: none;
+//     padding: 0px 10px;
+//     a {
+//       display: flex;
+//       color: $color-purple;
+//       text-align: center;
+//       padding: 12px 12px;
+//       text-decoration: none;
+//       flex-direction: row-reverse;
+//       align-items: center;
+//     }
+//     a:hover {
+//       // background-color: #ab5dda;
+//     }
+//   }
+//   //   .navbar li {
+//   //     background-color: #ab5dda;
+//   //   }
+// }
+// .navbar-brand {
+//   float: left;
+//   margin-bottom: 0;
+//   color: white;
+//   text-align: center;
+//   padding: 14px 16px;
+//   text-decoration: none;
+// }
+// .navbar {
+//   @include text-body-sm();
+//   right: 0;
+//   padding: 13px;
+//   border: 0;
+// }
+// @include media-breakpoint-down(sm) {
+//   nav {
+//     ul {
+//       position: absolute;
+//       width: 120px;
+//       flex-direction: column;
+//       height: fit-content;
+//       transition: 300ms ease all;
+//       top: 60px;
+//       &.active {
+//         left: 0px;
+//       }
+//       figure {
+//         position: fixed;
+//         z-index: 3;
+//         top: 10px;
+//         left: 2px;
+//       }
+//       li {
+//         width: 100%;
+//         padding-left: 0;
+//         padding-right: 0;
+//       }
+//       a {
+//         flex-direction: row;
+//         margin-left: 20px;
+//         justify-content: space-between;
+//         margin-right: 13px;
+//       }
+//     }
+//   }
+// }
 /* @media (min-width: 992px) {
   #mainNav {
     padding-top: 25px;
@@ -291,4 +219,33 @@ nav {
 //     }
 //   }
 //}
+
+@media screen and (max-width: 600px) {
+  // .navbar a:not(:first-child) {display: none;}
+  .navbar a {
+    display: none;
+  }
+  .navbar a.icon {
+    right: 0;
+    top: 0;
+    // float: right;
+    display: block;
+  }
+
+  .navbar__wrapper {
+    margin-left: 0;
+  }
+
+  .navbar.responsive {position: relative;}
+  .navbar.responsive a.icon {
+    // position: absolute;
+    // right: 0;
+    // top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
 </style>

@@ -187,7 +187,7 @@ export default {
   display: flex;
   justify-content: center;
   width: 85vw;
-  height: 95vh;
+  // height: 95vh;
 }
 
 .modalContainer {
@@ -231,7 +231,7 @@ export default {
     display: flex;
     justify-content: center;
     width: 80vw;
-    height: 95vh;
+    // height: 95vh;
   }
   .profileCardContainer {
     grid-template-columns: 1fr 1fr 1fr;
@@ -248,14 +248,14 @@ export default {
     display: flex;
     justify-content: center;
     width: 50vw;
-    height: 90vh;
+    // height: 90vh;
   }
   .filterContainer {
     flex-direction: row;
     text-align: left;
   }
   .filterContainer-btn {
-    margin-left: 8rem;
+    margin-left: 5rem;
   }
 }
 </style>

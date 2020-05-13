@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <Navigation />
+    <!-- <Navigation /> -->
     <BlobAnimation />
     <div class="row align-items-center mainSection">
       <div id="home" class="col-12">
@@ -43,7 +43,7 @@
 <script>
 import Projects from "../components/Projects";
 import ProjectCard from "../components/ProjectCard";
-import Navigation from "../components/Navigation.vue";
+// import Navigation from "../components/Navigation.vue";
 import Hero from "../components/Hero.vue";
 import About from "../components/AboutUs.vue";
 import Profiles from "../components/Profiles.vue";
@@ -59,7 +59,7 @@ export default {
     About,
     Profiles,
     BlobAnimation,
-    Navigation,
+    // Navigation,
     Footer
   }
 };
@@ -80,7 +80,7 @@ export default {
 }
 
 .section-title {
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
 
     @include media-breakpoint-down(sm) {
       text-align: center;
@@ -97,7 +97,7 @@ export default {
     }
 
     &-btn {
-      width: 68%;
+      width: 63%;
       margin-left: auto;
     }
     

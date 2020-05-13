@@ -71,7 +71,6 @@ export default {
     &-title {
     @include text-h4();
     display: flex;
-    margin-bottom: 2rem;
     color: $color-black;
 
       @include media-breakpoint-down(sm) {

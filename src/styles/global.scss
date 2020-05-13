@@ -11,10 +11,6 @@ body {
     color: $color-purple;
 }
 
-.container {
-    max-width: 1300px;
-}
-
 h1 {
     font-weight: bold;
     @include text-h1();
@@ -48,5 +44,17 @@ input {
 }
 
 section{
-    margin-bottom: 10rem;
+    margin-bottom: 15rem;
+}
+
+a:link,
+a:visited {
+    color: $color-purple;
+}
+
+a:hover,
+a:active {
+    text-decoration: none;
+    color: $color-light-purple;
+    transition: 0.3s;
 }
