@@ -47,20 +47,13 @@
     font-weight: bold;
     font-size: 24px;
 
-    @include media-breakpoint-down(md) {
-        font-size: 18px;
-    }
-}
-
-@mixin text-h4 {
-    @include secondary-base();
-    color: $color-black();
-    font-weight: bold;
-    font-size: 24px;
-
     @include media-breakpoint-down(md){
         font-size: 18px;
     }
+
+    // @include media-breakpoint-down(sm){
+    //     font-size: 14px;
+    // }
 }
 
 @mixin text-h5 {
@@ -85,6 +78,12 @@
 
     @include media-breakpoint-down(md) {
         font-size: 16px;
+        line-height: 22px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        font-size: 14px;
+        line-height: 22px;
     }
 }
 

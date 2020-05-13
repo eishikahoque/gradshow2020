@@ -88,7 +88,7 @@ export default {
                 }
             ],
             swiperOptions: {
-                slidesPerView: 1.25,
+                slidesPerView: 1.15,
                 spaceBetween: 20,
                 pagination: {
                     el: '.swiper-pagination',
@@ -171,13 +171,13 @@ export default {
     position: relative;
     color: $color-white;
     width: 73px;
-    height: 73px;
+    height: 63px;
     display: flex;
 }
 
 #btn-prev {
     background-color: $color-light-purple;
-    right: 1rem;
+    right: 0.62rem;
     left: auto;
 }
 
