@@ -331,7 +331,7 @@ export const data = [
 	{
 		id: 23,
 		name: "Yan Zhang",
-		title: "Product Designer",
+		title: "Back-end Developer",
 		picture: "/static/images/studentImages/yan.png",
 		color: "#FDDDFF",
 		hash: ["#BackEndDev", "#FrontEndDev"],
