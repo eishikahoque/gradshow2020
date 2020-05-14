@@ -74,7 +74,7 @@ nav {
 
 /* Add a black background color to the top navigation */
 .navbar {
-  overflow: hidden;
+  // overflow: hidden;
   display: flex;
   justify-content: end;
   position: relative;
@@ -107,30 +107,24 @@ nav {
 }
 
 @media screen and (max-width: 600px) {
-  // .navbar a:not(:first-child) {display: none;}
   .navbar a {
     display: none;
   }
   .navbar a.icon {
     right: 0;
     top: 0;
-    // float: right;
-    display: block;
+    display: inline-block;
   }
 
   .navbar__wrapper {
-    margin-left: 0;
-    margin-right: auto;
+    position: absolute;
+    right: 0;
+    top: 70px;
+    height: auto;
   }
 
-  .navbar .responsive {
-    position: relative;
-  }
-  .navbar.responsive a.icon {
-    // position: absolute;
-    // right: 0;
-    // top: 0;
-  }
+
+
   .navbar.responsive a {
     float: none;
     display: block;
