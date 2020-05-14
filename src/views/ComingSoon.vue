@@ -133,7 +133,7 @@ header {
 }
 
 .newsletter input[type="email"] {
-  @include text-h3();
+  @include text-h5();
   width: 100%;
   background-color: $color-white;
   border-color: $color-white;
@@ -155,7 +155,7 @@ header {
   height: 80px;
   border-radius: 0px 24px 24px 0px;
   text-transform: unset;
-  @include primary-btn-color();
+  @include primary-btn();
 }
 
 .footer-message {

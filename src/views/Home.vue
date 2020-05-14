@@ -1,69 +1,122 @@
 <template>
   <div class="container">
-    <!-- ======= NAVIGATION -->
-    <div class="row">
-      <div class="col-12">
-        <!-- Put navigation component here -->
-        <p>
-          Navigation
-          <button v-scroll-to="'#introSec'">
-            Home
-          </button>
-          <button v-scroll-to="'#profileSec'">
-            Profiles
-          </button>
-          <button v-scroll-to="'#projectSec'">
-            Projects
-          </button>
-        </p>
+    <!-- <Navigation /> -->
+    <BlobAnimation />
+    <div class="row align-items-center mainSection">
+      <div id="home" class="col-12">
+          <Hero />
       </div>
     </div>
 
-    <!-- ======== MAIN BODY -->
-    <!-- INTRO -->
-    <div class="row">
-      <div class="col-12">
-        <!-- Put intro component here -->
-        <h1 id="introSec">Hi. I'm Intro</h1>
+    <div class="row align-items-center">
+      <div id="about" class="col-12">
+        <About />
       </div>
     </div>
 
     <!-- STUDENT PROFILES -->
-    <div class="row">
-      <div class="col-12">
-        <!-- Put student profiles component here -->
-        <Profiles id="profileSec" />
+    <div class="row align-items-center">
+      <div id="grads" class="col-12">
+        <Profiles />
       </div>
     </div>
 
     <!-- FEATURED PROJECTS -->
     <div class="row">
       <div class="col-12">
-        <!-- Put student projects component here -->
-        <!-- REMOVE BELOW H1 WHEN YOU PLACE YOUR COMPONENTS -->
-        <h1 id="projectSec">I'm Projects</h1>
+        <Projects />
       </div>
     </div>
-    <!--  -->
+
+    <!-- Location -->
+    <div class="row">
+      <div class="col-12">
+        <!-- Put student projects component here -->
+        <!-- REMOVE BELOW H1 WHEN YOU PLACE YOUR COMPONENTS -->
+        <Footer />
+      </div>
+    </div>
   </div>
+
 </template>
 
 <script>
+import Projects from "../components/Projects";
+import ProjectCard from "../components/ProjectCard";
+// import Navigation from "../components/Navigation.vue";
+import Hero from "../components/Hero.vue";
+import About from "../components/AboutUs.vue";
 import Profiles from "../components/Profiles.vue";
+import BlobAnimation from "../components/BlobAnimation.vue";
+import Footer from "../components/Footer.vue";
 
-// @ is an alias to /src
 export default {
-  name: "Home",
+  name: "Home", 
+  title: 'Auto slides per view / Carousel mode',
   components: {
-    Profiles
+    Projects,
+    Hero,
+    About,
+    Profiles,
+    BlobAnimation,
+    // Navigation,
+    Footer
   }
 };
 </script>
 
-<style scoped>
-/* REMOVE THIS ONCE YOU PLACE YOUR COMPONENTS */
-h1 {
-  min-height: 900px;
+<style lang="scss">
+@import "@/styles/variables";
+@import "@/styles/mixins/typography";
+@import "@/styles/mixins/buttons";
+@import "@/styles/mixins/breakpoints";
+
+.primary-btn {
+  @include primary-btn()
 }
-/* ========================================== */
+
+.btn {
+    margin: 0.75rem;
+}
+
+.section-title {
+    margin-bottom: 4rem;
+
+    // @include media-breakpoint-down(sm) {
+    //   text-align: center;
+    // }
+}
+
+.filterContainer {
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    &.blurContainer {
+      filter: blur(5px);
+      overflow: hidden;
+    }
+
+    &-btn {
+      width: 63%;
+      margin-left: auto;
+    }
+    
+    @include media-breakpoint-down(sm) {
+      &-btn {
+        width: 100%;
+      }
+    }
+}
+.mainSection{
+  height: 100vh;
+}
+
+// #about, #grads, #projects{
+//   margin-top: 10em;
+//   margin-bottom: 10em;
+// }
+// /* REMOVE THIS ONCE YOU PLACE YOUR COMPONENTS */
+// h1 {
+//   min-height: 900px;
+// }
 </style>

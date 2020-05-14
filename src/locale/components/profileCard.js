@@ -17,7 +17,7 @@ export const data = [
 	{
 		id: 2,
 		name: "Andrew Block",
-		title: "Front-end Developer",
+		title: "Front-End Developer",
 		picture: "/static/images/studentImages/Andrew.png",
 		color: "#C9F0FF",
 		hash: ["#Developer", "#Advertising", "#Marketing"],
@@ -45,7 +45,7 @@ export const data = [
 	{
 		id: 4,
 		name: "Chesney Gordon-Williams",
-		title: "Front-end Developer",
+		title: "Front-End Developer",
 		picture: "/static/images/studentImages/Chesney.png",
 		color: "#C9F0FF",
 		hash: ["#UI/UXDesign", "#ProductDesign", "#FrontendDev"],
@@ -77,7 +77,7 @@ export const data = [
 		id: 6,
 		name: "Diana Mantilla",
 		title: "Digital Interactive Designer",
-		picture: "/static/images/studentImages/diana.png",
+		picture: "/static/images/studentImages/diana-2.png",
 		color: "#D1FFE3",
 		hash: ["#UXDesigner", "#InteractiveDesigner", "#GraphicDesigner"],
 		keywords: ["UXUI", "UXUI", "UXUI"],
@@ -111,7 +111,7 @@ export const data = [
 		hash: ["#UI/UXDesign", "#ProductDesign", "#FrontendDev"],
 		keywords: ["UXUI", "UXUI", "FE"],
 		portfolio: "http://www.eileensantiago.com",
-		behance: "https://www.behance.net/eileenmsantiago",
+		behance: "https://www.behance.net/eileensantiago",
 		github: "https://github.com/eileenmsantiago",
 		linkedin: "https://www.linkedin.com/in/eileensantiago",
 		blurb:
@@ -211,7 +211,7 @@ export const data = [
 	{
 		id: 15,
 		name: "Olivia Oleary",
-		title: "Front-end Developer",
+		title: "Front-End Developer",
 		picture: "/static/images/studentImages/olivia.png",
 		color: "#C9F0FF",
 		hash: ["#DigitalDesigner", "#ProductDesigner", "#FrontEndDev"],
@@ -311,12 +311,12 @@ export const data = [
 		instagram: "https://www.instagram.com/szerenasz/",
 		linkedin: "https://www.linkedin.com/in/szerenaszabo",
 		blurb:
-			"Event planner turned designer focused on user experience & project management, and skilled in front-end & back-end development",
+			"A UX Designer with experience in science and marketing. I help people and businesses who want to make a positive impact achieve their goals.",
 	},
 	{
 		id: 22,
 		name: "Tim Lu",
-		title: "Front-end Developer",
+		title: "Front-End Developer",
 		picture: "/static/images/studentImages/tim.png",
 		color: "#C9F0FF",
 		hash: ["#Front-endDev", "#GraphicDesigner", "#VideoProducer"],
@@ -331,10 +331,10 @@ export const data = [
 	{
 		id: 23,
 		name: "Yan Zhang",
-		title: "Back-end Developer",
+		title: "Back-End Developer",
 		picture: "/static/images/studentImages/yan.png",
 		color: "#FDDDFF",
-		hash: ["#BackEndDev", "#FrontEndDev"],
+		hash: ["#BackEndDev", "#FrontEndDev", "#FullStackDev"],
 		keywords: ["BE", "FE"],
 		portfolio: "http://www.yanzhang.site",
 		codepen: "https://codepen.io/yanzhang-sheridan",

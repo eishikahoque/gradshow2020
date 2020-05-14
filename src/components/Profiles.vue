@@ -1,13 +1,29 @@
 <template>
-  <div class="profiles">
-    <section
-      class="filteringSection"
-      v-bind:class="{ blurContainer: hideOverlay }"
-    >
-      <h2 class="headerTitle">Graduates</h2>
-      <div class="buttonContainer">
-        <button
-          class="filterBtn"
+  <section class="profiles">
+    <div class="filterContainer" v-bind:class="{ blurContainer: hideOverlay }">
+      <h2 class="section-title">Graduates</h2>
+
+      <div class="filterContainer-btn">
+        <!-- FILTERS -->
+        <label
+          v-for="(filter, i) in filters"
+          :key="i"
+          class="checkbox-container"
+        >
+          <input
+            type="radio"
+            v-bind:value="filter.value"
+            v-model="selectedFilter"
+            :checked="filter.value == ''"
+            name="filter"
+            v-on:change="filterStudents"
+          />
+          <span class="checkmark">{{ filter.label }}</span>
+        </label>
+        <!-- FILTERS ENDS -->
+
+        <!-- <button
+          class="primary-btn btn"
           v-for="(filter, i) in filters"
           v-bind:class="{ active: i === selectedFilterIndex }"
           data-toggle="buttons"
@@ -15,9 +31,9 @@
           @click="filterStudents(filter.value)"
         >
           {{ filter.label }}
-        </button>
+        </button> -->
       </div>
-    </section>
+    </div>
     <div
       class="profileCardContainer"
       v-bind:class="{ blurContainer: hideOverlay }"
@@ -41,7 +57,7 @@
         </ProfileModal>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -86,6 +102,7 @@ export default {
         }
       ],
       selectedFilterIndex: 0,
+      selectedFilter: "",
       currentProfile: null,
       showCard: true,
       hideModal: false,
@@ -106,13 +123,21 @@ export default {
       document.body.style.overflow = "auto";
       this.hideOverlay = false;
     },
-    filterStudents: function(selectedFilter) {
-      this.selectedFilterIndex = this.filters.indexOf(selectedFilter);
-      this.filteredData = selectedFilter
-        ? this.originalData.filter(
-            item => item.keywords.indexOf(selectedFilter) !== -1
-          )
-        : this.originalData;
+    filterStudents() {
+      this.filteredData =
+        this.selectedFilter != ""
+          ? this.originalData.filter(
+              item => item.keywords.indexOf(this.selectedFilter) !== -1
+            )
+          : this.originalData;
+
+      // this.selectedFilterIndex = this.filters.indexOf(selectedFilter);
+
+      // this.filteredData = selectedFilter
+      //   ? this.originalData.filter(
+      //       item => item.keywords.indexOf(selectedFilter) !== -1
+      //     )
+      //   : this.originalData;
     }
   }
 };
@@ -123,7 +148,9 @@ export default {
 @import "@/styles/mixins/breakpoints";
 
 .profiles {
-  margin: 2rem;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .headerTitle {
@@ -185,7 +212,7 @@ export default {
   display: flex;
   justify-content: center;
   width: 85vw;
-  height: 95vh;
+  // height: 95vh;
 }
 
 .modalContainer {
@@ -207,9 +234,9 @@ export default {
 }
 
 @include media-breakpoint-up(sm) {
-  .headerTitle {
-    font-size: 48px;
-  }
+  // .headerTitle {
+  //   font-size: 48px;
+  // }
   .profileCardContainer {
     grid-template-columns: 1fr 1fr;
   }
@@ -220,21 +247,22 @@ export default {
     padding: 0 3rem;
   }
 
-  .filteringSection {
-    text-align: center;
-  }
+  // .filterContainer {
+  //   text-align: center;
+  // }
 }
 @include media-breakpoint-up(md) {
   .profileModalContainer {
     display: flex;
     justify-content: center;
     width: 80vw;
-    height: 95vh;
+    // height: 95vh;
   }
   .profileCardContainer {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
 @include media-breakpoint-up(lg) {
   .headerTitle {
     text-align: left;
@@ -246,14 +274,14 @@ export default {
     display: flex;
     justify-content: center;
     width: 50vw;
-    height: 90vh;
+    // height: 90vh;
   }
-  .filteringSection {
+  .filterContainer {
     flex-direction: row;
     text-align: left;
   }
-  .buttonContainer {
-    margin-left: 8rem;
+  .filterContainer-btn {
+    margin-left: 5rem;
   }
 }
 </style>
