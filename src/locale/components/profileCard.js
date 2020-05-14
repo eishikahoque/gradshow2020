@@ -111,7 +111,7 @@ export const data = [
 		hash: ["#UI/UXDesign", "#ProductDesign", "#FrontendDev"],
 		keywords: ["UXUI", "UXUI", "FE"],
 		portfolio: "http://www.eileensantiago.com",
-		behance: "https://www.behance.net/eileenmsantiago",
+		behance: "https://www.behance.net/eileensantiago",
 		github: "https://github.com/eileenmsantiago",
 		linkedin: "https://www.linkedin.com/in/eileensantiago",
 		blurb:

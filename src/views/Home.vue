@@ -82,9 +82,9 @@ export default {
 .section-title {
     margin-bottom: 4rem;
 
-    @include media-breakpoint-down(sm) {
-      text-align: center;
-    }
+    // @include media-breakpoint-down(sm) {
+    //   text-align: center;
+    // }
 }
 
 .filterContainer {
