@@ -63,7 +63,7 @@ export default {
 /* @import "@/styles/mixins/breakpoints"; */
 
 .outline {
-  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #000;
   color: rgba(0, 0, 0, 0);
   padding-bottom: 0;
@@ -120,5 +120,9 @@ list-inline,
 
 .textAlignRight {
   text-align: right;
+}
+
+h3 {
+  margin-bottom: -8px;
 }
 </style>
