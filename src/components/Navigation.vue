@@ -65,7 +65,7 @@ export default {
 @import "@/styles/mixins/buttons";
 @import "@/styles/mixins/breakpoints";
 .logo {
-  padding: 3em 1em;
+  padding: 3em 30px;
   z-index: 1;
 }
 

@@ -131,7 +131,7 @@ export default {
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  width: 9vw;
+  width: 95vw;
   // height: 90vh;
   // width: 100%;
   height: 100%;
