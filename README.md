@@ -24,7 +24,7 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### vue.config.js
-Don't forget to update public path in vue.config.js file while building for production/deployment
+Don't forget to update public path in vue.config.js file when building for production/deployment
 
 ```
 module.exports = {
