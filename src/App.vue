@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- MAIN BODY -->
-    <Navigation class="nav"/>
+    <Navigation class="nav" />
     <router-view />
     <div class="bg-gradient"></div>
     <!-- <div id="footer-bg"/> -->
@@ -24,13 +24,13 @@ export default {
 
 <style lang="scss">
 #app {
-  background-image: url(/static/images/homeBackgrounds/bgnew3.png);
+  background-image: url(./assets/images/homeBackgrounds/bgnew3.png);
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
   background-size: 100%;
   z-index: -20;
-} 
+}
 
 // #footer-bg {
 //   background-image: url(/static/images/homeBackgrounds/footer.svg);
