@@ -155,7 +155,7 @@ export default {
   font-size: 16px;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   color: white;
 }
 
@@ -235,7 +235,7 @@ export default {
 
   .jobTitle {
     flex-direction: row;
-    justify-content: start;
+    justify-content: flex-start;
   }
 
   .hashtag {
@@ -278,7 +278,7 @@ export default {
 
   .jobTitle {
     flex-direction: row;
-    justify-content: start;
+    justify-content: flex-start;
   }
 
   .fas.fa-times {

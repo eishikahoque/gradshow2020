@@ -1,21 +1,25 @@
 <template>
   <div class="container">
     <div class="row align-items-center justify-content-between">
-    <div class="col-xs-6 logo">
-      <h4> IMM2020 </h4>
-    </div>
-    <div class="col-xs-6">
-    <nav class="navbar" :style="{ background: background || '#333' }" id="nav">
-      <a href="javascript:void(0);" class="icon" @click="myFunction">
-        <i class="fa fa-bars"></i>
-      </a>
-      <div class="navbar__wrapper">
-        <a href="#about">About</a>
-        <a href="#grads">Grads</a>
-        <a href="#projects">Works</a>
+      <div class="col-xs-6 logo">
+        <h4>IMM2020</h4>
       </div>
-    </nav>
-    </div>
+      <div class="col-xs-6">
+        <nav
+          class="navbar"
+          :style="{ background: background || '#333' }"
+          id="nav"
+        >
+          <a href="javascript:void(0);" class="icon" @click="myFunction">
+            <i class="fa fa-bars"></i>
+          </a>
+          <div class="navbar__wrapper">
+            <a href="#about">About</a>
+            <a href="#grads">Grads</a>
+            <a href="#projects">Works</a>
+          </div>
+        </nav>
+      </div>
     </div>
   </div>
 </template>
@@ -61,8 +65,8 @@ export default {
 @import "@/styles/mixins/buttons";
 @import "@/styles/mixins/breakpoints";
 .logo {
-   padding: 3em 1em;
-   z-index: 1;
+  padding: 3em 1em;
+  z-index: 1;
 }
 
 .logo h4 {
@@ -80,7 +84,7 @@ nav {
 .navbar {
   // overflow: hidden;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   position: relative;
   z-index: 1;
 
@@ -126,8 +130,6 @@ nav {
     top: 70px;
     height: auto;
   }
-
-
 
   .navbar.responsive a {
     float: none;
