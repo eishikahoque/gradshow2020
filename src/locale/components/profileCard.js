@@ -17,7 +17,7 @@ export const data = [
 	{
 		id: 2,
 		name: "Andrew Block",
-		title: "Front-end Developer",
+		title: "Front-End Developer",
 		picture: "/static/images/studentImages/Andrew.png",
 		color: "#C9F0FF",
 		hash: ["#Developer", "#Advertising", "#Marketing"],
@@ -45,7 +45,7 @@ export const data = [
 	{
 		id: 4,
 		name: "Chesney Gordon-Williams",
-		title: "Front-end Developer",
+		title: "Front-End Developer",
 		picture: "/static/images/studentImages/Chesney.png",
 		color: "#C9F0FF",
 		hash: ["#UI/UXDesign", "#ProductDesign", "#FrontendDev"],
@@ -211,7 +211,7 @@ export const data = [
 	{
 		id: 15,
 		name: "Olivia Oleary",
-		title: "Front-end Developer",
+		title: "Front-End Developer",
 		picture: "/static/images/studentImages/olivia.png",
 		color: "#C9F0FF",
 		hash: ["#DigitalDesigner", "#ProductDesigner", "#FrontEndDev"],
@@ -316,7 +316,7 @@ export const data = [
 	{
 		id: 22,
 		name: "Tim Lu",
-		title: "Front-end Developer",
+		title: "Front-End Developer",
 		picture: "/static/images/studentImages/tim.png",
 		color: "#C9F0FF",
 		hash: ["#Front-endDev", "#GraphicDesigner", "#VideoProducer"],
