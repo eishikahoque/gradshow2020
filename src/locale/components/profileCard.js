@@ -181,7 +181,7 @@ export const data = [
 	{
 		id: 13,
 		name: "Lily Da Huang",
-		title: "Full Stack Developer",
+		title: "Product Designer",
 		picture: "/static/images/studentImages/Lily.png",
 		color: "#C9F0FF",
 		hash: ["#FrontEndDev", "#UXDesigner", "#ProductDesigner"],
@@ -189,7 +189,7 @@ export const data = [
 		portfolio: "http://www.getmelily.com",
 		instagram: "https://www.instagram.com/designldh/",
 		dribble: "https://dribbble.com/getmelily",
-		linkedin: "https://www.linkedin.com/in/eishikahoque",
+		linkedin: "https://www.linkedin.com/in/getmelily",
 		blurb:
 			"UX/UI designer with 3+ years of experience. I have a passion for creating interactive digital products that empower people to achieve their goals. 💪",
 	},
@@ -200,7 +200,7 @@ export const data = [
 		picture: "/static/images/studentImages/Oby.png",
 		color: "#F1FFC2",
 		hash: ["#InteractionDesign", "#UIAnimator", "#CreativeTechnologist"],
-		keywords: ["UXUI", "UXUI", "UXUI"],
+		keywords: ["UXUI", "FE", "UXUI"],
 		portfolio: "http://www.iamoby.com",
 		linkedin: "https://www.linkedin.com/in/iamoby",
 		instagram: "https://www.instagram.com/iamobyy/",
@@ -339,7 +339,7 @@ export const data = [
 		portfolio: "http://www.yanzhang.site",
 		codepen: "https://codepen.io/yanzhang-sheridan",
 		github: "https://github.com/yanzhang-sheridan",
-		linkedin: "https://www.linkedin.com/in/getmelily",
+		linkedin: "https://www.linkedin.com/in/yanzhang0429/",
 		blurb:
 			"An experienced programmer keeps coding, building and learning with passion and discovery",
 	},
