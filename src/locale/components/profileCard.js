@@ -339,7 +339,7 @@ export const data = [
 		portfolio: "http://www.yanzhang.site",
 		codepen: "https://codepen.io/yanzhang-sheridan",
 		github: "https://github.com/yanzhang-sheridan",
-		linkedin: "https://www.linkedin.com/in/getmelily",
+		linkedin: "https://www.linkedin.com/in/yanzhang0429/",
 		blurb:
 			"An experienced programmer keeps coding, building and learning with passion and discovery",
 	},
