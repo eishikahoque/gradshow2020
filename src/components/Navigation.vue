@@ -65,6 +65,10 @@ export default {
    z-index: 1;
 }
 
+.logo h4 {
+  color: $color-purple;
+}
+
 nav {
   padding: 3em 1em;
 }
