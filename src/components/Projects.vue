@@ -3,7 +3,25 @@
     <div class="filterContainer" v-bind:class="{ blurContainer: hideOverlay }">
       <h2 class="section-title">Featured Projects</h2>
       <div class="filterContainer-btn">
-        <button
+        <!-- FILTERS -->
+        <label
+          v-for="(filter, i) in projFilters"
+          :key="i"
+          class="checkbox-container"
+        >
+          <input
+            type="radio"
+            v-bind:value="filter.value"
+            v-model="selectedProjFilter"
+            :checked="filter.value == ''"
+            name="filter"
+            v-on:change="filterProjects"
+          />
+          <span class="checkmark">{{ filter.label }}</span>
+        </label>
+        <!-- FILTERS ENDS -->
+
+        <!-- <button
           class="primary-btn btn"
           v-for="(filter, i) in projFilters"
           v-bind:class="{ active: i === selectedProjFilterIndex }"
@@ -12,7 +30,7 @@
           @click="filterProjects(filter.value)"
         >
           {{ filter.label }}
-        </button>
+        </button> -->
       </div>
     </div>
     <div class="project-carousel">
@@ -112,19 +130,27 @@ export default {
           }
         }
       },
-      selectedProjFilterIndex: 0
+      selectedProjFilterIndex: 0,
+      selectedProjFilter: ""
     };
   },
   methods: {
-    filterProjects: function(selectedProjFilter) {
-      this.selectedProjFilterIndex = this.projFilters.indexOf(
-        selectedProjFilter
-      );
-      this.filteredProjData = selectedProjFilter
-        ? this.projectData.filter(
-            item => item.keywords.indexOf(selectedProjFilter) !== -1
-          )
-        : this.projectData;
+    filterProjects() {
+      this.filteredProjData =
+        this.selectedProjFilter != ""
+          ? this.projectData.filter(
+              item => item.keywords.indexOf(this.selectedProjFilter) !== -1
+            )
+          : this.projectData;
+
+      // this.selectedProjFilterIndex = this.projFilters.indexOf(
+      //   selectedProjFilter
+      // );
+      // this.filteredProjData = selectedProjFilter
+      //   ? this.projectData.filter(
+      //       item => item.keywords.indexOf(selectedProjFilter) !== -1
+      //     )
+      //   : this.projectData;
     }
   }
 };
@@ -199,9 +225,9 @@ export default {
   align-content: center;
 }
 
-@include media-breakpoint-down(m {
+@include media-breakpoint-down(md) {
   .filterContainer {
-    width: 100;
+    width: 100%;
   }
 }
 </style>

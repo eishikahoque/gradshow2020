@@ -1,12 +1,28 @@
 <template>
   <section class="profiles">
-    <div
-      class="filterContainer"
-      v-bind:class="{ blurContainer: hideOverlay }"
-    >
+    <div class="filterContainer" v-bind:class="{ blurContainer: hideOverlay }">
       <h2 class="section-title">Graduates</h2>
+
       <div class="filterContainer-btn">
-        <button
+        <!-- FILTERS -->
+        <label
+          v-for="(filter, i) in filters"
+          :key="i"
+          class="checkbox-container"
+        >
+          <input
+            type="radio"
+            v-bind:value="filter.value"
+            v-model="selectedFilter"
+            :checked="filter.value == ''"
+            name="filter"
+            v-on:change="filterStudents"
+          />
+          <span class="checkmark">{{ filter.label }}</span>
+        </label>
+        <!-- FILTERS ENDS -->
+
+        <!-- <button
           class="primary-btn btn"
           v-for="(filter, i) in filters"
           v-bind:class="{ active: i === selectedFilterIndex }"
@@ -15,7 +31,7 @@
           @click="filterStudents(filter.value)"
         >
           {{ filter.label }}
-        </button>
+        </button> -->
       </div>
     </div>
     <div
@@ -86,6 +102,7 @@ export default {
         }
       ],
       selectedFilterIndex: 0,
+      selectedFilter: "",
       currentProfile: null,
       showCard: true,
       hideModal: false,
@@ -106,13 +123,21 @@ export default {
       document.body.style.overflow = "auto";
       this.hideOverlay = false;
     },
-    filterStudents: function(selectedFilter) {
-      this.selectedFilterIndex = this.filters.indexOf(selectedFilter);
-      this.filteredData = selectedFilter
-        ? this.originalData.filter(
-            item => item.keywords.indexOf(selectedFilter) !== -1
-          )
-        : this.originalData;
+    filterStudents() {
+      this.filteredData =
+        this.selectedFilter != ""
+          ? this.originalData.filter(
+              item => item.keywords.indexOf(this.selectedFilter) !== -1
+            )
+          : this.originalData;
+
+      // this.selectedFilterIndex = this.filters.indexOf(selectedFilter);
+
+      // this.filteredData = selectedFilter
+      //   ? this.originalData.filter(
+      //       item => item.keywords.indexOf(selectedFilter) !== -1
+      //     )
+      //   : this.originalData;
     }
   }
 };
@@ -237,6 +262,7 @@ export default {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
 @include media-breakpoint-up(lg) {
   .headerTitle {
     text-align: left;
