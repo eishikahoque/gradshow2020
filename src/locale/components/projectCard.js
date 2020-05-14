@@ -97,7 +97,7 @@ export const data =
             description: "Game Friend Finder was built during an 8642 prototyping exercise and is designed to connect like-minded gamers.",
             image: "gff.png",
             students: "Rob Cottignies, Drashya Gohil, Ankit Gupta, Andrew Block, & Padmini Smith",
-            link: "http://www.robcottignies.com/projects/Gaming-Friend-Finder-Project",
+            link: "https://www.youtube.com/watch?time_continue=28&v=0_8QDHRo0dQ&feature=emb_logo",
             keywords: ["app"]
         },
         {
