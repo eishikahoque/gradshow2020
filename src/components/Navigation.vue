@@ -1,5 +1,10 @@
 <template>
   <div class="container">
+    <div class="row align-items-center justify-content-between">
+    <div class="col-xs-6 logo">
+      <h4> IMM2020 </h4>
+    </div>
+    <div class="col-xs-6">
     <nav class="navbar" :style="{ background: background || '#333' }" id="nav">
       <a href="javascript:void(0);" class="icon" @click="myFunction">
         <i class="fa fa-bars"></i>
@@ -10,6 +15,8 @@
         <a href="#projects">Works</a>
       </div>
     </nav>
+    </div>
+    </div>
   </div>
 </template>
 
@@ -53,6 +60,11 @@ export default {
 @import "@/styles/mixins/typography";
 @import "@/styles/mixins/buttons";
 @import "@/styles/mixins/breakpoints";
+.logo {
+   padding: 3em 1em;
+   z-index: 1;
+}
+
 nav {
   padding: 3em 1em;
 }
@@ -64,6 +76,7 @@ nav {
 .navbar {
   overflow: hidden;
   display: flex;
+  justify-content: end;
   position: relative;
   z-index: 1;
 
@@ -77,7 +90,6 @@ nav {
   font-weight: 600;
   float: left;
   display: block;
-  // color: #472B7A;
   text-align: center;
   padding-right: 3rem;
   text-decoration: none;
@@ -94,132 +106,6 @@ nav {
   color: white;
 }
 
-// nav {
-// //   position: fixed;
-//   z-index: 3;
-//   height: 60px;
-//   width: 100%;
-//   font-weight: bold;
-//   right: 0;
-//   padding: 13px;
-//   border: 0;
-//   margin-bottom: 10px;
-//   // background: rgba(126, 91, 91, 0.1);
-//   ul {
-//     list-style-type: none;
-//     margin: 0;
-//     padding: 0;
-//     overflow: hidden;
-//     /* background-color: #606c76; */
-//     display: flex;
-//     float: right;
-//     height: 100%;
-//     align-items: center;
-//     margin-block-start: 0;
-//     margin-block-end: 0;
-//     padding-inline-start: 0;
-//   }
-//   li {
-//     // float: right;
-//     margin-bottom: 0;
-//     list-style-type: none;
-//     padding: 0px 10px;
-//     a {
-//       display: flex;
-//       color: $color-purple;
-//       text-align: center;
-//       padding: 12px 12px;
-//       text-decoration: none;
-//       flex-direction: row-reverse;
-//       align-items: center;
-//     }
-//     a:hover {
-//       // background-color: #ab5dda;
-//     }
-//   }
-//   //   .navbar li {
-//   //     background-color: #ab5dda;
-//   //   }
-// }
-// .navbar-brand {
-//   float: left;
-//   margin-bottom: 0;
-//   color: white;
-//   text-align: center;
-//   padding: 14px 16px;
-//   text-decoration: none;
-// }
-// .navbar {
-//   @include text-body-sm();
-//   right: 0;
-//   padding: 13px;
-//   border: 0;
-// }
-// @include media-breakpoint-down(sm) {
-//   nav {
-//     ul {
-//       position: absolute;
-//       width: 120px;
-//       flex-direction: column;
-//       height: fit-content;
-//       transition: 300ms ease all;
-//       top: 60px;
-//       &.active {
-//         left: 0px;
-//       }
-//       figure {
-//         position: fixed;
-//         z-index: 3;
-//         top: 10px;
-//         left: 2px;
-//       }
-//       li {
-//         width: 100%;
-//         padding-left: 0;
-//         padding-right: 0;
-//       }
-//       a {
-//         flex-direction: row;
-//         margin-left: 20px;
-//         justify-content: space-between;
-//         margin-right: 13px;
-//       }
-//     }
-//   }
-// }
-/* @media (min-width: 992px) {
-  #mainNav {
-    padding-top: 25px;
-    padding-bottom: 25px;
-    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
-    transition: padding-top 0.3s, padding-bottom 0.3s;
-    border: none;
-    background-color: transparent;
-  }
-  .navbar-expand-lg,
-  .navbar-expand-lg .navbar-nav {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-  }
-  .navbar-expand-lg {
-    -ms-flex-flow: row nowrap;
-    flex-flow: row nowrap;
-    -ms-flex-pack: start;
-    -webkit-box-pack: start;
-    justify-content: flex-start;
-  }
-} */
-// #mainNav {
-//   padding: 30px;
-//   a {
-//     font-weight: bold;
-//     color: #fff;
-//     &.router-link-exact-active {
-//       color: #42b983;
-//     }
-//   }
-//}
-
 @media screen and (max-width: 600px) {
   // .navbar a:not(:first-child) {display: none;}
   .navbar a {
@@ -234,9 +120,10 @@ nav {
 
   .navbar__wrapper {
     margin-left: 0;
+    margin-right: auto;
   }
 
-  .navbar.responsive {
+  .navbar .responsive {
     position: relative;
   }
   .navbar.responsive a.icon {
