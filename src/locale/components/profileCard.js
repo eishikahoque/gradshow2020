@@ -196,7 +196,7 @@ export const data = [
 	{
 		id: 14,
 		name: "Evonne Oby Okoye",
-		title: "Creative Technologist",
+		title: "Experience Designer",
 		picture: "/static/images/studentImages/Oby.png",
 		color: "#F1FFC2",
 		hash: ["#InteractionDesign", "#UIAnimator", "#CreativeTechnologist"],
