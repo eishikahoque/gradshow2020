@@ -311,7 +311,7 @@ export const data = [
 		instagram: "https://www.instagram.com/szerenasz/",
 		linkedin: "https://www.linkedin.com/in/szerenaszabo",
 		blurb:
-			"Event planner turned designer focused on user experience & project management, and skilled in front-end & back-end development",
+			"A UX Designer with experience in science and marketing. I help people and businesses who want to make a positive impact achieve their goals.",
 	},
 	{
 		id: 22,
