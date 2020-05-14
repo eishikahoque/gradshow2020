@@ -5,7 +5,7 @@
       class="imageGradient"
       v-bind:style="{
         backgroundImage: `linear-gradient(180deg, rgba(130, 107, 176,0.4) 0%, rgba(71,43,122,0.95) 100%), 
-        url(${profile.picture})`
+        url(${completeProfileUrl})`
       }"
     >
       <div class="jobTitleRow">
@@ -42,7 +42,7 @@
               <img
                 :key="i"
                 v-if="profile[icon.name]"
-                v-bind:src="`/static/images/socialIcons/${icon.image}`"
+                :src="require(`../assets/images/socialIcons/${icon.image}`)"
                 alt="social icon"
                 class="socialIcon"
                 @click="redirectSocial(profile[icon.name])"
@@ -62,6 +62,7 @@ export default {
   components: {},
   data() {
     return {
+      // baseImageUrl: require(`../assets/images/`),
       availableIcons: [
         {
           name: "codepen",
@@ -108,6 +109,13 @@ export default {
     },
     redirectSocial: function(path) {
       window.open(path, "_blank");
+    }
+  },
+  computed: {
+    completeProfileUrl() {
+      let result = require(`../assets/images/studentImages/${this.profile.picture}`);
+
+      return result;
     }
   }
 };

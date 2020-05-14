@@ -6,13 +6,15 @@
       }"
       class="gradient"
     >
-      <img v-bind:src="image" class="cardImage" alt="student picture" />
+      <img
+        :src="require(`../assets/images/studentImages/${image}`)"
+        class="cardImage"
+        alt="student picture"
+      />
     </div>
     <div class="profile-card__content">
       <div class="profilecardName" v-html="name"></div>
-      <div class="profilecardTitle">
-        {{ title }}
-      </div>
+      <div class="profilecardTitle">{{ title }}</div>
     </div>
   </main>
 </template>
@@ -98,9 +100,7 @@ export default {
 
 @include media-breakpoint-up(sm) {
   .profilecard {
-    box-shadow: 6px 6px 16px -5px #f4f5f6;
+    box-shadow: 6px 6px 16px -5px 4f5f6;
   }
 }
-
-
 </style>
